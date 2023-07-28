@@ -33,10 +33,10 @@ import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 
-import whatsapp_icon from "./socials/whatsapp_icon.jpg"
-import twitter from "./socials/twitter_icon.jpg"
-import telegram_icon from "./socials/telegram_icon.jpg"
-import linkdin_icon from "./socials/linkdln_icon.jpg"
+import whatsapp_icon from "./socials/whatsapp_icon.jpg";
+import twitter from "./socials/twitter_icon.jpg";
+import telegram_icon from "./socials/telegram_icon.jpg";
+import linkdin_icon from "./socials/linkdln_icon.jpg";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";

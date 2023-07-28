@@ -12,8 +12,8 @@ import menu from "./menu.svg";
 import close from "./close.svg";
 
 import illustration from "./illustration.jpg"
-import illustration1 from "./static-website.svg"
-import illustration2 from "./static-website.png"
+import illustration1 from "./Static-website.svg"
+import illustration2 from "./Static-website.png"
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
 import figma from "./tech/figma.png";

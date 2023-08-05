@@ -41,6 +41,11 @@ import linkdin_icon from "./socials/linkdln_icon.jpg";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import portfolio from "./portfoliowebsite.png";
+import disney from "./disneyclone.png";
+import kasuwa from "./kasuwa.png";
+import deyspeak from "./deyspeak.png";
+import foodorder from "./foodordering.png";
 
 export {
   illustration,
@@ -81,5 +86,11 @@ export {
   whatsapp_icon,
   telegram_icon,
   linkdin_icon,
-  twitter
+  twitter,
+
+  portfolio,
+  disney,
+  kasuwa,
+  deyspeak,
+  foodorder
 };

@@ -1,3 +1,4 @@
+import { BiLogoTwitter, BiLogoWhatsapp, BiLogoTelegram, BiLogoGithub, BiLogoLinkedin } from 'react-icons/bi';
 import {
   react,
   node,
@@ -30,7 +31,13 @@ import {
     linkdin_icon,
     twitter,
     telegram_icon,
-    whatsapp_icon
+    whatsapp_icon,
+
+    portfolio,
+    deyspeak,
+    disney,
+    kasuwa,
+    foodorder
   } from "../assets";
   
   export const navLinks = [
@@ -208,7 +215,32 @@ import {
   
   const projects = [
     {
-      name: "Car Rent",
+      name: "Disney clone",
+      description:
+        "Disney Cloned Website",
+      tags: [
+        {
+          name: "react",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "Firebase",
+          color: "green-text-gradient",
+        },
+        {
+          name: "Redux",
+          color: "green-text-gradient",
+        },
+        {
+          name: "disney WebApp clone",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: disney,
+      source_code_link: "https://github.com/cReAtOR0009/italianRestaurant",
+    },
+    {
+      name: "Deyspeak",
       description:
         "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
       tags: [
@@ -217,28 +249,32 @@ import {
           color: "blue-text-gradient",
         },
         {
-          name: "nodejs",
+          name: "framer-motion",
           color: "green-text-gradient",
         },
         {
-          name: "mongodb",
+          name: "react-router-dom",
+          color: "green-text-gradient",
+        },
+        {
+          name: "deyspeak",
           color: "pink-text-gradient",
         },
       ],
-      image: carrent,
-      source_code_link: "https://github.com/",
+      image: deyspeak,
+      source_code_link: "https://github.com/cReAtOR0009/italianRestaurant",
     },
     {
-      name: "Job IT",
+      name: "Kasuwa",
       description:
-        "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+        "A full-stack Landing Page for kasuwa Farms that allows visitors to check the prices, percentage increase and decrease of Agricutural Commodities ",
       tags: [
         {
-          name: "html",
+          name: "React",
           color: "blue-text-gradient",
         },
         {
-          name: "css",
+          name: "styled-component",
           color: "green-text-gradient",
         },
         {
@@ -246,12 +282,73 @@ import {
           color: "pink-text-gradient",
         },
       ],
-      image: jobit,
+      image: kasuwa,
       source_code_link: "https://github.com/",
+    },
+    {
+      name: "portfolio Website",
+      description:
+        "my Porfolio website",
+      tags: [
+        {
+          name: "React",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "tailwind",
+          color: "green-text-gradient",
+        },
+        {
+          name: "framer-motion",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "three-js",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: portfolio,
+      source_code_link: "https://github.com/cReAtOR0009/",
+    },
+    {
+      name: "food ordering Website",
+      description:
+        "A fullstack food ordering website",
+      tags: [
+        {
+          name: "React",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "tailwind",
+          color: "green-text-gradient",
+        },
+        {
+          name: "framer-motion",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "Redux",
+          color: "green-text-gradient",
+        },
+        {
+          name: "node-js",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "Express-js",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "stripe",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: portfolio,
+      source_code_link: "https://github.com/cReAtOR0009/portfolio",
     },
   ];
 
-import { BiLogoTwitter, BiLogoWhatsapp, BiLogoTelegram, BiLogoGithub, BiLogoLinkedin } from 'react-icons/bi';
 
   const socials = [
     {platform:"telegram",

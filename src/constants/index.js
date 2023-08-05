@@ -344,7 +344,7 @@ import {
           color: "pink-text-gradient",
         },
       ],
-      image: portfolio,
+      image: foodorder,
       source_code_link: "https://github.com/cReAtOR0009/portfolio",
     },
   ];

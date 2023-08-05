@@ -12,6 +12,7 @@ const ProjectCard = ({
   index,
   name,
   description,
+  linkToWebsite,
   tags,
   image,
   source_code_link,
@@ -44,7 +45,8 @@ const ProjectCard = ({
                 className='w-1/2 h-1/2 object-contain'
               />
             </div>
-          </div>
+          </div> 
+              {/* <a href={linkToWebsite} target="_blank" rel="noopener noreferrer" className="">link to website</a> */}
         </div>
 
         <div className='mt-5'>

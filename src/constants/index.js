@@ -218,6 +218,7 @@ import {
       name: "Disney clone",
       description:
         "Disney Cloned Website",
+      linkToWebsite:"deyspeak.com",
       tags: [
         {
           name: "react",
@@ -243,6 +244,7 @@ import {
       name: "Deyspeak",
       description:
         "A Language Learning App",
+      linkToWebsite:"deyspeak.com",
       tags: [
         {
           name: "react",
@@ -268,6 +270,7 @@ import {
       name: "Kasuwa",
       description:
         "A full-stack Landing Page for kasuwa Farms that allows visitors to check the prices, percentage increase and decrease of Agricutural Commodities ",
+      linkToWebsite:"kasuwa.com",
       tags: [
         {
           name: "React",
@@ -289,6 +292,7 @@ import {
       name: "portfolio Website",
       description:
         "my Porfolio website",
+      linkToWebsite:"deyspeak.com",
       tags: [
         {
           name: "React",

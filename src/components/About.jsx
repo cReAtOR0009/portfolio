@@ -38,7 +38,7 @@ const ServiceCard =({index, title, icon}) => {
 
 const About = () => {
   return (
-    <div>
+    <div style={{boxShadow:"-1px -45px 55px 120px rgba(0,17,36,1)"}}>
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview.</h2>
@@ -49,7 +49,7 @@ const About = () => {
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
         
-As a highly skilled web developer, I specialize in HTML, CSS, and JavaScript, and I have extensive experience with popular front-end frameworks and Libraries such as React, Three.js, Framer Motion, React-Router, Redux, Tailwind, React-Bootstrap, recharts, and also frameworks and Libraries for Node.js, Google Firebase Inclusive--I'm very open to Learn more. I'm a quick learner and enjoy collaborating with clients and other developers to develop effective and scalable solutions that address real-world challenges. Let's team up and make magic happen!, I promise I won't suggest adding any unicorns or glitter, unless that's what you're into. But seriously, with my skills and your ideas, we're bound to make the Best of magic in Web Development!
+As a highly skilled web developer, I am proficient in HTML, CSS, and JavaScript, and I have extensive experience with popular front-end frameworks and Libraries such as React, Three.js, Framer Motion, React-Router, Redux, Tailwind, React-Bootstrap, recharts, and also frameworks and Libraries for Node.js, Google Firebase Inclusive--I'm very open to Learn more. I'm a quick learner and enjoy collaborating with clients and other developers to develop effective and scalable solutions that address real-world challenges. Let's team up and make magic happen!, I promise I won't suggest adding any unicorns or glitter, unless that's what you're into. But seriously, with my skills and your ideas, we're bound to make the Best of magic in Web Development!
       </motion.p>
       <div className="mt-20 h-[auto] py-2 sm-overflow-hidden sm-w-[100vw]" style={{ background:"", overflow:"hidden"}}>
 

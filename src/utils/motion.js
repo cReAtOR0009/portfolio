@@ -78,10 +78,10 @@ export const navIn = (direction, type, delay, duration) => {
   };
 };
 
-export const infinitescrollx= (x, width, delay, duration)=> {
+export const infinitescrollx= (y, width, delay, duration)=> {
   return{
     animate:{
-      x:[-200,x-width,],
+      x:[-200,y-width,],
       transition: {
         x: {
           delay:delay, 

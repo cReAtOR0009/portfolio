@@ -251,25 +251,27 @@ import {
     },
   ];
 
+import { BiLogoTwitter, BiLogoWhatsapp, BiLogoTelegram, BiLogoGithub, BiLogoLinkedin } from 'react-icons/bi';
+
   const socials = [
     {platform:"telegram",
-     icon:telegram_icon,
-     link:"https://www.telegram.com"
+     icon:BiLogoTelegram,
+     link:"https://t.me/SAGEmanolo"
     },
 
      {platform:"twitter",
-     icon:twitter,
-     link:"https://www.twitter.com"
+     icon:BiLogoTwitter,
+     link:"https://www.twitter.com/stTAIWOEMMANUEL"
     },
 
      {platform:"linkdin",
-     icon:linkdin_icon,
-     link:"https://www.linkdin.com"
+     icon:BiLogoLinkedin,
+     link:"https://www.linkedin.com/in/taiwo-emmanuel-7683ab210"
     },
 
      {platform:"whatsapp",
-     icon:whatsapp_icon,
-     link:"https://www.whatsapp.com"
+     icon:BiLogoWhatsapp,
+     link:"https://wa.me/+2347065049691"
     },
   
   ]

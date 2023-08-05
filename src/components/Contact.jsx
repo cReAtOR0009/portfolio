@@ -1,6 +1,8 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
+import { BiLogoTwitter, BiLogoWhatsapp, BiLogoTelegram,BiLogoGithub, BiLogoLinkedin } from 'react-icons/bi';
+
 
 import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
@@ -123,6 +125,22 @@ const Contact = () => {
             {loading ? "Sending..." : "Send"}
           </button>
         </form>
+
+        <motion.div className="flex gap-4 py-2 flex-wrap">
+          {socials.map((social, index) => (
+               <motion.div
+               key={social.name}
+               onClick={() => window.open(social.link, "_blank")}
+               className='w-[35px] h-[35px] text-center justify-center text-[#fff] border-2 border-tertiary  cursor-pointer rounded-[50%] p-[10px]'>
+                 <div className="flex flex-col justify-center items-center">
+                  <h1><social.icon fontSize="1em" color="#915eff" /></h1>
+                     <p style={{fontSize:"10px"}}>{social.platform}</p>
+                 </div>
+               </motion.div>
+          )
+
+          )}
+      </motion.div>
       </motion.div>
 
       <motion.div
@@ -130,21 +148,6 @@ const Contact = () => {
         className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'
       >
         <EarthCanvas />
-      </motion.div>
-      <motion.div>
-          {socials.map((social, index) => (
-               <motion.div
-               key={social.name}
-               onClick={() => window.open(social.link, "_blank")}
-               className='w-28 h-28 text-center text-[#fff] border-2 border-tertiary  cursor-pointer rounded-[50%] p-[20px]'>
-                 <div className="flex flex-col justify-center items-center">
-                   <img src={social.icon} alt={`technology${social.platform}`} />
-                     <p>{social.platform}</p>
-                 </div>
-               </motion.div>
-          )
-
-          )}
       </motion.div>
     </div>
   );

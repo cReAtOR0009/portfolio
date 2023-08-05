@@ -1,3 +1,4 @@
+require('dotenv').config()
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
@@ -36,16 +37,16 @@ const Contact = () => {
 
     emailjs
       .send(
-        "service_nlhnlfs",
-        "template_pp2i77c",
+        process.env.REACT_EMAILJS_SERVICE_ID,
+        process.env.REACT_EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
           to_name: "Sage",
           from_email: form.email,
-          to_email: "epidnugoairdrop@gmail.com",
+          to_email: process.env.REACT_EMAIL,
           message: form.message,
         },
-        "4wGJDG5ZcjlvEcPnL"
+        process.env.REACT_EMAILJS_PUBLIC_KEY
       )
       .then(
         () => {

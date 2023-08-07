@@ -219,7 +219,7 @@ import {
       name: "Disney clone",
       description:
         "Disney Cloned Website",
-      linkToWebsite:"https://strong-mermaid-d50520.netlify.app",
+      linkToWebsite:"https://disneywebclone.netlify.app",
       tags: [
         {
           name: "react",

@@ -37,7 +37,8 @@ import {
     deyspeak,
     disney,
     kasuwa,
-    foodorder
+    foodorder,
+    groceryapp
   } from "../assets";
   
   export const navLinks = [
@@ -240,6 +241,33 @@ import {
       image: disney,
       source_code_link: "https://github.com/cReAtOR0009/italianRestaurant",
     },
+    
+    {
+      name: "todaydeliver Grocery api and Admin Panel",
+      description:
+        "a Grocery Api with Admin Panel",
+      linkToWebsite:"deyspeak.com",
+      tags: [
+        {
+          name: "React",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "css",
+          color: "green-text-gradient",
+        },
+        {
+          name: "node js",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "firebase",
+          color: "pink-text-gradient",
+        }],
+        image: groceryapp,
+      source_code_link: "https://github.com/cReAtOR0009/groceryApp",
+      },
+
     {
       name: "Deyspeak",
       description:

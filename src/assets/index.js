@@ -46,6 +46,7 @@ import disney from "./disneyclone.png";
 import kasuwa from "./kasuwa.png";
 import deyspeak from "./deyspeak.png";
 import foodorder from "./foodordering.png";
+import groceryapp from "./groceryapp.png";
 
 export {
   illustration,
@@ -92,5 +93,6 @@ export {
   disney,
   kasuwa,
   deyspeak,
-  foodorder
+  foodorder,
+  groceryapp
 };

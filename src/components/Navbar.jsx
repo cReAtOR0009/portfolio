@@ -11,7 +11,7 @@ const Navbar = () => {
   const [Toggle, setToggle] = useState(false)
   return (
     <motion.nav 
-    className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 border-b-4 bg-[#915eff]`}
+    className={`${styles.paddingX} w-screen flex items-center py-5 fixed top-0 z-20 border-b-4 bg-[#915eff]`}
     initial={{ y: -250 }}
     animate={{ y: -10 }}
     transition={{ delay: .5, duration: 1, type: "spring", stiffness: 120 }}

@@ -172,19 +172,19 @@ import {
         "Participating in code reviews and providing constructive feedback to other developers.",
       ],
     },
-    {
-      title: "Web Developer (React.js, Node.js)",
-      company_name: "Kwakol Markets PTY Limited",
-      icon: javascript,
-      iconBg: "#E6DEDD",
-      date: "June 2019 - November 2021)",
-      points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Collaborated with clients to gather requirements and translate them into visually appealing website designs.",
-      ],
-    },
+    // {
+    //   title: "Web Developer (React.js, Node.js)",
+    //   company_name: "Kwakol Markets PTY Limited",
+    //   icon: javascript,
+    //   iconBg: "#E6DEDD",
+    //   date: "June 2019 - November 2021)",
+    //   points: [
+    //     "Developing and maintaining web applications using React.js and other related technologies.",
+    //     "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+    //     "Implementing responsive design and ensuring cross-browser compatibility.",
+    //     "Collaborated with clients to gather requirements and translate them into visually appealing website designs.",
+    //   ],
+    // },
   ];
   
   const testimonials = [
@@ -219,7 +219,7 @@ import {
       name: "Disney clone",
       description:
         "Disney Cloned Website",
-      linkToWebsite:"deyspeak.com",
+      linkToWebsite:"https://strong-mermaid-d50520.netlify.app",
       tags: [
         {
           name: "react",
@@ -239,14 +239,14 @@ import {
         },
       ],
       image: disney,
-      source_code_link: "https://github.com/cReAtOR0009/italianRestaurant",
+      source_code_link: "https://github.com/cReAtOR0009/disneyWebclone.git",
     },
     
     {
       name: "todaydeliver Grocery api and Admin Panel",
       description:
         "a Grocery Api with Admin Panel",
-      linkToWebsite:"deyspeak.com",
+      linkToWebsite:"https://admin.todaydeliver.in/login",
       tags: [
         {
           name: "React",
@@ -265,7 +265,7 @@ import {
           color: "pink-text-gradient",
         }],
         image: groceryapp,
-      source_code_link: "https://github.com/cReAtOR0009/groceryApp",
+      source_code_link: "https://github.com/cReAtOR0009/groceryapp",
       },
 
     {
@@ -340,7 +340,7 @@ import {
         },
       ],
       image: portfolio,
-      source_code_link: "https://github.com/cReAtOR0009/",
+      source_code_link: "https://github.com/cReAtOR0009/portfolio",
     },
     {
       name: "food ordering Website",
@@ -377,7 +377,7 @@ import {
         },
       ],
       image: foodorder,
-      source_code_link: "https://github.com/cReAtOR0009/portfolio",
+      source_code_link: "https://github.com/cReAtOR0009",
     },
   ];
 

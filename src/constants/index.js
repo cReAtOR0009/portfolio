@@ -272,7 +272,7 @@ import {
       name: "Deyspeak",
       description:
         "A Language Learning App",
-      linkToWebsite:"deyspeak.com",
+      linkToWebsite:"https://deyspeak.com",
       tags: [
         {
           name: "react",
@@ -298,7 +298,7 @@ import {
       name: "Kasuwa",
       description:
         "A full-stack Landing Page for kasuwa Farms that allows visitors to check the prices, percentage increase and decrease of Agricutural Commodities ",
-      linkToWebsite:"kasuwa.com",
+      linkToWebsite:"https://kasuwa.com",
       tags: [
         {
           name: "React",
@@ -320,7 +320,7 @@ import {
       name: "portfolio Website",
       description:
         "my Porfolio website",
-      linkToWebsite:"deyspeak.com",
+      linkToWebsite:"https://web-dev-crib.netlify.app/",
       tags: [
         {
           name: "React",

@@ -46,10 +46,11 @@ const ProjectCard = ({
               />
             </div>
           </div> 
-              <a href={linkToWebsite} target="_blank" rel="noopener noreferrer" className="">link to website</a>
+       
         </div>
 
-        <div className='mt-5'>
+        <div className='mt-3'>
+          <a href={linkToWebsite} target="_blank" rel="noopener noreferrer" className="mt-[20px] text-secondary">link to website</a>
           <h3 className='text-white font-bold text-[24px]'>{name}</h3>
           <p className='mt-2 text-secondary text-[14px]'>{description}</p>
         </div>

@@ -53,7 +53,7 @@ const Navbar = () => {
         onClick={() => setToggle(!Toggle)}
         />
         <div className={`${!Toggle ? 'hidden'
-        :'flex' } p-6 absolute top-20 right-0 mx-4 my2 min-w-[140px] z-10 rounded-xl`}>
+        :'flex' } p-6 absolute top-20 right-0 mx-4 my2 min-w-[140px] z-10 rounded-xl  bg-[#915eff] transition-none `}>
             <ul className="list-none flex justify-end items-start flex-col gap-4">
         {navLinks.map((link) => {
           return <li

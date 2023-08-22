@@ -38,7 +38,8 @@ import {
     disney,
     kasuwa,
     foodorder,
-    groceryapp
+    groceryapp,
+    creatornikestore
   } from "../assets";
   
   export const navLinks = [
@@ -219,7 +220,7 @@ import {
       name: "Disney clone",
       description:
         "Disney Cloned Website",
-      linkToWebsite:"https://disneywebclone.netlify.app",
+      linkToWebsite:"https://disneywebclone2.netlify.app",
       tags: [
         {
           name: "react",
@@ -239,8 +240,34 @@ import {
         },
       ],
       image: disney,
-      source_code_link: "https://github.com/cReAtOR0009/disneyWebclone.git",
+      source_code_link: "https://github.com/cReAtOR0009/disneyWebclone",
     },
+    {
+    name: "Nike Store",
+    description:
+      "An e-commerce shoe store",
+    linkToWebsite:"https://creator-nikestore.netlify.app",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Firebase",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Redux",
+        color: "green-text-gradient",
+      },
+      {
+        name: "disney WebApp clone",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: creatornikestore,
+    source_code_link: "https://github.com/cReAtOR0009/nikeStore",
+  },
     
     {
       name: "todaydeliver Grocery api and Admin Panel",

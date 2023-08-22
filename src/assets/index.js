@@ -47,6 +47,7 @@ import kasuwa from "./kasuwa.png";
 import deyspeak from "./deyspeak.png";
 import foodorder from "./foodordering.png";
 import groceryapp from "./groceryapp.png";
+import creatornikestore from "./creatornikestore.png"
 
 export {
   illustration,
@@ -94,5 +95,6 @@ export {
   kasuwa,
   deyspeak,
   foodorder,
-  groceryapp
+  groceryapp,
+  creatornikestore
 };

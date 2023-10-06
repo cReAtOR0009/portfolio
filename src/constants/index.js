@@ -153,7 +153,7 @@ import {
       company_name: "Deyspeak Language Learning App",
       icon: nodejs,
       iconBg: "#E6DEDD",
-      date: "March 2023 - May 2023",
+      date: "March 2023 - October 2023",
       points: [
         "Developing and maintaining backend-service using Node.js and other related technologies.",
         "Collaborating with cross-functional teams including ui/ux designers, devops engineers, frontend developers, other content creators, and other developers to create high-quality products.",
@@ -165,12 +165,13 @@ import {
       company_name: "DotcircleLabs",
       icon: reactjs,
       iconBg: "#383E56",
-      date: "April 2022 - November 2022)",
+      date: "April 2022 - Now)",
       points: [
         "Assisted senior designers in creating website mockups and prototypes.",
-        "Implemented design changes based on client feedback and requirements.",
-        "Conducted quality assurance testing to ensure cross-browser compatibility and responsiveness.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
+        "Undergo several Web design Trainings and Practice.",
+        "Familiarize with Professionals and industry Standard Work Experiences.",
+        "Participated in quality assurance testing to ensure cross-browser compatibility and responsiveness.",
+        "Contributed to reviews and providing constructive feedback to other developers.",
       ],
     },
     // {
@@ -245,15 +246,15 @@ import {
     {
     name: "Nike Store",
     description:
-      "An e-commerce shoe store",
+      "An e-commerce shoe store with modern UI",
     linkToWebsite:"https://creator-nikestore.netlify.app",
     tags: [
       {
-        name: "react",
+        name: "React",
         color: "blue-text-gradient",
       },
       {
-        name: "Firebase",
+        name: "Tailwindcss",
         color: "green-text-gradient",
       },
       {
@@ -261,7 +262,7 @@ import {
         color: "green-text-gradient",
       },
       {
-        name: "disney WebApp clone",
+        name: "Nike demo store",
         color: "pink-text-gradient",
       },
     ],
@@ -280,15 +281,15 @@ import {
           color: "blue-text-gradient",
         },
         {
-          name: "css",
+          name: "CSS",
           color: "green-text-gradient",
         },
         {
-          name: "node js",
+          name: "Node js",
           color: "pink-text-gradient",
         },
         {
-          name: "firebase",
+          name: "Firebase",
           color: "pink-text-gradient",
         }],
         image: groceryapp,
@@ -299,14 +300,14 @@ import {
       name: "Deyspeak",
       description:
         "A Language Learning App",
-      linkToWebsite:"https://deyspeak.com",
+      linkToWebsite:"https://phenomenal-gelato-370181.netlify.app/",
       tags: [
         {
-          name: "react",
+          name: "React",
           color: "blue-text-gradient",
         },
         {
-          name: "framer-motion",
+          name: "Framer-motion",
           color: "green-text-gradient",
         },
         {
@@ -314,7 +315,7 @@ import {
           color: "green-text-gradient",
         },
         {
-          name: "deyspeak",
+          name: "deyspeak, A language learning app waitlist page",
           color: "pink-text-gradient",
         },
       ],
@@ -336,7 +337,7 @@ import {
           color: "green-text-gradient",
         },
         {
-          name: "javascript",
+          name: "Nodejs",
           color: "pink-text-gradient",
         },
       ],
@@ -354,15 +355,15 @@ import {
           color: "blue-text-gradient",
         },
         {
-          name: "tailwind",
+          name: "Tailwindcss",
           color: "green-text-gradient",
         },
         {
-          name: "framer-motion",
+          name: "Framer-motion",
           color: "pink-text-gradient",
         },
         {
-          name: "three-js",
+          name: "Three-js",
           color: "pink-text-gradient",
         },
       ],

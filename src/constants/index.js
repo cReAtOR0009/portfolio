@@ -149,7 +149,7 @@ import {
       ],
     },
     {
-      title: "Backend developer (Node.js, Express.js, MongoDb)",
+      title: "Fullstack Web developer (Node.js, Express.js, React.js MongoDb)",
       company_name: "Deyspeak Language Learning App",
       icon: nodejs,
       iconBg: "#E6DEDD",
@@ -271,9 +271,9 @@ import {
   },
     
     {
-      name: "todaydeliver Grocery api and Admin Panel",
+      name: "todaydeliver Grocery api",
       description:
-        "a Grocery Api with Admin Panel",
+        "A Grocery Api with Admin Panel",
       linkToWebsite:"https://admin.todaydeliver.in/login",
       tags: [
         {

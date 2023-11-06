@@ -57,7 +57,7 @@ As a highly skilled web developer, I am proficient in HTML, CSS, and JavaScript,
       variants={window.innerWidth>=640?infinitescrollx(0, window.innerWidth,0,10):fadeIn("right","",.5,2)}
       // style={{width:"100%", background:"red"}}
       animate={"animate"}
-      className=' flex gap-[150px] max-h-[100%] h-[100%] sm-overflow-x-hidden sm:w-[100vw] w-[100%]'>
+      className=' flex gap-[150px] max-h-[100%] h-[100%] sm-overflow-x-flow sm:w-[100vw] w-[100%]'>
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))

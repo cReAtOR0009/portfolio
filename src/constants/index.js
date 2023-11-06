@@ -39,7 +39,8 @@ import {
     kasuwa,
     foodorder,
     groceryapp,
-    creatornikestore
+    creatornikestore,
+    blog1
   } from "../assets";
   
   export const navLinks = [
@@ -406,6 +407,33 @@ import {
       ],
       image: foodorder,
       source_code_link: "https://github.com/cReAtOR0009",
+    },
+
+    {
+      name: "A simple Blog Website",
+      description:
+        "my Porfolio website",
+      linkToWebsite:"https://demoblog2.onrender.com/",
+      tags: [
+        {
+          name: "React",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "Express.js",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "material ui",
+          color: "green-text-gradient",
+        },
+        {
+          name: "gsap",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: blog1,
+      source_code_link: "https://github.com/cReAtOR0009/simpleBlog1.git",
     },
   ];
 

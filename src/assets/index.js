@@ -42,6 +42,7 @@ import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 import portfolio from "./portfoliowebsite.png";
+import blog1 from "./blog1.png"
 import disney from "./disneyclone.png";
 import kasuwa from "./kasuwa.png";
 import deyspeak from "./deyspeak.png";
@@ -96,5 +97,6 @@ export {
   deyspeak,
   foodorder,
   groceryapp,
-  creatornikestore
+  creatornikestore,
+  blog1
 };

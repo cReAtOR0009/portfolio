@@ -327,7 +327,7 @@ import {
       name: "Kasuwa",
       description:
         "A full-stack Landing Page for kasuwa Farms that allows visitors to check the prices, percentage increase and decrease of Agricutural Commodities ",
-      linkToWebsite:"https://kasuwa.com",
+      linkToWebsite:"https://newkasuwa.onrender.com/",
       tags: [
         {
           name: "React",

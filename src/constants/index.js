@@ -197,7 +197,7 @@ import {
       name: "Petwilson Olatunde",
       designation: "Product Manager",
       company: "AGRIARCHE LIMITED",
-      image: "https://media.licdn.com/dms/image/C4D03AQG-YcJoRA7p1w/profile-displayphoto-shrink_200_200/0/1648554553870?e=1690416000&v=beta&t=ArNT8_yyb2CeS8KUzAZjBVXjyPLngWFNTZSQ8CorBXg",
+      image: "https://randomuser.me/api/portraits/men/6.jpg",
     },
     {
       testimonial:
@@ -205,12 +205,12 @@ import {
       name: "Endurance Murgho",
       designation: "CEO",
       company: "Deyspeak coop",
-      image: "https://media.licdn.com/dms/image/D4D03AQHH8YClMCowcQ/profile-displayphoto-shrink_200_200/0/1680819235240?e=1690416000&v=beta&t=IqGRMgj9-lTl40GHvGRoBL4DMb5Xigao6-F76D84dyk",
+      image: "https://randomuser.me/api/portraits/men/6.jpg",
     },
     {
       testimonial:
         "He was a great intern!",
-      name: "Mrs Gbenga",
+      name: "Mr Gbenga",
       designation: "Project Manager",
       company: "D0tCircleLabs",
       image: "https://randomuser.me/api/portraits/women/6.jpg",

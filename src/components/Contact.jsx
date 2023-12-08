@@ -63,7 +63,7 @@ const Contact = () => {
           setLoading(false);
           console.error(error);
 
-          alert("Ahh, something went wrong. Please try again.");
+          alert("opps, something went wrong. Please try again.");
         }
       );
   };
@@ -146,7 +146,7 @@ const Contact = () => {
 
       <motion.div
         variants={slideIn("up", "tween", 0.2, 1)}
-        className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'
+        className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px] sm:h-[350px]'
       >
         <EarthCanvas />
       </motion.div>

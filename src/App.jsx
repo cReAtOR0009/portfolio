@@ -34,22 +34,6 @@ const App = ()=> {
           <Hero />
         </div>
         <About />
-        {/* <motion.div
-        variants={Banner}
-        initial="initial"
-        animate="animate"
-      >
-        <h2>scroll</h2>
-      {[...letters].map((letter) => {
-       return <motion.span
-       className="text-[45px]"
-       key={letter}
-          variants={letterAnimation}
-          initial="initial"
-          animate="animate"
-        >{letter}</motion.span>
-      })}
-      </motion.div> */}
         <Experience />
         <Tech />
         <Works />

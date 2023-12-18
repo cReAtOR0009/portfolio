@@ -19,13 +19,10 @@ const ProjectCard = ({
 }) => {
   return (
 
-      <motion.Tilt
+      <motion.div
       variants={fadeIn("up", "spring", index * 0.5, 0.75)}
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
+      initial="hidden"
+      animate="show"
         className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
       >
         <div className='relative w-full h-[230px]'>
@@ -66,7 +63,7 @@ const ProjectCard = ({
             </p>
           ))}
         </div>
-      </motion.Tilt>
+      </motion.div>
 
   );
 };
@@ -74,14 +71,19 @@ const ProjectCard = ({
 const Works = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} `}>My work</p>
-        <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
+      <motion.div variants={textVariant()}
+         initial="hidden"
+      animate="show"
+      >
+        <p className={styles.sectionSubText}>My work</p>
+        <h2 className={styles.sectionHeadText}>Projects.</h2>
       </motion.div>
 
       <div className='w-full flex'>
         <motion.p
-          variants={fadeIn("", "", 0.1, 1)}
+         variants={textVariant(1)}
+         initial="hidden"
+         animate="show"
           className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
         >
           Following projects showcases my skills and experience through

@@ -6,7 +6,7 @@ export const textVariant = (delay) => {
     },
     show: {
       y: 0,
-      opacity: 1,
+      opacity: [0, 1],
       transition: {
         type: "spring",
         duration: 1.25,
@@ -17,14 +17,17 @@ export const textVariant = (delay) => {
 };
 
 export const fadeIn = (direction, type, delay, duration) => {
+
+  const xHidden = direction === "left" ? 200 : direction === "right" ? -200 : 0;
+  const yHidden = direction === "up" ? 100 : direction === "down" ? -100 : 0;
   return {
     hidden: {
-      x: direction === "left" ? 100 : direction === "right" ? -100 : 0,
-      y: direction === "up" ? 100 : direction === "down" ? -100 : 0,
+      x: xHidden,
+      y: yHidden,
       opacity: 0,
     },
     show: {
-      x: 0,
+      x: [0, 50, -25, 0],
       y: 0,
       opacity: 1,
       transition: {

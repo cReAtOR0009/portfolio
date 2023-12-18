@@ -5,26 +5,6 @@ import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, Stars
 
 const App = ()=> {
 
-//   const letters = ["a", "b", "c", "d", "e", "f", "g", "h", "j"]
-// const Banner ={
-//   animate:{
-//     transition:{
-//       delayChildren:2,
-//       staggerChildren:1
-//     }
-//   }
-// }
-// const letterAnimation = {
-//   initial:{
-//     y:400
-//   },
-//   animate:{
-//     y:0,
-//     transition:{
-//       ease:[0.6, 0.01, -0.05, 0.95]
-//     }
-//   }
-// }
   return (
 
       <BrowserRouter>

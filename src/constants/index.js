@@ -72,10 +72,6 @@ import {
       icon: backend,
     },
     {
-      title: "Customer Service Representative",
-      icon: creator,
-    },
-    {
       title: "Content Creator",
       icon: web,
     },

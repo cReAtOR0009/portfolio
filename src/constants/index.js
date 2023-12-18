@@ -72,8 +72,12 @@ import {
       icon: backend,
     },
     {
-      title: "Content Creator",
+      title: "Web Content Creator",
       icon: web,
+    },
+    {
+      title: "Blockchain enthusiates",
+      icon: mobile,
     },
   ];
   

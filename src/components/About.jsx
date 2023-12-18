@@ -9,30 +9,30 @@ import { fadeIn, textVariant, infinitescrollx } from "../utils/motion";
 
 const ServiceCard = ({ index, title, icon }) => {
 
-  const [animationVariants, setAnimationVariants] = useState({ type: '', props: {} });
+  // const [animationVariants, setAnimationVariants] = useState({ type: '', props: {} });
 
-  useEffect(() => {
-    const updateAnimationVariants = () => {
-      const windowWidth = window.innerWidth;
+  // useEffect(() => {
+  //   const updateAnimationVariants = () => {
+  //     const windowWidth = window.innerWidth;
 
-      if (windowWidth >= 640) {
-        setAnimationVariants(infinitescrollx(0, windowWidth, 0, 10));
-      } else {
-        setAnimationVariants(infinitescrollx(0, windowWidth, 0, 10));
-      }
-    };
+  //     if (windowWidth >= 640) {
+  //       setAnimationVariants(infinitescrollx(0, windowWidth, 0, 10));
+  //     } else {
+  //       setAnimationVariants(infinitescrollx(0, windowWidth, 0, 10));
+  //     }
+  //   };
 
-    // Initial setup
-    updateAnimationVariants();
+  //   // Initial setup
+  //   updateAnimationVariants();
 
-    // Update animation variants on window resize
-    window.addEventListener('resize', updateAnimationVariants);
+  //   // Update animation variants on window resize
+  //   window.addEventListener('resize', updateAnimationVariants);
 
-    // Cleanup on component unmount
-    return () => {
-      window.removeEventListener('resize', updateAnimationVariants);
-    };
-  }, []);
+  //   // Cleanup on component unmount
+  //   return () => {
+  //     window.removeEventListener('resize', updateAnimationVariants);
+  //   };
+  // }, []);
 
   return (
     <Tilt className="xs:w-[300px] w-[300px] h-full bg-[transparent] border-2 border-[#915eff]  p-[15px] rounded-lg">
@@ -87,14 +87,10 @@ const About = () => {
         style={{ background: "", overflow: "hidden" }}
       >
         <motion.div
-          variants={
-            window.innerWidth >= 640
-              ? infinitescrollx(0, window.innerWidth, 0, 10)
-              : fadeIn("right", "", 0.5, 2)
-          }
+        variants={infinitescrollx(200, 10, 0.5,20)}
           // style={{width:"100%", background:"red"}}
           animate={"animate"}
-          className=" flex gap-[150px] max-h-[100%] h-[100%] sm:mobileScrolling overflow-x-scroll sm:w-[100vw] w-[100%]"
+          className=" flex gap-[150px] max-h-[100%] h-[100%] sm:mobileScrolling sm:w-[100vw] w-[100%]"
         >
           {services.map((service, index) => (
             <ServiceCard key={service.title} index={index} {...service} />

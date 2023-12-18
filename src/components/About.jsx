@@ -1,4 +1,4 @@
-import React from "react";
+import {useState, useEffect} from "react";
 import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 
@@ -8,6 +8,32 @@ import { SectionWrapper } from "../hoc/index";
 import { fadeIn, textVariant, infinitescrollx } from "../utils/motion";
 
 const ServiceCard = ({ index, title, icon }) => {
+
+  const [animationVariants, setAnimationVariants] = useState({ type: '', props: {} });
+
+  useEffect(() => {
+    const updateAnimationVariants = () => {
+      const windowWidth = window.innerWidth;
+
+      if (windowWidth >= 640) {
+        setAnimationVariants(infinitescrollx(0, windowWidth, 0, 10));
+      } else {
+        setAnimationVariants(infinitescrollx(0, windowWidth, 0, 10));
+      }
+    };
+
+    // Initial setup
+    updateAnimationVariants();
+
+    // Update animation variants on window resize
+    window.addEventListener('resize', updateAnimationVariants);
+
+    // Cleanup on component unmount
+    return () => {
+      window.removeEventListener('resize', updateAnimationVariants);
+    };
+  }, []);
+
   return (
     <Tilt className="xs:w-[300px] w-[300px] h-full bg-[transparent] border-2 border-[#915eff]  p-[15px] rounded-lg">
       <motion.div
@@ -37,12 +63,12 @@ const About = () => {
     <div style={{ boxShadow: "-1px -40px 55px 12px rgba(0,17,36,1)" }}>
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>Overview.</h2>
+        <h2 className={`${styles.sectionHeadText} underline`}>Overview.</h2>
       </motion.div>
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
+        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px] border"
       >
         As a highly skilled web developer, I am proficient in HTML, CSS, and
         JavaScript, and I have extensive experience with popular front-end
@@ -68,7 +94,7 @@ const About = () => {
           }
           // style={{width:"100%", background:"red"}}
           animate={"animate"}
-          className=" flex gap-[150px] max-h-[100%] h-[100%] sm:mobileScrolling sm:w-[100vw] w-[100%]"
+          className=" flex gap-[150px] max-h-[100%] h-[100%] sm:mobileScrolling overflow-x-scroll sm:w-[100vw] w-[100%]"
         >
           {services.map((service, index) => (
             <ServiceCard key={service.title} index={index} {...service} />

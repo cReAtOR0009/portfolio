@@ -50,6 +50,8 @@ import foodorder from "./foodordering.png";
 import groceryapp from "./groceryapp.png";
 import creatornikestore from "./creatornikestore.png"
 
+import web3Course from "./web3Course.png"
+
 export {
   illustration,
   illustration1,
@@ -98,5 +100,7 @@ export {
   foodorder,
   groceryapp,
   creatornikestore,
-  blog1
+  blog1,
+
+  web3Course
 };

@@ -46,7 +46,9 @@ import {
   groceryapp,
   creatornikestore,
   blog1,
+
   web3Course,
+  votingApp,
 } from "../assets";
 
 export const navLinks = [
@@ -497,8 +499,8 @@ const web3projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: web3Course,
-    source_code_link: "https://github.com/cReAtOR0009/nikeStore",
+    image: votingApp,
+    source_code_link: "https://github.com/cReAtOR0009/BlockchainVotingApp.git",
   },
 ];
 

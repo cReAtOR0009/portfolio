@@ -51,6 +51,7 @@ import groceryapp from "./groceryapp.png";
 import creatornikestore from "./creatornikestore.png"
 
 import web3Course from "./web3Course.png"
+import votingApp from "./votingApp.png"
 
 export {
   illustration,
@@ -102,5 +103,6 @@ export {
   creatornikestore,
   blog1,
 
-  web3Course
+  web3Course,
+  votingApp
 };

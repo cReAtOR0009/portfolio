@@ -107,7 +107,7 @@ const Projects = () => {
         {/* <p className={styles.sectionSubText}>My Web Projects</p> */}
         <h2 className={styles.sectionHeadText}>My Web3 Projects.</h2>
 
-        <div className='mt-20 flex flex-wrap gap-7'>
+        <div className='mt-10 flex flex-wrap gap-7'>
         {web3projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}

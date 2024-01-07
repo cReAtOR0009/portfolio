@@ -23,7 +23,7 @@ const ProjectCard = ({
       variants={fadeIn("up", "spring", index * 0.5, 0.75)}
       initial="hidden"
       animate="show"
-        className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
+        className='bg-[#3f2952] p-5 rounded-2xl sm:w-[360px] w-full'
       >
         <div className='relative w-full h-[230px]'>
           <img
@@ -57,7 +57,7 @@ const ProjectCard = ({
           {tags.map((tag) => (
             <p
               key={`${name}-${tag.name}`}
-              className={`text-[14px] ${tag.color}`}
+              className={`text-[14px] text-[${tag.color}]`}
             >
               #{tag.name}
             </p>

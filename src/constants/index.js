@@ -480,7 +480,7 @@ const web3projects = [
     name: "Blockchain Voting App",
     description:
       "A Blockchain web3 App that allows blockchain enthusiasts to take advantage of the blockchain technology for decentralized voting, here you can take advantage of the blockchain and create a decentralized voting poll accessible to everyone, it gives you access to create elections and corresponding contestants. all informations regarding the elections are stored on the blockchain making it immutable and secure ",
-    linkToWebsite: "https://creator-nikestore.netlify.app",
+    linkToWebsite: "https://master--web3ethtransfer.netlify.app/",
     tags: [
       {
         name: "Solidity",

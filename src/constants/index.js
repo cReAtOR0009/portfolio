@@ -49,6 +49,7 @@ import {
 
   web3Course,
   votingApp,
+  screencapture
 } from "../assets";
 
 export const navLinks = [
@@ -236,19 +237,19 @@ const projects = [
     tags: [
       {
         name: "react",
-        color: "blue-text-gradient",
+        color: "#b6a6e8-text-gradient",
       },
       {
         name: "Firebase",
-        color: "green-text-gradient",
+        color: "#8469d8-text-gradient",
       },
       {
         name: "Redux",
-        color: "green-text-gradient",
+        color: "#8469d8-text-gradient",
       },
       {
         name: "disney WebApp clone",
-        color: "pink-text-gradient",
+        color: "#69a2d8 -text-gradient",
       },
     ],
     image: disney,
@@ -261,19 +262,19 @@ const projects = [
     tags: [
       {
         name: "React",
-        color: "blue-text-gradient",
+        color: "#b6a6e8-text-gradient",
       },
       {
         name: "Tailwindcss",
-        color: "green-text-gradient",
+        color: "#8469d8-text-gradient",
       },
       {
         name: "Redux",
-        color: "green-text-gradient",
+        color: "#8469d8-text-gradient",
       },
       {
         name: "Nike demo store",
-        color: "pink-text-gradient",
+        color: "#69a2d8 -text-gradient",
       },
     ],
     image: creatornikestore,
@@ -287,19 +288,19 @@ const projects = [
     tags: [
       {
         name: "React",
-        color: "blue-text-gradient",
+        color: "#b6a6e8-text-gradient",
       },
       {
         name: "CSS",
-        color: "green-text-gradient",
+        color: "#8469d8-text-gradient",
       },
       {
         name: "Node js",
-        color: "pink-text-gradient",
+        color: "#69a2d8 -text-gradient",
       },
       {
         name: "Firebase",
-        color: "pink-text-gradient",
+        color: "#69a2d8 -text-gradient",
       },
     ],
     image: groceryapp,
@@ -314,19 +315,19 @@ const projects = [
     tags: [
       {
         name: "React",
-        color: "blue-text-gradient",
+        color: "#b6a6e8-text-gradient",
       },
       {
         name: "Framer-motion",
-        color: "green-text-gradient",
+        color: "#8469d8-text-gradient",
       },
       {
         name: "react-router-dom",
-        color: "green-text-gradient",
+        color: "#8469d8-text-gradient",
       },
       {
         name: "pure css",
-        color: "pink-text-gradient",
+        color: "#69a2d8 -text-gradient",
       },
     ],
     image: deyspeak,
@@ -340,15 +341,15 @@ const projects = [
     tags: [
       {
         name: "React",
-        color: "blue-text-gradient",
+        color: "#b6a6e8-text-gradient",
       },
       {
         name: "styled-component",
-        color: "green-text-gradient",
+        color: "#8469d8-text-gradient",
       },
       {
         name: "Nodejs",
-        color: "pink-text-gradient",
+        color: "#69a2d8 -text-gradient",
       },
     ],
     image: kasuwa,
@@ -362,19 +363,19 @@ const projects = [
     tags: [
       {
         name: "React",
-        color: "blue-text-gradient",
+        color: "#b6a6e8-text-gradient",
       },
       {
         name: "Tailwindcss",
-        color: "green-text-gradient",
+        color: "#8469d8-text-gradient",
       },
       {
         name: "Framer-motion",
-        color: "pink-text-gradient",
+        color: "#69a2d8 -text-gradient",
       },
       {
         name: "Three-js",
-        color: "pink-text-gradient",
+        color: "#69a2d8 -text-gradient",
       },
     ],
     image: portfolio,
@@ -386,31 +387,31 @@ const projects = [
     tags: [
       {
         name: "React",
-        color: "blue-text-gradient",
+        color: "#b6a6e8-text-gradient",
       },
       {
         name: "tailwind",
-        color: "green-text-gradient",
+        color: "#8469d8-text-gradient",
       },
       {
         name: "framer-motion",
-        color: "pink-text-gradient",
+        color: "-text-gradient",
       },
       {
         name: "Redux",
-        color: "green-text-gradient",
+        color: "#8469d8-text-gradient",
       },
       {
         name: "node-js",
-        color: "blue-text-gradient",
+        color: "#b6a6e8",
       },
       {
         name: "Express-js",
-        color: "pink-text-gradient",
+        color: "#69a2d8 -text-gradient",
       },
       {
         name: "stripe",
-        color: "pink-text-gradient",
+        color: "#69a2d8 -text-gradient",
       },
     ],
     image: foodorder,
@@ -425,23 +426,49 @@ const projects = [
     tags: [
       {
         name: "React",
-        color: "blue-text-gradient",
+        color: "#b6a6e8-text-gradient",
       },
       {
         name: "Express.js",
-        color: "pink-text-gradient",
+        color: "#69a2d8 -text-gradient",
       },
       {
         name: "material ui",
-        color: "green-text-gradient",
+        color: "#8469d8-text-gradient",
       },
       {
         name: "gsap",
-        color: "pink-text-gradient",
+        color: "#69a2d8 -text-gradient",
       },
     ],
     image: blog1,
     source_code_link: "https://github.com/cReAtOR0009/simpleBlog1.git",
+  },
+  {
+    name: "A Real Estate Website",
+    description:
+      " a simple Blog website that allows the user to create blogs using the #mern stacka simple Blog website that allows the user to create blogs using the #mern stack",
+    linkToWebsite: "https://creator-real-estate-market.netlify.app/",
+    tags: [
+      {
+        name: "React",
+        color: "#b6a6e8-text-gradient",
+      },
+      {
+        name: "Fgma to Design",
+        color: "#69a2d8 -text-gradient",
+      },
+      {
+        name: "Tailwind",
+        color: "#8469d8-text-gradient",
+      },
+      {
+        name: "reacr router Dom",
+        color: "#69a2d8 -text-gradient",
+      },
+    ],
+    image: screencapture,
+    source_code_link: "https://github.com/cReAtOR0009/Real_Estate",
   },
 ];
 
@@ -454,23 +481,23 @@ const web3projects = [
     tags: [
       {
         name: "blockchain",
-        color: "blue-text-gradient",
+        color: "#b6a6e8-text-gradient",
       },
       {
         name: "ethers",
-        color: "green-text-gradient",
+        color: "#8469d8-text-gradient",
       },
       {
         name: "hardhat",
-        color: "green-text-gradient",
+        color: "#8469d8-text-gradient",
       },
       {
         name: "react",
-        color: "pink-text-gradient",
+        color: "#69a2d8 -text-gradient",
       },
       {
         name: "web3",
-        color: "pink-text-gradient",
+        color: "#69a2d8 -text-gradient",
       },
     ],
     image: web3Course,
@@ -484,19 +511,19 @@ const web3projects = [
     tags: [
       {
         name: "Solidity",
-        color: "blue-text-gradient",
+        color: "#b6a6e8-text-gradient",
       },
       {
         name: "ethers.js",
-        color: "green-text-gradient",
+        color: "#8469d8-text-gradient",
       },
       {
         name: "blockchain",
-        color: "green-text-gradient",
+        color: "#8469d8-text-gradient",
       },
       {
         name: "ethereum",
-        color: "pink-text-gradient",
+        color: "#69a2d8 -text-gradient",
       },
     ],
     image: votingApp,
@@ -513,23 +540,23 @@ const freelancing = [
     tags: [
       {
         name: "blockchain",
-        color: "blue-text-gradient",
+        color: "#b6a6e8-text-gradient",
       },
       {
         name: "ethers",
-        color: "green-text-gradient",
+        color: "#8469d8-text-gradient",
       },
       {
         name: "hardhat",
-        color: "green-text-gradient",
+        color: "#8469d8-text-gradient",
       },
       {
         name: "react",
-        color: "pink-text-gradient",
+        color: "#69a2d8 -text-gradient",
       },
       {
         name: "web3",
-        color: "pink-text-gradient",
+        color: "#69a2d8 -text-gradient",
       },
     ],
     image: disney,
@@ -543,19 +570,19 @@ const freelancing = [
     tags: [
       {
         name: "Solidity",
-        color: "blue-text-gradient",
+        color: "#b6a6e8-text-gradient",
       },
       {
         name: "ethers.js",
-        color: "green-text-gradient",
+        color: "#8469d8-text-gradient",
       },
       {
         name: "blockchain",
-        color: "green-text-gradient",
+        color: "#8469d8-text-gradient",
       },
       {
         name: "ethereum",
-        color: "pink-text-gradient",
+        color: "#69a2d8 -text-gradient",
       },
     ],
     image: creatornikestore,

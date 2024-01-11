@@ -54,14 +54,18 @@ const ProjectCard = ({
         </div>
 
         <div className='mt-4 flex flex-wrap gap-2'>
-          {tags.map((tag) => (
-            <p
+          {tags.map((tag) => {
+            const firstWord = tag.color.split("-")[0].toLowerCase()
+            // console.log(firstWord)
+           return <p
               key={`${name}-${tag.name}`}
-              className={`text-[14px] text-[${tag.color}]`}
+              style={{background:`${firstWord}`}}
+              className={`text-[14px] p-[10px]  border rounded-full border-[red] text-[${firstWord}]`}
             >
               #{tag.name}
             </p>
-          ))}
+})
+}
         </div>
       </motion.div>
 

@@ -49,6 +49,7 @@ import deyspeak from "./deyspeak.png";
 import foodorder from "./foodordering.png";
 import groceryapp from "./groceryapp.png";
 import creatornikestore from "./creatornikestore.png"
+import screencapture from "./screencapture.png"
 
 import web3Course from "./web3Course.png"
 import votingApp from "./votingApp.png"
@@ -102,6 +103,7 @@ export {
   groceryapp,
   creatornikestore,
   blog1,
+  screencapture,
 
   web3Course,
   votingApp

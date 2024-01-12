@@ -35,7 +35,7 @@ const ServiceCard = ({ index, title, icon }) => {
   // }, []);
 
   return (
-    <Tilt className="xs:w-[300px] w-[300px] h-full bg-[transparent] border-2 border-[#915eff]  p-[15px] rounded-lg">
+    <Tilt className="xs:w-[300px] w-[200px] h-full bg-[transparent] border-2 border-[#915eff]  p-[15px] rounded-lg">
       <motion.div
         variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
         className=" w-[300px] bg-[#915eff] border-2 p-[20px] rounded-lg"
@@ -46,7 +46,7 @@ const ServiceCard = ({ index, title, icon }) => {
             scale: 1,
             speed: 250,
           }}
-          className="bg-tertiary border-2 border-[#915eff] rounded-lg py-5 px-12 min-h-[280px] w-[300px] flex justify-evenly items-center flex-col"
+          className="bg-tertiary border-2 border-[#915eff] rounded-lg py-5 px-12 min-h-[180px] sm:w[300px] w-[200px] flex justify-evenly items-center flex-col"
         >
           <h3 className="text-white text-[20px] font-bold text-center">
             {title}
@@ -83,14 +83,14 @@ const About = () => {
         ideas, we're bound to make the Best of magic in Web Development!
       </motion.p>
       <div
-        className="mt-20 h-[auto] py-2 sm-overflow-hidden sm-w-[100vw]"
+        className="mt-20 h-[auto] py-2 sm-overflow-hidden sm-w-[70vw]"
         style={{ background: "", overflow: "hidden" }}
       >
         <motion.div
         variants={infinitescrollx(200, 10, 0.5,20)}
           // style={{width:"100%", background:"red"}}
           animate={"animate"}
-          className=" flex gap-[150px] max-h-[100%] h-[100%] sm:mobileScrolling sm:w-[100vw] w-[100%]"
+          className=" flex gap-[150px] max-h-[100%] h-[100%] sm:mobileScrolling sm:w-[80vw] w-[100%]"
         >
           {services.map((service, index) => (
             <ServiceCard key={service.title} index={index} {...service} />

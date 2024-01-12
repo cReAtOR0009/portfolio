@@ -60,7 +60,7 @@ const ProjectCard = ({
            return <p
               key={`${name}-${tag.name}`}
               style={{background:`${firstWord}`}}
-              className={`text-[14px] p-[10px]  border rounded-full border-[red] text-[${firstWord}]`}
+              className={`text-[14px] p-[10px] rounded-full  text-[${firstWord}]`}
             >
               #{tag.name}
             </p>

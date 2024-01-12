@@ -85,12 +85,16 @@ const services = [
     icon: backend,
   },
   {
-    title: "Web Content Creator",
-    icon: web,
+    title: "smartContract developer",
+    icon: mobile,
   },
   {
-    title: "Blockchain enthusiates",
+    title: "Blockchain developer",
     icon: mobile,
+  },
+  {
+    title: "Web Content Creator",
+    icon: web,
   },
 ];
 

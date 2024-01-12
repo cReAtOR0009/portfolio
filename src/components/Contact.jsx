@@ -33,8 +33,15 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+  
+    // Validate form fields
+    if (!form.name || !form.email || !form.message) {
+      alert("Please fill in all the required fields.");
+      return;
+    }
+  
     setLoading(true);
-
+  
     emailjs
       .send(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
@@ -51,8 +58,8 @@ const Contact = () => {
       .then(
         () => {
           setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
-
+          alert("Thank you!. I will get back to you as soon as possible, ");
+  
           setForm({
             name: "",
             email: "",
@@ -62,11 +69,12 @@ const Contact = () => {
         (error) => {
           setLoading(false);
           console.error(error);
-
-          alert("opps, something went wrong. Please try again.");
+  
+          alert("Oops, something went wrong. Please try again.");
         }
       );
   };
+  
 
   return (
     <div

@@ -53,6 +53,7 @@ import screencapture from "./screencapture.png"
 
 import web3Course from "./web3Course.png"
 import votingApp from "./votingApp.png"
+import crowdFundingApp from "./crowdFunding.png"
 
 export {
   illustration,
@@ -106,5 +107,6 @@ export {
   screencapture,
 
   web3Course,
-  votingApp
+  votingApp,
+  crowdFundingApp
 };

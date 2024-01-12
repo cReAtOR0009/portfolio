@@ -49,7 +49,8 @@ import {
 
   web3Course,
   votingApp,
-  screencapture
+  screencapture,
+  crowdFundingApp
 } from "../assets";
 
 export const navLinks = [
@@ -485,15 +486,15 @@ const web3projects = [
     tags: [
       {
         name: "blockchain",
-        color: "#b6a6e8-text-gradient",
+        color: "violet-500",
       },
       {
         name: "ethers",
-        color: "#8469d8-text-gradient",
+        color: "teal-500",
       },
       {
         name: "hardhat",
-        color: "#8469d8-text-gradient",
+        color: "lime-500",
       },
       {
         name: "react",
@@ -515,15 +516,15 @@ const web3projects = [
     tags: [
       {
         name: "Solidity",
-        color: "#b6a6e8-text-gradient",
+        color: "gray-500",
       },
       {
         name: "ethers.js",
-        color: "#8469d8-text-gradient",
+        color: "teal-500",
       },
       {
         name: "blockchain",
-        color: "#8469d8-text-gradient",
+        color: "violet-500",
       },
       {
         name: "ethereum",
@@ -532,6 +533,33 @@ const web3projects = [
     ],
     image: votingApp,
     source_code_link: "https://github.com/cReAtOR0009/BlockchainVotingApp.git",
+  },
+
+  {
+    name: "Blockchain CrowdFunding App",
+    description:
+      "A web3 crowdfunding app made and deployed to the sepolia network by _creator, built with robust smartContract Integration and minimal ui, this allows you to raise money for your Blockchain project securely in eth or any specified Blockchain digital asset of your choice",
+    linkToWebsite: "https://creator-crowdfunding.netlify.app/",
+    tags: [
+      {
+        name: "Solidity",
+        color: "gray-500",
+      },
+      {
+        name: "ethers.js",
+        color: "teal-500",
+      },
+      {
+        name: "blockchain",
+        color: "violet-500",
+      },
+      {
+        name: "sepolia",
+        color: "#69a2d8 -text-gradient",
+      },
+    ],
+    image: crowdFundingApp,
+    source_code_link: "https://github.com/cReAtOR0009/hardhat_fundme",
   },
 ];
 
@@ -544,15 +572,15 @@ const freelancing = [
     tags: [
       {
         name: "blockchain",
-        color: "#b6a6e8-text-gradient",
+        color: "violet-500",
       },
       {
         name: "ethers",
-        color: "#8469d8-text-gradient",
+        color: "teal-500",
       },
       {
         name: "hardhat",
-        color: "#8469d8-text-gradient",
+        color: "lime-500",
       },
       {
         name: "react",
@@ -574,15 +602,15 @@ const freelancing = [
     tags: [
       {
         name: "Solidity",
-        color: "#b6a6e8-text-gradient",
+        color: "gray-500",
       },
       {
         name: "ethers.js",
-        color: "#8469d8-text-gradient",
+        color: "teal-500",
       },
       {
         name: "blockchain",
-        color: "#8469d8-text-gradient",
+        color: "violet-500",
       },
       {
         name: "ethereum",

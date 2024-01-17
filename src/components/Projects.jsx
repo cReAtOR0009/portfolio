@@ -131,7 +131,7 @@ const Projects = () => {
         {/* {freelancing.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))} */}
-        loading...#coming soon
+        loading...#currently bringing together and creating content for my Freelancing Journey
       </div>
 
 

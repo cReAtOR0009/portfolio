@@ -656,4 +656,5 @@ export {
   projects,
   socials,
   web3projects,
+  freelancing
 };

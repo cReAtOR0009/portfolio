@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { github } from "../assets";
 import { SectionWrapper } from "../hoc";
-import { projects, web3projects } from "../constants";
+import { projects, web3projects, freelancing } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 
 const ProjectCard = ({
@@ -115,6 +115,23 @@ const Projects = () => {
         {web3projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
+      </div>
+
+
+      </motion.div>
+
+      <motion.div variants={textVariant()}
+         initial="hidden"
+      animate="show"
+      >
+        {/* <p className={styles.sectionSubText}>My Web Projects</p> */}
+        <h2 className={styles.sectionHeadText}>My Freelancing Journey...</h2>
+
+        <div className='mt-10 flex flex-wrap gap-7'>
+        {/* {freelancing.map((project, index) => (
+          <ProjectCard key={`project-${index}`} index={index} {...project} />
+        ))} */}
+        loading...#coming soon
       </div>
 
 

@@ -1,14 +1,13 @@
-import {useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 
-import { styles } from "../styles";
-import { services } from "../constants";
-import { SectionWrapper } from "../hoc/index";
-import { fadeIn, textVariant, infinitescrollx } from "../utils/motion";
+import { styles } from "../../styles";
+import { services } from "../../constants";
+import { SectionWrapper } from "../../hoc/index";
+import { fadeIn, textVariant, infinitescrollx } from "../../utils/motion";
 
 const ServiceCard = ({ index, title, icon }) => {
-
   // const [animationVariants, setAnimationVariants] = useState({ type: '', props: {} });
 
   // useEffect(() => {
@@ -87,7 +86,7 @@ const About = () => {
         style={{ background: "", overflow: "hidden" }}
       >
         <motion.div
-        variants={infinitescrollx(200, 10, 0.5,20)}
+          variants={infinitescrollx(200, 10, 0.5, 20)}
           // style={{width:"100%", background:"red"}}
           animate={"animate"}
           className=" flex gap-[150px] max-h-[100%] h-[100%] sm:mobileScrolling sm:w-[80vw] w-[100%]"

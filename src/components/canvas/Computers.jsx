@@ -1,16 +1,21 @@
 import React, { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, PerspectiveCamera, Preload, useGLTF } from "@react-three/drei";
+import {
+  OrbitControls,
+  PerspectiveCamera,
+  Preload,
+  useGLTF,
+} from "@react-three/drei";
 
-import CanvasLoader from "../Loader";
+import CanvasLoader from "../Home/Loader";
 
-const  Computers = ({ isMobile }) => {
+const Computers = ({ isMobile }) => {
   const computer = useGLTF("./desktop_pc/scene.gltf");
 
   return (
     <mesh>
-      <PerspectiveCamera makeDefault position={[5,1,15]} />
-      <hemisphereLight intensity={0.15} groundColor='red' />
+      <PerspectiveCamera makeDefault position={[5, 1, 15]} />
+      <hemisphereLight intensity={0.15} groundColor="red" />
       <spotLight
         position={[-20, 50, 10]}
         angle={0.12}
@@ -26,13 +31,12 @@ const  Computers = ({ isMobile }) => {
         position={isMobile ? [0, -3, -2.2] : [0, -3.25, -1.5]}
         rotation={[-0.01, -0.2, -0.1]}
       />
-{/*       
+      {/*       
       <mesh >
       <sphereGeometry args={[1, 50, 200]} />
       <meshStandardMaterial color="red" />
       </mesh> */}
     </mesh>
-    
   );
 };
 
@@ -42,7 +46,7 @@ const ComputersCanvas = () => {
   useEffect(() => {
     // Add a listener for changes to the screen size
     const mediaQuery = window.matchMedia("(max-width: 500px)");
-    console.log(mediaQuery)
+    console.log(mediaQuery);
     // Set the initial value of the `isMobile` state variable
     setIsMobile(mediaQuery.matches);
 
@@ -62,7 +66,7 @@ const ComputersCanvas = () => {
 
   return (
     <Canvas
-      frameloop='demand'
+      frameloop="demand"
       shadows
       dpr={[1, 2]}
       // camera={{ position: [20, 3, 5], fov: 25 }}

@@ -237,7 +237,7 @@ const testimonials = [
 const projects = [
   {
     name: "Disney cloned",
-    description: "I cloned the Disney Website",
+    description: "this is a Disney clone website platform designed to replicate the look and feel of the official Disney website, offering a similar user experience and content structure. Typically created for educational and portfolio purposes, the Disney clone site mimics the layout, color schemes, and interactive elements found on the official Disney site. It include sections dedicated to various Disney movies, and their classifications.",
     linkToWebsite: "https://disneywebclone2.netlify.app",
     tags: [
       {
@@ -262,7 +262,7 @@ const projects = [
   },
   {
     name: "Nike Store",
-    description: "An e-commerce shoe store with modern UI",
+    description: "As a web designer, I crafted a dynamic portfolio project showcasing Nike's athletic world. The website features the latest products like the Play With Electric Nike Adapt 2.0 Sneakers and emphasizes Nike's iconic Air technology. It offers an engaging user experience, allowing visitors to explore top-rated sales, featured items, and learn about Nike's commitment to community and sustainability. The design reflects my skills in creating visually appealing and user-friendly platforms, capturing the essence of Nike's sportsmanship and style.",
     linkToWebsite: "https://creator-nikestore.netlify.app",
     tags: [
       {
@@ -622,6 +622,332 @@ const freelancing = [
   },
 ];
 
+const allProjects =[
+  {
+    name: "Disney cloned",
+    description: "this is a Disney clone website platform designed to replicate the look and feel of the official Disney website, offering a similar user experience and content structure. Typically created for educational and portfolio purposes, the Disney clone site mimics the layout, color schemes, and interactive elements found on the official Disney site. It include sections dedicated to various Disney movies, and their classifications.",
+    linkToWebsite: "https://disneywebclone2.netlify.app",
+    tags: [
+      {
+        name: "react",
+        color: "#b6a6e8-text-gradient",
+      },
+      {
+        name: "Firebase",
+        color: "#8469d8-text-gradient",
+      },
+      {
+        name: "Redux",
+        color: "#8469d8-text-gradient",
+      },
+      {
+        name: "disney WebApp clone",
+        color: "#69a2d8 -text-gradient",
+      },
+    ],
+    image: disney,
+    source_code_link: "https://github.com/cReAtOR0009/disneyWebclone",
+  },
+  {
+    name: "Nike Store",
+    description: "As a web designer, I crafted a dynamic portfolio project showcasing Nike's athletic world. The website features the latest products like the Play With Electric Nike Adapt 2.0 Sneakers and emphasizes Nike's iconic Air technology. It offers an engaging user experience, allowing visitors to explore top-rated sales, featured items, and learn about Nike's commitment to community and sustainability. The design reflects my skills in creating visually appealing and user-friendly platforms, capturing the essence of Nike's sportsmanship and style.",
+    linkToWebsite: "https://creator-nikestore.netlify.app",
+    tags: [
+      {
+        name: "React",
+        color: "#b6a6e8-text-gradient",
+      },
+      {
+        name: "Tailwindcss",
+        color: "#8469d8-text-gradient",
+      },
+      {
+        name: "Redux",
+        color: "#8469d8-text-gradient",
+      },
+      {
+        name: "Nike demo store",
+        color: "#69a2d8 -text-gradient",
+      },
+    ],
+    image: creatornikestore,
+    source_code_link: "https://github.com/cReAtOR0009/nikeStore",
+  },
+
+  {
+    name: "todaydeliver Grocery api",
+    description: "A Grocery Api with Admin Panel",
+    linkToWebsite: "https://admin.todaydeliver.in/login",
+    tags: [
+      {
+        name: "React",
+        color: "#b6a6e8-text-gradient",
+      },
+      {
+        name: "CSS",
+        color: "#8469d8-text-gradient",
+      },
+      {
+        name: "Node js",
+        color: "#69a2d8 -text-gradient",
+      },
+      {
+        name: "Firebase",
+        color: "#69a2d8 -text-gradient",
+      },
+    ],
+    image: groceryapp,
+    source_code_link: "https://github.com/cReAtOR0009/groceryapp",
+  },
+
+  {
+    name: "Deyspeak",
+    description:
+      "A waitlist website for a Language Learning App -DeySpeak, visitors can signup to join the waitlist for the App prior Launch",
+    linkToWebsite: "https://phenomenal-gelato-370181.netlify.app/",
+    tags: [
+      {
+        name: "React",
+        color: "#b6a6e8-text-gradient",
+      },
+      {
+        name: "Framer-motion",
+        color: "#8469d8-text-gradient",
+      },
+      {
+        name: "react-router-dom",
+        color: "#8469d8-text-gradient",
+      },
+      {
+        name: "pure css",
+        color: "#69a2d8 -text-gradient",
+      },
+    ],
+    image: deyspeak,
+    source_code_link: "https://github.com/cReAtOR0009/italianRestaurant",
+  },
+  {
+    name: "Kasuwa",
+    description:
+      "A full-stack webiste with admin panel for kasuwa Farms that allows visitors to check the prices, percentage increase and decrease of Agricutural Commodities, Admin users can update the price of any commodity, add new commodity with corresponding price, delete commodity and more. percentage increase and decrease are dynamically calculated from the initial and new prices of commodity as they are updated",
+    linkToWebsite: "https://newkasuwa.onrender.com/",
+    tags: [
+      {
+        name: "React",
+        color: "#b6a6e8-text-gradient",
+      },
+      {
+        name: "styled-component",
+        color: "#8469d8-text-gradient",
+      },
+      {
+        name: "Nodejs",
+        color: "#69a2d8 -text-gradient",
+      },
+    ],
+    image: kasuwa,
+    source_code_link: "https://github.com/",
+  },
+  {
+    name: "portfolio Website",
+    description:
+      "my Porfolio website, showcasing my web2 and web3 journey as a Fullstack web developer, here you can journey with me as i highlight important details about my journey which includes a brief description of me,technology I use, projects I have worked on, ways you can reach me and more",
+    linkToWebsite: "https://web-dev-crib.netlify.app/",
+    tags: [
+      {
+        name: "React",
+        color: "#b6a6e8-text-gradient",
+      },
+      {
+        name: "Tailwindcss",
+        color: "#8469d8-text-gradient",
+      },
+      {
+        name: "Framer-motion",
+        color: "#69a2d8 -text-gradient",
+      },
+      {
+        name: "Three-js",
+        color: "#69a2d8 -text-gradient",
+      },
+    ],
+    image: portfolio,
+    source_code_link: "https://github.com/cReAtOR0009/portfolio",
+  },
+  {
+    name: "food ordering Website",
+    description: "A fullstack food ordering website",
+    tags: [
+      {
+        name: "React",
+        color: "#b6a6e8-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "#8469d8-text-gradient",
+      },
+      {
+        name: "framer-motion",
+        color: "-text-gradient",
+      },
+      {
+        name: "Redux",
+        color: "#8469d8-text-gradient",
+      },
+      {
+        name: "node-js",
+        color: "#b6a6e8",
+      },
+      {
+        name: "Express-js",
+        color: "#69a2d8 -text-gradient",
+      },
+      {
+        name: "stripe",
+        color: "#69a2d8 -text-gradient",
+      },
+    ],
+    image: foodorder,
+    source_code_link: "https://github.com/cReAtOR0009",
+  },
+
+  {
+    name: "A simple Blog Website",
+    description:
+      " a simple Blog website that allows the user to create blogs using the #mern stack",
+    linkToWebsite: "https://demoblog2.onrender.com/",
+    tags: [
+      {
+        name: "React",
+        color: "#b6a6e8-text-gradient",
+      },
+      {
+        name: "Express.js",
+        color: "#69a2d8 -text-gradient",
+      },
+      {
+        name: "material ui",
+        color: "#8469d8-text-gradient",
+      },
+      {
+        name: "gsap",
+        color: "#69a2d8 -text-gradient",
+      },
+    ],
+    image: blog1,
+    source_code_link: "https://github.com/cReAtOR0009/simpleBlog1.git",
+  },
+  {
+    name: "A Real Estate Website",
+    description:
+      " a simple Blog website that allows the user to create blogs using the #mern stacka simple Blog website that allows the user to create blogs using the #mern stack",
+    linkToWebsite: "https://creator-real-estate-market.netlify.app/",
+    tags: [
+      {
+        name: "React",
+        color: "#b6a6e8-text-gradient",
+      },
+      {
+        name: "Fgma to Design",
+        color: "#69a2d8 -text-gradient",
+      },
+      {
+        name: "Tailwind",
+        color: "#8469d8-text-gradient",
+      },
+      {
+        name: "reacr router Dom",
+        color: "#69a2d8 -text-gradient",
+      },
+    ],
+    image: screencapture,
+    source_code_link: "https://github.com/cReAtOR0009/Real_Estate",
+  },
+  {
+    name: "web3 Course",
+    description: 
+      "This project is a web3 application that interacts with the Ethereum blockchain to manage and display transactions. The application includes functionalities related to connecting a user's wallet, sending transactions, fetching and displaying transaction history, and managing a dark/light theme toggle. The Ethereum interactions are facilitated by the ethers.js library, and the React framework is used for building the user interface,  taking advantage of the blockchain technology,it allowing you send transactions and include a message, and keyword which is stored on the blockckain imutably, this keyword is used to generates a corresponding gif image that matches the keyword from the transaction details returned from the blockchain on the ethereum blochchain aftre the transaction is completed",
+    linkToWebsite: "https://master--web3ethtransfer.netlify.app/",
+    tags: [
+      {
+        name: "blockchain",
+        color: "violet-500",
+      },
+      {
+        name: "ethers",
+        color: "teal-500",
+      },
+      {
+        name: "hardhat",
+        color: "lime-500",
+      },
+      {
+        name: "react",
+        color: "#69a2d8 -text-gradient",
+      },
+      {
+        name: "web3",
+        color: "#69a2d8 -text-gradient",
+      },
+    ],
+    image: web3Course,
+    source_code_link: "https://github.com/cReAtOR0009/web3course1.git",
+  },
+  {
+    name: "Blockchain Voting App",
+    description:
+      "A Blockchain web3 App that allows blockchain enthusiasts to take advantage of the blockchain technology for decentralized voting, here you can take advantage of the blockchain and create a decentralized voting poll accessible to everyone, it gives you access to create elections and corresponding contestants. all informations regarding the elections are stored on the blockchain making it immutable and secure ",
+    linkToWebsite: "https://master--web3ethtransfer.netlify.app/",
+    tags: [
+      {
+        name: "Solidity",
+        color: "gray-500",
+      },
+      {
+        name: "ethers.js",
+        color: "teal-500",
+      },
+      {
+        name: "blockchain",
+        color: "violet-500",
+      },
+      {
+        name: "ethereum",
+        color: "#69a2d8 -text-gradient",
+      },
+    ],
+    image: votingApp,
+    source_code_link: "https://github.com/cReAtOR0009/BlockchainVotingApp.git",
+  },
+
+  {
+    name: "Blockchain CrowdFunding App",
+    description:
+      "A web3 crowdfunding app made and deployed to the sepolia network by _creator, built with robust smartContract Integration and minimal ui, this allows you to raise money for your Blockchain project securely in eth or any specified Blockchain digital asset of your choice",
+    linkToWebsite: "https://creator-crowdfunding.netlify.app/",
+    tags: [
+      {
+        name: "Solidity",
+        color: "gray-500",
+      },
+      {
+        name: "ethers.js",
+        color: "teal-500",
+      },
+      {
+        name: "blockchain",
+        color: "violet-500",
+      },
+      {
+        name: "sepolia",
+        color: "#69a2d8 -text-gradient",
+      },
+    ],
+    image: crowdFundingApp,
+    source_code_link: "https://github.com/cReAtOR0009/hardhat_fundme",
+  },
+]
+
 const socials = [
   {
     platform: "telegram",
@@ -656,5 +982,6 @@ export {
   projects,
   socials,
   web3projects,
-  freelancing
+  freelancing,
+  allProjects
 };

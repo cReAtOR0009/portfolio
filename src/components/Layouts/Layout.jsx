@@ -12,7 +12,7 @@ const Layouts = () => {
       <div className="outlet">
         <Outlet />
       </div>
-      <StarsCanvas />
+      {/* <StarsCanvas /> */}
       <Contact />
     </div>
   );

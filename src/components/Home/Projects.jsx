@@ -1,6 +1,7 @@
 import React from "react";
 import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 import { styles } from "../../styles";
 import { github } from "../../assets";
@@ -17,6 +18,15 @@ const ProjectCard = ({
   image,
   source_code_link,
 }) => {
+
+  const truncateContent = (content, maxLength) => {
+    const words = content.split(" ");
+    const truncated = words.slice(0, maxLength).join(" ");
+    return words.length > maxLength ? `${truncated}...` : content;
+  };
+
+  const truncatedContent = truncateContent(description, 30);
+
   return (
     <motion.div
       variants={fadeIn("up", "spring", index * 0.5, 0.75)}
@@ -55,10 +65,10 @@ const ProjectCard = ({
           link to website
         </a>
         <h3 className="text-white font-bold text-[24px]">{name}</h3>
-        <p className="mt-2 text-secondary text-[14px]">{description}</p>
+        <p className="mt-2 text-secondary text-[14px]">{truncatedContent} <Link className="p-[3px] rounded text-white bg-[#e63e3e]" to={`/projects/${index}`}>More details</Link></p>
       </div>
 
-      <div className="mt-4 flex flex-wrap gap-2">
+      <div className="mt-5 flex flex-wrap gap-2">
         {tags.map((tag) => {
           const firstWord = tag.color.split("-")[0].toLowerCase();
           // console.log(firstWord)

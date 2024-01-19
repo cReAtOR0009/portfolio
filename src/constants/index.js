@@ -236,7 +236,7 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Disney cloned",
+    name: "Disney clone",
     description: "this is a Disney clone website platform designed to replicate the look and feel of the official Disney website, offering a similar user experience and content structure. Typically created for educational and portfolio purposes, the Disney clone site mimics the layout, color schemes, and interactive elements found on the official Disney site. It include sections dedicated to various Disney movies, and their classifications.",
     linkToWebsite: "https://disneywebclone2.netlify.app",
     tags: [
@@ -288,7 +288,7 @@ const projects = [
 
   {
     name: "todaydeliver Grocery api",
-    description: "A Grocery Api with Admin Panel",
+    description: "This is a Fullstack e-commerce website that seamlessly integrates a Grocery API with an Admin Panel, offering users a streamlined online grocery shopping experience. With secure authentication, an extensive product catalog, an intuitive shopping cart, and a user-friendly checkout, the platform ensures convenience across devices. The Admin Panel empowers administrators to efficiently manage products, users, and orders, with access to valuable analytics and reports. Technologically, the website adopts a Fullstack architecture, combining frontend frameworks- React.js  with backend technology- Node.js , and MongoDb for database",
     linkToWebsite: "https://admin.todaydeliver.in/login",
     tags: [
       {
@@ -315,7 +315,7 @@ const projects = [
   {
     name: "Deyspeak",
     description:
-      "A waitlist website for a Language Learning App -DeySpeak, visitors can signup to join the waitlist for the App prior Launch",
+      "Introducing one of my standout projects featured in my portfolio – an innovative language learning app waitlist website. Joining the exclusive waitlist offers you the opportunity to be at the forefront of a revolutionary African language learning experience. This app is meticulously designed to transcend language barriers, foster cultural connections, and empower users to communicate fluently in multiple African languages. As you explore my portfolio, discover how I contributed to creating a captivating and user-friendly platform. The waitlist website showcases my skills in crafting compelling content and an enticing user experience from Figma design, enticing visitors to embark on their linguistic journey.",
     linkToWebsite: "https://phenomenal-gelato-370181.netlify.app/",
     tags: [
       {
@@ -341,7 +341,7 @@ const projects = [
   {
     name: "Kasuwa",
     description:
-      "A full-stack webiste with admin panel for kasuwa Farms that allows visitors to check the prices, percentage increase and decrease of Agricutural Commodities, Admin users can update the price of any commodity, add new commodity with corresponding price, delete commodity and more. percentage increase and decrease are dynamically calculated from the initial and new prices of commodity as they are updated",
+      "Presenting a dynamic full-stack website with an integrated admin panel for Kasuwa Farms. This platform provides visitors with real-time access to agricultural commodity prices, along with the percentage increase and decrease conveniently displayed on the landing page. Admin users wield the power to update commodity prices, add new commodities with corresponding prices, delete items, and more. A standout feature of this website lies in its use of dynamic APIs, exclusively serving user requests. The percentage increase and decrease are automatically calculated in real-time as admin users update commodity prices. This showcases the website's responsiveness and ability to provide users with the most current and accurate information.",
     linkToWebsite: "https://newkasuwa.onrender.com/",
     tags: [
       {
@@ -676,7 +676,7 @@ const allProjects =[
 
   {
     name: "todaydeliver Grocery api",
-    description: "A Grocery Api with Admin Panel",
+    description: "This is a Fullstack e-commerce website that seamlessly integrates a Grocery API with an Admin Panel, offering users a streamlined online grocery shopping experience. With secure authentication, an extensive product catalog, an intuitive shopping cart, and a user-friendly checkout, the platform ensures convenience across devices. The Admin Panel empowers administrators to efficiently manage products, users, and orders, with access to valuable analytics and reports. Technologically, the website adopts a Fullstack architecture, combining frontend frameworks- React.js  with backend technology- Node.js , and MongoDb for database",
     linkToWebsite: "https://admin.todaydeliver.in/login",
     tags: [
       {
@@ -703,7 +703,7 @@ const allProjects =[
   {
     name: "Deyspeak",
     description:
-      "A waitlist website for a Language Learning App -DeySpeak, visitors can signup to join the waitlist for the App prior Launch",
+      "Introducing one of my standout projects featured in my portfolio – an innovative language learning app waitlist website. Joining the exclusive waitlist offers you the opportunity to be at the forefront of a revolutionary African language learning experience. This app is meticulously designed to transcend language barriers, foster cultural connections, and empower users to communicate fluently in multiple African languages. As you explore my portfolio, discover how I contributed to creating a captivating and user-friendly platform. The waitlist website showcases my skills in crafting compelling content and an enticing user experience from Figma design, enticing visitors to embark on their linguistic journey.",
     linkToWebsite: "https://phenomenal-gelato-370181.netlify.app/",
     tags: [
       {
@@ -729,7 +729,7 @@ const allProjects =[
   {
     name: "Kasuwa",
     description:
-      "A full-stack webiste with admin panel for kasuwa Farms that allows visitors to check the prices, percentage increase and decrease of Agricutural Commodities, Admin users can update the price of any commodity, add new commodity with corresponding price, delete commodity and more. percentage increase and decrease are dynamically calculated from the initial and new prices of commodity as they are updated",
+      "Presenting a dynamic full-stack website with an integrated admin panel for Kasuwa Farms. This platform provides visitors with real-time access to agricultural commodity prices, along with the percentage increase and decrease conveniently displayed on the landing page. Admin users wield the power to update commodity prices, add new commodities with corresponding prices, delete items, and more. A standout feature of this website lies in its use of dynamic APIs, exclusively serving user requests. The percentage increase and decrease are automatically calculated in real-time as admin users update commodity prices. This showcases the website's responsiveness and ability to provide users with the most current and accurate information.",
     linkToWebsite: "https://newkasuwa.onrender.com/",
     tags: [
       {

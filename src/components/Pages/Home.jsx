@@ -1,7 +1,6 @@
 import {
   About,
   Hero,
-  Navbar,
   Tech,
   Experience,
   Projects,

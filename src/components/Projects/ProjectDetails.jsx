@@ -6,10 +6,9 @@ import { allProjects } from "../../constants";
 import { fadeIn, textVariant } from "../../utils/motion";
 
 const ProjectDetails = ({}) => {
+
   const { projectId } = useParams();
 
-  //   console.log(projectId)
-  //   const project = allProjects[projectId];
   const project = allProjects.find(
     (project, index) => index == parseInt(projectId)
   );
@@ -23,46 +22,46 @@ const ProjectDetails = ({}) => {
 
   return (
     <>
-      <div className="mt-20  flex flex-wrap gap-8">
-        <div className=" w-[350px] sm:h-[350px] h-[230px]">
-          <img
-            src={image}
-            alt={`${name}`}
-            className="w-full h-full object-cover rounded-2xl"
-          />
-        </div>
-        <div className=" w-[350px] sm:h-[350px] h-[230px]">
-          <img
-            src={image}
-            alt={`${name}`}
-            className="w-full h-full object-cover rounded-2xl"
-          />
-        </div>
-        <div className=" w-[350px] sm:h-[350px] h-[230px]">
-          <img
-            src={image}
-            alt={`${name}`}
-            className="w-full h-full object-cover rounded-2xl"
-          />
-        </div>
-        <div className=" w-[350px] sm:h-[350px] h-[230px]">
-          <img
-            src={image}
-            alt={`${name}`}
-            className="w-full h-full object-cover rounded-2xl"
-          />
-        </div>
-      </div>
       <h1 className="mt-[100px] text-center text-white text-[30px]">
         this page is currently in progress
       </h1>
+      {/* <div className="mt-20  flex flex-wrap gap-8">
+        <div className=" w-[320px] sm:h-[320px] h-[230px]">
+          <img
+            src={image}
+            alt={`${name}`}
+            className="w-full h-full object-cover rounded-2xl"
+          />
+        </div>
+        <div className=" w-[320px] sm:h-[320px] h-[230px]">
+          <img
+            src={image}
+            alt={`${name}`}
+            className="w-full h-full object-cover rounded-2xl"
+          />
+        </div>
+        <div className=" w-[320px] sm:h-[320px] h-[230px]">
+          <img
+            src={image}
+            alt={`${name}`}
+            className="w-full h-full object-cover rounded-2xl"
+          />
+        </div>
+        <div className=" w-[320px] sm:h-[320px] h-[230px]">
+          <img
+            src={image}
+            alt={`${name}`}
+            className="w-full h-full object-cover rounded-2xl"
+          />
+        </div>
+      </div> */}
       <motion.div
         //   variants={fadeIn("up", "spring", index * 0.5, 0.75)}
         //   initial="hidden"
         //   animate="show"
-        className="bg-[#3f2952] mx-auto mt-[20px] p-5 rounded-2xl sm:w-[500px] w-full"
+        className="bg-[#3f2952] mx-auto mt-[20px] p-5 rounded-2xl  w-full"
       >
-        <div className="relative w-full sm:h-[400px] h-[230px] ">
+        {/* <div className="relative w-full sm:h-[400px] h-[230px] ">
           <img
             src={image}
             alt="project_image"
@@ -81,19 +80,19 @@ const ProjectDetails = ({}) => {
               />
             </div>
           </div>
-        </div>
+        </div> */}
 
         <div className="mt-3">
+          <h1 className="text-white text-center font-bold text-[30px]">{name}</h1>
+          <p className="mt-2 text-secondary text-[14px]">{description}</p>
           <a
             href={linkToWebsite}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-[20px] text-secondary"
+            className="mt-[150px]"
           >
             link to website
           </a>
-          <h3 className="text-white font-bold text-[24px]">{name}</h3>
-          <p className="mt-2 text-secondary text-[14px]">{description}</p>
         </div>
 
         <div className="mt-4 flex flex-wrap gap-2">
@@ -111,6 +110,42 @@ const ProjectDetails = ({}) => {
             );
           })}
         </div>
+        <div className="mt-4">
+          <h1>Key Features:</h1>
+        </div>
+        <div className="mt-4">
+          <h1>Packages Used:</h1>
+        </div>
+        <div className="mt-20  flex flex-wrap gap-8">
+        <div className=" w-[320px] sm:h-[320px] h-[230px]">
+          <img
+            src={image}
+            alt={`${name}`}
+            className="w-full h-full object-cover rounded-2xl"
+          />
+        </div>
+        <div className=" w-[320px] sm:h-[320px] h-[230px]">
+          <img
+            src={image}
+            alt={`${name}`}
+            className="w-full h-full object-cover rounded-2xl"
+          />
+        </div>
+        <div className=" w-[320px] sm:h-[320px] h-[230px]">
+          <img
+            src={image}
+            alt={`${name}`}
+            className="w-full h-full object-cover rounded-2xl"
+          />
+        </div>
+        <div className=" w-[320px] sm:h-[320px] h-[230px]">
+          <img
+            src={image}
+            alt={`${name}`}
+            className="w-full h-full object-cover rounded-2xl"
+          />
+        </div>
+      </div>
       </motion.div>
     </>
   );

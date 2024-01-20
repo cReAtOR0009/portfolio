@@ -44,7 +44,7 @@ const Navbar = () => {
            initial={link.title==="Contact"?"hidden2":"hidden"}
            animate={link.title==="Contact"?"show2":"show"}
            onClick={() => setActive(link.title)}
-          ><a href={`#${link.id}`}>{link.title}</a></motion.li>;
+          ><a href={`/#${link.id}`}>{link.title}</a></motion.li>;
         })}
       </ul>
       <div className="sm:hidden flex flex-1 justify-end items-center">

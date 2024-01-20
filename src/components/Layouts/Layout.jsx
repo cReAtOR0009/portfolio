@@ -10,10 +10,13 @@ const Layouts = () => {
     <div>
       <Nav />
       <div className="outlet">
+        <StarsCanvas />
         <Outlet />
       </div>
-      {/* <StarsCanvas /> */}
+      <div className='relative z-0'>
+      <StarsCanvas />
       <Contact />
+      </div>
     </div>
   );
 };

@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { styles } from "../../styles";
 import { github } from "../../assets";
 import { SectionWrapper } from "../../hoc";
-import { projects, web3projects, freelancing } from "../../constants";
+import { projects, web3projects, freelancing, allProjects } from "../../constants";
 import { fadeIn, textVariant } from "../../utils/motion";
 
 const ProjectCard = ({
@@ -18,7 +18,6 @@ const ProjectCard = ({
   image,
   source_code_link,
 }) => {
-
   const truncateContent = (content, maxLength) => {
     const words = content.split(" ");
     const truncated = words.slice(0, maxLength).join(" ");
@@ -65,7 +64,18 @@ const ProjectCard = ({
           link to website
         </a>
         <h3 className="text-white font-bold text-[24px]">{name}</h3>
-        <p className="mt-2 text-secondary text-[14px]">{truncatedContent} <Link className="p-[3px] rounded text-white bg-[#e63e3e]" to={`/projects/${index}`}>More details</Link></p>
+        <p className="mt-2 text-secondary text-[14px]">
+          {truncatedContent}{" "}
+          <Link
+            className="p-[3px] rounded text-white bg-[#e63e3e]"
+            onClick={() => {
+              window.scrollTo(0, 0);
+            }}
+            to={`/projects/${index}`}
+          >
+            More details
+          </Link>
+        </p>
       </div>
 
       <div className="mt-5 flex flex-wrap gap-2">

@@ -6,7 +6,6 @@ import { allProjects } from "../../constants";
 import { fadeIn, textVariant } from "../../utils/motion";
 
 const ProjectDetails = ({}) => {
-
   const { projectId } = useParams();
 
   const project = allProjects.find(
@@ -22,68 +21,15 @@ const ProjectDetails = ({}) => {
 
   return (
     <>
-      <h1 className="mt-[100px] text-center text-white text-[30px]">
+      <h1 className=" text-center text-white text-[30px]">
         this page is currently in progress
       </h1>
-      {/* <div className="mt-20  flex flex-wrap gap-8">
-        <div className=" w-[320px] sm:h-[320px] h-[230px]">
-          <img
-            src={image}
-            alt={`${name}`}
-            className="w-full h-full object-cover rounded-2xl"
-          />
-        </div>
-        <div className=" w-[320px] sm:h-[320px] h-[230px]">
-          <img
-            src={image}
-            alt={`${name}`}
-            className="w-full h-full object-cover rounded-2xl"
-          />
-        </div>
-        <div className=" w-[320px] sm:h-[320px] h-[230px]">
-          <img
-            src={image}
-            alt={`${name}`}
-            className="w-full h-full object-cover rounded-2xl"
-          />
-        </div>
-        <div className=" w-[320px] sm:h-[320px] h-[230px]">
-          <img
-            src={image}
-            alt={`${name}`}
-            className="w-full h-full object-cover rounded-2xl"
-          />
-        </div>
-      </div> */}
-      <motion.div
-        //   variants={fadeIn("up", "spring", index * 0.5, 0.75)}
-        //   initial="hidden"
-        //   animate="show"
-        className="bg-[#3f2952] mx-auto mt-[20px] p-5 rounded-2xl  w-full"
-      >
-        {/* <div className="relative w-full sm:h-[400px] h-[230px] ">
-          <img
-            src={image}
-            alt="project_image"
-            className="w-full h-full object-cover rounded-2xl"
-          />
-
-          <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
-            <div
-              onClick={() => window.open(source_code_link, "_blank")}
-              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
-            >
-              <img
-                src={image}
-                alt="source code"
-                className="w-1/2 h-1/2 object-contain"
-              />
-            </div>
-          </div>
-        </div> */}
-
+ 
+      <motion.div className="bg-[#3f2952] mx-auto mt-[20px] p-5 rounded-2xl  w-full">
         <div className="mt-3">
-          <h1 className="text-white text-center font-bold text-[30px]">{name}</h1>
+          <h1 className="text-white text-center font-bold text-[30px]">
+            {name}
+          </h1>
           <p className="mt-2 text-secondary text-[14px]">{description}</p>
           <a
             href={linkToWebsite}
@@ -117,35 +63,35 @@ const ProjectDetails = ({}) => {
           <h1>Packages Used:</h1>
         </div>
         <div className="mt-20  flex flex-wrap gap-8">
-        <div className=" w-[320px] sm:h-[320px] h-[230px]">
-          <img
-            src={image}
-            alt={`${name}`}
-            className="w-full h-full object-cover rounded-2xl"
-          />
+          <div className=" w-[320px] sm:h-[320px] h-[230px]">
+            <img
+              src={image}
+              alt={`${name}`}
+              className="w-full h-full object-cover rounded-2xl"
+            />
+          </div>
+          <div className=" w-[320px] sm:h-[320px] h-[230px]">
+            <img
+              src={image}
+              alt={`${name}`}
+              className="w-full h-full object-cover rounded-2xl"
+            />
+          </div>
+          <div className=" w-[320px] sm:h-[320px] h-[230px]">
+            <img
+              src={image}
+              alt={`${name}`}
+              className="w-full h-full object-cover rounded-2xl"
+            />
+          </div>
+          <div className=" w-[320px] sm:h-[320px] h-[230px]">
+            <img
+              src={image}
+              alt={`${name}`}
+              className="w-full h-full object-cover rounded-2xl"
+            />
+          </div>
         </div>
-        <div className=" w-[320px] sm:h-[320px] h-[230px]">
-          <img
-            src={image}
-            alt={`${name}`}
-            className="w-full h-full object-cover rounded-2xl"
-          />
-        </div>
-        <div className=" w-[320px] sm:h-[320px] h-[230px]">
-          <img
-            src={image}
-            alt={`${name}`}
-            className="w-full h-full object-cover rounded-2xl"
-          />
-        </div>
-        <div className=" w-[320px] sm:h-[320px] h-[230px]">
-          <img
-            src={image}
-            alt={`${name}`}
-            className="w-full h-full object-cover rounded-2xl"
-          />
-        </div>
-      </div>
       </motion.div>
     </>
   );

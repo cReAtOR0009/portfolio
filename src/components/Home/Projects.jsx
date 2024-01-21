@@ -149,6 +149,13 @@ const Projects = () => {
           Journey
         </div>
       </motion.div>
+
+      <motion.div variants={textVariant()} initial="hidden" animate="show">
+        <h2 className={styles.sectionHeadText}>APIs</h2>
+        <div className="mt-10 flex flex-wrap gap-7">
+          loading...#API
+        </div>
+      </motion.div>
     </>
   );
 };

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { navIn, textVariant } from "../utils/motion";
 
@@ -9,6 +9,8 @@ import { logo, menu, close } from "../assets";
 const Navbar = () => {
   const [active, setActive] = useState("Contact");
   const [Toggle, setToggle] = useState(false)
+
+  const navigate = useNavigate()
   return (
     <motion.nav 
     className={`${styles.paddingX} w-screen flex items-center py-5 fixed top-0 z-20 border-b-4 bg-[#5b4785]`}
@@ -43,7 +45,7 @@ const Navbar = () => {
            variants={navIn("right", "spring",  link.title==="Contact"? 1*index :1 * index, link.title==="Contact"? 1.5:2)}
            initial={link.title==="Contact"?"hidden2":"hidden"}
            animate={link.title==="Contact"?"show2":"show"}
-           onClick={() => setActive(link.title)}
+           onClick={() => {setActive(link.title), navigate(link.title)}}
           ><a href={`/#${link.id}`}>{link.title}</a></motion.li>;
         })}
       </ul>

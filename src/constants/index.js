@@ -193,19 +193,19 @@ const experiences = [
       "Contributed to reviews and providing constructive feedback to other developers.",
     ],
   },
-  // {
-  //   title: "Web Developer (React.js, Node.js)",
-  //   company_name: "Kwakol Markets PTY Limited",
-  //   icon: javascript,
-  //   iconBg: "#E6DEDD",
-  //   date: "June 2019 - November 2021)",
-  //   points: [
-  //     "Developing and maintaining web applications using React.js and other related technologies.",
-  //     "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-  //     "Implementing responsive design and ensuring cross-browser compatibility.",
-  //     "Collaborated with clients to gather requirements and translate them into visually appealing website designs.",
-  //   ],
-  // },
+  {
+    title: "Freelancing",
+    company_name: "Fiverr, Upwork etc",
+    icon: javascript,
+    iconBg: "#E6DEDD",
+    date: "June 2023 - Now)",
+    points: [
+      "Making web bots for fetching data and automating web task",
+      "writting web bot for listening to blockchain events, and Telegram Bots ",
+      "writting webscrapper, Discord Bot, Game Playing bot",
+      "Helping client deploy web applications on node js server",
+    ],
+  },
 ];
 
 const testimonials = [

@@ -184,7 +184,7 @@ const experiences = [
     company_name: "DotcircleLabs",
     icon: reactjs,
     iconBg: "#383E56",
-    date: "April 2022 - Now)",
+    date: "April 2022 - Now",
     points: [
       "Assisted senior designers in creating website mockups and prototypes.",
       "Undergo several Web design Trainings and Practice.",
@@ -196,7 +196,7 @@ const experiences = [
   {
     title: "Freelancing",
     company_name: "Fiverr, Upwork etc",
-    icon: javascript,
+    icon: nodejs,
     iconBg: "#E6DEDD",
     date: "June 2023 - Now)",
     points: [

@@ -195,7 +195,7 @@ const experiences = [
   },
   {
     title: "Freelancing",
-    company_name: "Fiverr, Upwork etc",
+    company_name: "Fiverr, Upwork, Discord...",
     icon: nodejs,
     iconBg: "#E6DEDD",
     date: "June 2023 - Now)",

@@ -126,7 +126,7 @@ const Projects = () => {
         ))}
       </div>
 
-      <motion.div variants={textVariant()} initial="hidden" animate="show">
+      <motion.div variants={textVariant()} initial="hidden" animate="show" className="my-[20px]">
         {/* <p className={styles.sectionSubText}>My Web Projects</p> */}
         <h2 className={styles.sectionHeadText}>My Web3 Projects.</h2>
 
@@ -137,7 +137,7 @@ const Projects = () => {
         </div>
       </motion.div>
 
-      <motion.div variants={textVariant()} initial="hidden" animate="show">
+      <motion.div variants={textVariant()} initial="hidden" animate="show" className="my-[20px]">
         {/* <p className={styles.sectionSubText}>My Web Projects</p> */}
         <h2 className={styles.sectionHeadText}>My Freelancing Journey...</h2>
 
@@ -150,7 +150,7 @@ const Projects = () => {
         </div>
       </motion.div>
 
-      <motion.div variants={textVariant()} initial="hidden" animate="show">
+      <motion.div variants={textVariant()} initial="hidden" animate="show" className="my-[20px]">
         <h2 className={styles.sectionHeadText}>APIs</h2>
         <div className="mt-10 flex flex-wrap gap-7">
           loading...#API

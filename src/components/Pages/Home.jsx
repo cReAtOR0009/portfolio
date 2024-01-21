@@ -10,11 +10,6 @@ import {
 
 const Home = () => {
 
-//   useEffect(() => {
-//     document.getElementById("ElementID").scrollIntoView();
-//     // or, use a ref and
-//     elementRef.current.scrollIntoView()
-// }, [])
   return (
     <div>
       <div className="relative z-0 bg-primary">

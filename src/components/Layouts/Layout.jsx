@@ -10,7 +10,7 @@ const Layouts = () => {
     <div>
       <Nav />
       <div className="outlet">
-        <StarsCanvas />
+        {/* <StarsCanvas /> */}
         <Outlet />
       </div>
       <div className='relative z-0'>

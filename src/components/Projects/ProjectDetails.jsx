@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import { SectionWrapper } from "../../hoc";
 import { allProjects } from "../../constants";
-import { fadeIn, textVariant } from "../../utils/motion";
+// import { fadeIn, textVariant } from "../../utils/motion";
 
 const ProjectDetails = ({}) => {
   const { projectId } = useParams();

@@ -16,15 +16,23 @@ const ProjectDetails = ({}) => {
   if (!project) {
     return <div>no project Found</div>;
   }
-  const { name, description, linkToWebsite, tags, image, source_code_link } =
-    project;
+  const {
+    name,
+    description,
+    linkToWebsite,
+    tags,
+    image,
+    keyFeatures,
+    packagesUsed,
+    source_code_link,
+  } = project;
 
   return (
     <>
       <h1 className=" text-center text-white text-[30px]">
         this page is currently in progress
       </h1>
- 
+
       <motion.div className="bg-[#3f2952] mx-auto mt-[20px] p-5 rounded-2xl  w-full">
         <div className="mt-3">
           <h1 className="text-white text-center font-bold text-[30px]">
@@ -35,7 +43,7 @@ const ProjectDetails = ({}) => {
             href={linkToWebsite}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-[150px]"
+            className="mt-[150px] text-[25px]"
           >
             link to website
           </a>
@@ -57,40 +65,31 @@ const ProjectDetails = ({}) => {
           })}
         </div>
         <div className="mt-4">
-          <h1>Key Features:</h1>
+          <h1 className="text-[30px] text-center mb-[20px]">Key Features:</h1>
+          {keyFeatures.map((keyFeature) => (
+            <p className="mb-[10px] text-[20px] text-secondary">{keyFeature}</p>
+          ))}
         </div>
         <div className="mt-4">
-          <h1>Packages Used:</h1>
+          <h1 className="text-[30px] text-center mb-[20px]">Packages Used:</h1>
+          {packagesUsed.map((packagge) => (
+            <ol className="mb-[10px] text-[20px] text-secondary">
+              <li>{packagge}</li>
+            </ol>
+          ))}
         </div>
         <div className="mt-20  flex flex-wrap gap-8">
-          <div className=" w-[320px] sm:h-[320px] h-[230px]">
-            <img
-              src={image}
-              alt={`${name}`}
-              className="w-full h-full object-cover rounded-2xl"
-            />
-          </div>
-          <div className=" w-[320px] sm:h-[320px] h-[230px]">
-            <img
-              src={image}
-              alt={`${name}`}
-              className="w-full h-full object-cover rounded-2xl"
-            />
-          </div>
-          <div className=" w-[320px] sm:h-[320px] h-[230px]">
-            <img
-              src={image}
-              alt={`${name}`}
-              className="w-full h-full object-cover rounded-2xl"
-            />
-          </div>
-          <div className=" w-[320px] sm:h-[320px] h-[230px]">
-            <img
-              src={image}
-              alt={`${name}`}
-              className="w-full h-full object-cover rounded-2xl"
-            />
-          </div>
+          {image.map((image, index) => {
+            return (
+              <div key={index} className="w-[320px] sm:h-[320px] h-[230px]">
+                <img
+                  src={image}
+                  alt={`${name}`}
+                  className="w-full h-full object-cover rounded-2xl"
+                />
+              </div>
+            );
+          })}
         </div>
       </motion.div>
     </>

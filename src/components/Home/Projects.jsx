@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { styles } from "../../styles";
 import { github } from "../../assets";
 import { SectionWrapper } from "../../hoc";
-import { projects, web3projects, freelancing, allProjects } from "../../constants";
+import { allProjects } from "../../constants";
 import { fadeIn, textVariant } from "../../utils/motion";
 
 const ProjectCard = ({
@@ -19,6 +19,7 @@ const ProjectCard = ({
   source_code_link,
 }) => {
   const truncateContent = (content, maxLength) => {
+    // console.log(content);
     const words = content.split(" ");
     const truncated = words.slice(0, maxLength).join(" ");
     return words.length > maxLength ? `${truncated}...` : content;
@@ -28,6 +29,7 @@ const ProjectCard = ({
 
   return (
     <motion.div
+    key={index}
       variants={fadeIn("up", "spring", index * 0.5, 0.75)}
       initial="hidden"
       animate="show"
@@ -35,7 +37,7 @@ const ProjectCard = ({
     >
       <div className="relative w-full h-[230px]">
         <img
-          src={image}
+          src={image[0]}
           alt="project_image"
           className="w-full h-full object-cover rounded-2xl"
         />
@@ -97,6 +99,22 @@ const ProjectCard = ({
   );
 };
 
+const AllProjectsWithIndex = allProjects.map((value, index) => ({
+  value,
+  index,
+}));
+
+const web2 = AllProjectsWithIndex.filter(
+  (project) => project.value.category == "web2"
+);
+const web3 = AllProjectsWithIndex.filter(
+  (project) => project.value.category == "web3"
+);
+console.log(web3);
+const freelancing = AllProjectsWithIndex.filter(
+  (project) => project.value.category == "freelancing"
+);
+
 const Projects = () => {
   return (
     <>
@@ -121,40 +139,61 @@ const Projects = () => {
       </div>
 
       <div className="mt-20 flex flex-wrap gap-7">
-        {projects.map((project, index) => (
-          <ProjectCard key={`project-${index}`} index={index} {...project} />
+        {web2.map((project, index) => (
+          <ProjectCard
+            key={`project-${project.index}`}
+            index={project.index}
+            {...project.value}
+          />
         ))}
       </div>
 
-      <motion.div variants={textVariant()} initial="hidden" animate="show" className="my-[20px]">
+      <motion.div
+        variants={textVariant()}
+        initial="hidden"
+        animate="show"
+        className="my-[20px]"
+      >
         {/* <p className={styles.sectionSubText}>My Web Projects</p> */}
         <h2 className={styles.sectionHeadText}>My Web3 Projects.</h2>
 
         <div className="mt-10 flex flex-wrap gap-7">
-          {web3projects.map((project, index) => (
-            <ProjectCard key={`project-${index}`} index={index} {...project} />
+          {web3.map((project, index) => (
+            <ProjectCard key={`project-${project.index}`} index={project.index} {...project.value} />
           ))}
         </div>
       </motion.div>
 
-      <motion.div variants={textVariant()} initial="hidden" animate="show" className="my-[20px]">
+      <motion.div
+        variants={textVariant()}
+        initial="hidden"
+        animate="show"
+        className="my-[20px]"
+      >
         {/* <p className={styles.sectionSubText}>My Web Projects</p> */}
         <h2 className={styles.sectionHeadText}>My Freelancing Journey...</h2>
 
         <div className="mt-10 flex flex-wrap gap-7">
-          {/* {freelancing.map((project, index) => (
-          <ProjectCard key={`project-${index}`} index={index} {...project} />
-        ))} */}
+          {freelancing.map((project, index) => (
+            <ProjectCard
+              key={`project-${index}`}
+              index={index}
+              {...project.value}
+            />
+          ))}
           loading...#currently bringing together the content for my Freelancing
           Journey
         </div>
       </motion.div>
 
-      <motion.div variants={textVariant()} initial="hidden" animate="show" className="my-[20px]">
+      <motion.div
+        variants={textVariant()}
+        initial="hidden"
+        animate="show"
+        className="my-[20px]"
+      >
         <h2 className={styles.sectionHeadText}>APIs</h2>
-        <div className="mt-10 flex flex-wrap gap-7">
-          loading...#API
-        </div>
+        <div className="mt-10 flex flex-wrap gap-7">loading...#API</div>
       </motion.div>
     </>
   );

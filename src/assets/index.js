@@ -55,6 +55,15 @@ import web3Course from "./web3Course.png"
 import votingApp from "./votingApp.png"
 import crowdFundingApp from "./crowdFunding.png"
 
+//ipfs project images
+import ipfs1 from "./ipfs1.png"
+import ipfs2 from "./ipfs2.png"
+import ipfs3 from "./ipfs3.png"
+import ipfs4 from "./ipfs4.png"
+import ipfs5 from "./ipfs5.png"
+import ipfs6 from "./ipfs6.png"
+import ipfs7 from "./ipfs7.png"
+
 export {
   illustration,
   illustration1,
@@ -108,5 +117,14 @@ export {
 
   web3Course,
   votingApp,
-  crowdFundingApp
+  crowdFundingApp,
+
+  //ipfs images export
+  ipfs1,
+  ipfs2,
+  ipfs3,
+  ipfs4,
+  ipfs5,
+  ipfs6,
+  ipfs7
 };

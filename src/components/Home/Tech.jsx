@@ -6,6 +6,7 @@ import { BallCanvas } from "../canvas";
 import { SectionWrapper } from "../../hoc";
 import { socials, technologies } from "../../constants";
 import { navIn, fadeIn } from "../../utils/motion";
+import { styles } from "../../styles";
 
 const TechCard = ({ index, icon, name }) => {
   // console.log("technology",technology)
@@ -25,11 +26,14 @@ const TechCard = ({ index, icon, name }) => {
 };
 const Tech = () => {
   return (
-    <div className="flex flex-row flex-wrap justify-center gap-10">
-      {technologies.map((technology, index) => (
-        <TechCard key={technology.name} index={index} {...technology} />
-      ))}
-    </div>
+    <>
+      <h1 className={styles.sectionHeadText}>Tools And Tecnologies</h1>
+      <div className="flex flex-row flex-wrap justify-center gap-10">
+        {technologies.map((technology, index) => (
+          <TechCard key={technology.name} index={index} {...technology} />
+        ))}
+      </div>
+    </>
   );
 };
 

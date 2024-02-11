@@ -110,7 +110,7 @@ const web2 = AllProjectsWithIndex.filter(
 const web3 = AllProjectsWithIndex.filter(
   (project) => project.value.category == "web3"
 );
-console.log(web3);
+// console.log(web3);
 const freelancing = AllProjectsWithIndex.filter(
   (project) => project.value.category == "freelancing"
 );

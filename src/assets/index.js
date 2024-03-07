@@ -51,6 +51,11 @@ import groceryapp from "./groceryapp.png";
 import creatornikestore from "./creatornikestore.png"
 import screencapture from "./screencapture.png"
 import realestateImage1 from "./realestateImage1.png"
+import qrcodevoting1 from "./qrCodeVoting1.png"
+import qrcodevoting2 from "./qrCodeVoting2.png"
+import qrcodevoting3 from "./qrCodeVoting3.png"
+import qrcodevoting4 from "./qrCodeVoting4.png"
+import qrcodevoting5 from "./qrCodeVoting5.png"
 
 import web3Course from "./web3Course.png"
 import votingApp from "./votingApp.png"
@@ -116,6 +121,13 @@ export {
   blog1,
   screencapture,
   realestateImage1,
+
+  qrcodevoting1,
+  qrcodevoting2,
+  qrcodevoting3,
+  qrcodevoting4,
+  qrcodevoting5,
+
 
   web3Course,
   votingApp,

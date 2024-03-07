@@ -51,6 +51,11 @@ import {
   screencapture,
   realestateImage1,
   crowdFundingApp,
+  qrcodevoting1,
+  qrcodevoting2,
+  qrcodevoting3,
+  qrcodevoting4,
+  qrcodevoting5,
 
   //ipfs project image import
   ipfs1,
@@ -332,6 +337,49 @@ const allProjects = [
     ],
     image: [portfolio],
     source_code_link: "https://github.com/cReAtOR0009/portfolio",
+    category: "web2",
+    keyFeatures: [],
+    packagesUsed: [],
+  },
+  {
+    name: "QR Code Voting",
+    description:
+      "we were  Organizing a programme here in my school and we wanted only those that are present physically for the programme to be able to vote their favourite performances and also get some Data we need from participants also, i came about the idea of this Project which uses the react html5-qrcode library for scanning Qr code, I generated a number of qr code using the react-qr-code library, i stored the values of these qr codes in a database using mongodb and i rendered out these values and printed them also. the Qr Code was shared in the programme granting physical participants the priviledge to vote with a valid Qr Code. the Qr Code could only be used once, after which it gets invalidated as a used QRCode from the Backend and this is handled by the backend using Node js and Mongo Db for the Database, the election results can be checked and monitored by a registered and authenticated admin. using this web app, voting could only be done through the use of a valid and unused QR code",
+    linkToWebsite: "https://blwvotingapp.netlify.app/",
+    tags: [
+      {
+        name: "React",
+        color: "#b6a6e8-text-gradient",
+      },
+      {
+        name: "Tailwindcss",
+        color: "#8469d8-text-gradient",
+      },
+      {
+        name: "react-qr-code",
+        color: "#69a2d8 -text-gradient",
+      },
+      {
+        name: "html5-qrcode",
+        color: "#351d75 -text-gradient",
+      },
+      {
+        name: "mongoDb",
+        color: "#8469d8-text-gradient",
+      },
+      {
+        name: "Nodejs",
+        color: "#8469d8-text-gradient",
+      },
+    ],
+    image: [
+      // qrcodevoting1,
+      // qrcodevoting2,
+      // qrcodevoting3,
+      qrcodevoting4,
+      qrcodevoting5,
+    ],
+    source_code_link: "https://github.com/cReAtOR0009/QRCODE_VOTING",
     category: "web2",
     keyFeatures: [],
     packagesUsed: [],

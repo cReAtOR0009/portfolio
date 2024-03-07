@@ -23,7 +23,7 @@ const Hero = () => {
               </span>{" "}
             </h1>
             <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-              a skilled and experienced Graphics designer and web developer,
+              a skilled and experienced web developer and  Graphics designer ,
               <br className="sm:block hidden" />
               with passion for creating innovative and dynamic websites and web
               Applications with latest and indemand tools in the tech industry

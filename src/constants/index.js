@@ -49,6 +49,7 @@ import {
   web3Course,
   votingApp,
   screencapture,
+  realestateImage1,
   crowdFundingApp,
 
   //ipfs project image import
@@ -248,34 +249,121 @@ const testimonials = [
 //
 
 const allProjects = [
+  // {
+  //   name: "Disney cloned",
+  //   description:
+  //     "This is a Disney clone website platform designed to replicate the look and feel of the official Disney website, offering a similar user experience and content structure. Typically created for educational and portfolio purposes, the Disney clone site mimics the layout, color schemes, and interactive elements found on the official Disney site. It includes sections dedicated to various Disney movies and their classifications.",
+  //   linkToWebsite: "https://disneywebclone2.netlify.app",
+  //   tags: [
+  //     {
+  //       name: "React",
+  //       color: "#b6a6e8-text-gradient",
+  //     },
+  //     {
+  //       name: "Firebase",
+  //       color: "#8469d8-text-gradient",
+  //     },
+  //     {
+  //       name: "Redux",
+  //       color: "#8469d8-text-gradient",
+  //     },
+  //     {
+  //       name: "Disney WebApp clone",
+  //       color: "#69a2d8 -text-gradient",
+  //     },
+  //   ],
+  //   image: [disney],
+  //   source_code_link: "https://github.com/cReAtOR0009/disneyWebclone",
+  //   category: "web2",
+  //   keyFeatures: [],
+  //   packagesUsed: []
+  // },
   {
-    name: "Disney cloned",
+    name: "A Real Estate Website",
     description:
-      "This is a Disney clone website platform designed to replicate the look and feel of the official Disney website, offering a similar user experience and content structure. Typically created for educational and portfolio purposes, the Disney clone site mimics the layout, color schemes, and interactive elements found on the official Disney site. It includes sections dedicated to various Disney movies and their classifications.",
-    linkToWebsite: "https://disneywebclone2.netlify.app",
+      "I am pouring a lot of efforts into this, its a real estate web app that allows you to buy and sell real estate propeerties, basicaly you can signup as a regualar user and be priviledged to buy property or as an agent and be permitted to list real estate properties, properties listed would contain a very extensive detail of the property which includes amenities showcase, surroundind amenities, property sales and rent history, owners history, and also a link to virtual tour where you can preview properties virtually in 3d wherever you are in the world",
+    linkToWebsite: "https://creator-real-estate-market.netlify.app/",
     tags: [
       {
         name: "React",
         color: "#b6a6e8-text-gradient",
       },
       {
-        name: "Firebase",
+        name: "Figma to Design",
+        color: "#69a2d8 -text-gradient",
+      },
+      {
+        name: "Tailwind",
         color: "#8469d8-text-gradient",
       },
       {
-        name: "Redux",
-        color: "#8469d8-text-gradient",
-      },
-      {
-        name: "Disney WebApp clone",
+        name: "React Router Dom",
         color: "#69a2d8 -text-gradient",
       },
     ],
-    image: [disney],
-    source_code_link: "https://github.com/cReAtOR0009/disneyWebclone",
+    image: [realestateImage1, screencapture],
+    source_code_link: "https://github.com/cReAtOR0009/Real_Estate",
     category: "web2",
     keyFeatures: [],
-    packagesUsed: []
+    packagesUsed: [],
+  },
+  {
+    name: "portfolio Website",
+    description:
+      "My Portfolio website, showcasing my web2 and web3 journey as a Fullstack web developer, here you can journey with me as I highlight important details about my journey which includes a brief description of me, the technology I use, projects I have worked on and I am still working on, ways you can reach me, and more. :)",
+    linkToWebsite: "https://web-dev-crib.netlify.app/",
+    tags: [
+      {
+        name: "React",
+        color: "#b6a6e8-text-gradient",
+      },
+      {
+        name: "Tailwindcss",
+        color: "#8469d8-text-gradient",
+      },
+      {
+        name: "Framer-motion",
+        color: "#69a2d8 -text-gradient",
+      },
+      {
+        name: "Three-js",
+        color: "#69a2d8 -text-gradient",
+      },
+    ],
+    image: [portfolio],
+    source_code_link: "https://github.com/cReAtOR0009/portfolio",
+    category: "web2",
+    keyFeatures: [],
+    packagesUsed: [],
+  },
+  {
+    name: "Deyspeak",
+    description:
+      "Introducing one of my standout projects featured in my portfolio, which i made Voluntarily as a fullStack web developer, while on the Deyspeak Developer Team – a language learning app waitlist website. Joining the exclusive waitlist offers you the opportunity to be at the forefront of a revolutionary African language learning experience. This app is meticulously designed to transcend language barriers, foster cultural connections, and empower users to communicate fluently in multiple African languages. As you explore my portfolio, discover how I contributed to creating a captivating and user-friendly platform. The waitlist website showcases my skills in crafting compelling content and an enticing user experience from Figma design, enticing visitors to embark on their linguistic journey.",
+    linkToWebsite: "https://phenomenal-gelato-370181.netlify.app/",
+    tags: [
+      {
+        name: "React",
+        color: "#b6a6e8-text-gradient",
+      },
+      {
+        name: "Framer-motion",
+        color: "#8469d8-text-gradient",
+      },
+      {
+        name: "react-router-dom",
+        color: "#8469d8-text-gradient",
+      },
+      {
+        name: "pure CSS",
+        color: "#69a2d8 -text-gradient",
+      },
+    ],
+    image: [deyspeak],
+    source_code_link: "https://github.com/cReAtOR0009/deyspeak",
+    category: "web2",
+    keyFeatures: [],
+    packagesUsed: [],
   },
   {
     name: "Nike Store",
@@ -304,7 +392,7 @@ const allProjects = [
     source_code_link: "https://github.com/cReAtOR0009/nikeStore",
     category: "web2",
     keyFeatures: [],
-    packagesUsed: []
+    packagesUsed: [],
   },
   {
     name: "todaydeliver Grocery api",
@@ -333,37 +421,9 @@ const allProjects = [
     source_code_link: "https://github.com/cReAtOR0009/groceryapp",
     category: "web2",
     keyFeatures: [],
-    packagesUsed: []
+    packagesUsed: [],
   },
-  {
-    name: "Deyspeak",
-    description:
-      "Introducing one of my standout projects featured in my portfolio – an innovative language learning app waitlist website. Joining the exclusive waitlist offers you the opportunity to be at the forefront of a revolutionary African language learning experience. This app is meticulously designed to transcend language barriers, foster cultural connections, and empower users to communicate fluently in multiple African languages. As you explore my portfolio, discover how I contributed to creating a captivating and user-friendly platform. The waitlist website showcases my skills in crafting compelling content and an enticing user experience from Figma design, enticing visitors to embark on their linguistic journey.",
-    linkToWebsite: "https://phenomenal-gelato-370181.netlify.app/",
-    tags: [
-      {
-        name: "React",
-        color: "#b6a6e8-text-gradient",
-      },
-      {
-        name: "Framer-motion",
-        color: "#8469d8-text-gradient",
-      },
-      {
-        name: "react-router-dom",
-        color: "#8469d8-text-gradient",
-      },
-      {
-        name: "pure CSS",
-        color: "#69a2d8 -text-gradient",
-      },
-    ],
-    image: [deyspeak],
-    source_code_link: "https://github.com/cReAtOR0009/italianRestaurant",
-    category: "web2",
-    keyFeatures: [],
-    packagesUsed: []
-  },
+
   {
     name: "Kasuwa",
     description:
@@ -387,76 +447,47 @@ const allProjects = [
     source_code_link: "https://github.com/",
     category: "web2",
     keyFeatures: [],
-    packagesUsed: []
+    packagesUsed: [],
   },
-  {
-    name: "portfolio Website",
-    description:
-      "My Portfolio website, showcasing my web2 and web3 journey as a Fullstack web developer, here you can journey with me as I highlight important details about my journey which includes a brief description of me, the technology I use, projects I have worked on, ways you can reach me, and more.",
-    linkToWebsite: "https://web-dev-crib.netlify.app/",
-    tags: [
-      {
-        name: "React",
-        color: "#b6a6e8-text-gradient",
-      },
-      {
-        name: "Tailwindcss",
-        color: "#8469d8-text-gradient",
-      },
-      {
-        name: "Framer-motion",
-        color: "#69a2d8 -text-gradient",
-      },
-      {
-        name: "Three-js",
-        color: "#69a2d8 -text-gradient",
-      },
-    ],
-    image: [portfolio],
-    source_code_link: "https://github.com/cReAtOR0009/portfolio",
-    category: "web2",
-    keyFeatures: [],
-    packagesUsed: []
-  },
-  {
-    name: "food ordering Website",
-    description: "A fullstack food ordering website",
-    tags: [
-      {
-        name: "React",
-        color: "#b6a6e8-text-gradient",
-      },
-      {
-        name: "Tailwind",
-        color: "#8469d8-text-gradient",
-      },
-      {
-        name: "Framer-motion",
-        color: "-text-gradient",
-      },
-      {
-        name: "Redux",
-        color: "#8469d8-text-gradient",
-      },
-      {
-        name: "Node.js",
-        color: "#b6a6e8",
-      },
-      {
-        name: "Express.js",
-        color: "#69a2d8 -text-gradient",
-      },
-      {
-        name: "Stripe",
-        color: "#69a2d8 -text-gradient",
-      },
-    ],
-    image: [foodorder],
-    source_code_link: "https://github.com/cReAtOR0009",
-    category: "web2",
-    keyFeatures: [],
-    packagesUsed: []
-  },
+  // {
+  //   name: "food ordering Website",
+  //   description: "A fullstack food ordering website",
+  //   tags: [
+  //     {
+  //       name: "React",
+  //       color: "#b6a6e8-text-gradient",
+  //     },
+  //     {
+  //       name: "Tailwind",
+  //       color: "#8469d8-text-gradient",
+  //     },
+  //     {
+  //       name: "Framer-motion",
+  //       color: "-text-gradient",
+  //     },
+  //     {
+  //       name: "Redux",
+  //       color: "#8469d8-text-gradient",
+  //     },
+  //     {
+  //       name: "Node.js",
+  //       color: "#b6a6e8",
+  //     },
+  //     {
+  //       name: "Express.js",
+  //       color: "#69a2d8 -text-gradient",
+  //     },
+  //     {
+  //       name: "Stripe",
+  //       color: "#69a2d8 -text-gradient",
+  //     },
+  //   ],
+  //   image: [foodorder],
+  //   source_code_link: "https://github.com/cReAtOR0009",
+  //   category: "web2",
+  //   keyFeatures: [],
+  //   packagesUsed: []
+  // },
 
   {
     name: "A simple Blog Website",
@@ -485,37 +516,9 @@ const allProjects = [
     source_code_link: "https://github.com/cReAtOR0009/simpleBlog1.git",
     category: "web2",
     keyFeatures: [],
-    packagesUsed: []
+    packagesUsed: [],
   },
-  {
-    name: "A Real Estate Website",
-    description:
-      "A simple Blog website that allows the user to create blogs using the #MERN stacka simple Blog website that allows the user to create blogs using the #MERN stack",
-    linkToWebsite: "https://creator-real-estate-market.netlify.app/",
-    tags: [
-      {
-        name: "React",
-        color: "#b6a6e8-text-gradient",
-      },
-      {
-        name: "Figma to Design",
-        color: "#69a2d8 -text-gradient",
-      },
-      {
-        name: "Tailwind",
-        color: "#8469d8-text-gradient",
-      },
-      {
-        name: "React Router Dom",
-        color: "#69a2d8 -text-gradient",
-      },
-    ],
-    image: [screencapture],
-    source_code_link: "https://github.com/cReAtOR0009/Real_Estate",
-    category: "web2",
-    keyFeatures: [],
-    packagesUsed: []
-  },
+
   {
     name: "web3 Course",
     description:
@@ -547,10 +550,10 @@ const allProjects = [
     source_code_link: "https://github.com/cReAtOR0009/web3course1.git",
     category: "web3",
     keyFeatures: [],
-    packagesUsed: []
+    packagesUsed: [],
   },
   {
-    name: "Blockchain Voting App",
+    name: "Blockchain Voting App Frontend Demo",
     description:
       "A Blockchain web3 App that allows blockchain enthusiasts to take advantage of the blockchain technology for decentralized voting, here you can take advantage of the blockchain and create a decentralized voting poll accessible to everyone, it gives you access to create elections and corresponding contestants. all information regarding the elections is stored on the blockchain making it immutable and secure.",
     linkToWebsite: "https://master--web3ethtransfer.netlify.app/",
@@ -576,7 +579,7 @@ const allProjects = [
     source_code_link: "https://github.com/cReAtOR0009/BlockchainVotingApp.git",
     category: "web3",
     keyFeatures: [],
-    packagesUsed: []
+    packagesUsed: [],
   },
   {
     name: "Blockchain CrowdFunding App",
@@ -605,7 +608,7 @@ const allProjects = [
     source_code_link: "https://github.com/cReAtOR0009/hardhat_fundme",
     category: "web3",
     keyFeatures: [],
-    packagesUsed: []
+    packagesUsed: [],
   },
   {
     name: "CREATOR IPFS",
@@ -633,36 +636,37 @@ const allProjects = [
     image: [ipfs1, ipfs3, ipfs5],
     source_code_link: "https://github.com/cReAtOR0009",
     category: "web3",
-    keyFeatures: ["File Upload to IPFS: Users can upload files to the IPFS network directly from the frontend interface.",
-    "Progress Tracking: The interface displays the upload progress, allowing users to track the status of their uploads in real-time.",
-    "Feedback Notifications: Toast notifications are used to provide feedback to the user, indicating whether the file upload was successful or if there was an error.",
-    "Copy to Clipboard: Users can easily copy the generated IPFS URL to their clipboard with a single click, making it convenient to share or use the uploaded file.",
-    "Express Server: The backend server is implemented using Express.js, providing a robust and scalable foundation for handling HTTP requests.",
-  "IPFS File Upload: Files uploaded to the server are stored temporarily and then uploaded to the IPFS network using the ThirdwebStorage library.",
-  "Error Handling: The server handles various error scenarios, such as missing files or internal server errors, providing appropriate responses to the client.",
-  "Middleware Logging: Middleware logging is implemented to log server requests, helping in monitoring and debugging server activity.",
-  "REST API Endpoints: The server exposes REST API endpoints for file upload (POST /upload) and basic server status (GET /)."
-],
-    packagesUsed: [ "@thirdweb-dev/react",
-    "@thirdweb-dev/sdk",
-    "npm-check",
-    "react",
-    "react-dom",
-    "react-dropzone",
-    "react-toastify",
-    "@vitejs/plugin-react",
-    "cross-env",
-    "vite",
-    "vite-plugin-node-polyfills",
-    "@thirdweb-dev/storage",
-    "cors",
-    "dotenv",
-    "express",
-    "multer",
-    "nodemon",
-    "path"
-  
-  ]
+    keyFeatures: [
+      "File Upload to IPFS: Users can upload files to the IPFS network directly from the frontend interface.",
+      "Progress Tracking: The interface displays the upload progress, allowing users to track the status of their uploads in real-time.",
+      "Feedback Notifications: Toast notifications are used to provide feedback to the user, indicating whether the file upload was successful or if there was an error.",
+      "Copy to Clipboard: Users can easily copy the generated IPFS URL to their clipboard with a single click, making it convenient to share or use the uploaded file.",
+      "Express Server: The backend server is implemented using Express.js, providing a robust and scalable foundation for handling HTTP requests.",
+      "IPFS File Upload: Files uploaded to the server are stored temporarily and then uploaded to the IPFS network using the ThirdwebStorage library.",
+      "Error Handling: The server handles various error scenarios, such as missing files or internal server errors, providing appropriate responses to the client.",
+      "Middleware Logging: Middleware logging is implemented to log server requests, helping in monitoring and debugging server activity.",
+      "REST API Endpoints: The server exposes REST API endpoints for file upload (POST /upload) and basic server status (GET /).",
+    ],
+    packagesUsed: [
+      "@thirdweb-dev/react",
+      "@thirdweb-dev/sdk",
+      "npm-check",
+      "react",
+      "react-dom",
+      "react-dropzone",
+      "react-toastify",
+      "@vitejs/plugin-react",
+      "cross-env",
+      "vite",
+      "vite-plugin-node-polyfills",
+      "@thirdweb-dev/storage",
+      "cors",
+      "dotenv",
+      "express",
+      "multer",
+      "nodemon",
+      "path",
+    ],
   },
 ];
 

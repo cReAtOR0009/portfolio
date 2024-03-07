@@ -50,6 +50,7 @@ import foodorder from "./foodordering.png";
 import groceryapp from "./groceryapp.png";
 import creatornikestore from "./creatornikestore.png"
 import screencapture from "./screencapture.png"
+import realestateImage1 from "./realestateImage1.png"
 
 import web3Course from "./web3Course.png"
 import votingApp from "./votingApp.png"
@@ -114,6 +115,7 @@ export {
   creatornikestore,
   blog1,
   screencapture,
+  realestateImage1,
 
   web3Course,
   votingApp,

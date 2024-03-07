@@ -76,10 +76,10 @@ const About = () => {
         frameworks and Libraries for Node.js, Google Firebase Inclusive--I'm
         very open to Learn more. I'm a quick learner and enjoy collaborating
         with clients and other developers to develop effective and scalable
-        solutions that address real-world challenges. Let's team up and make
-        magic happen!, I promise I won't suggest adding any unicorns or glitter,
-        unless that's what you're into. But seriously, with my skills and your
-        ideas, we're bound to make the Best of magic in Web Development!
+        solutions that address real-world challenges. I am Currently Extending
+        my knowledge and experience to the blockchain industry using solidity.
+        with my skills and your ideas, we're bound to make the Best of magic in
+        Web Development!
       </motion.p>
       <div
         className="mt-20 h-[auto] py-2 sm-overflow-hidden sm-w-[70vw]"

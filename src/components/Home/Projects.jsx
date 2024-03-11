@@ -61,7 +61,7 @@ const ProjectCard = ({
           href={linkToWebsite}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-[20px] text-secondary"
+          className="mt-[20px] text-secondary hover:underline underline-offset-4"
         >
           link to website
         </a>
@@ -69,7 +69,7 @@ const ProjectCard = ({
         <p className="mt-2 text-secondary text-[14px]">
           {truncatedContent}{" "}
           <Link
-            className="p-[3px] rounded text-white bg-[#e63e3e]"
+            className="p-[3px] rounded text-white bg-[#e63e3e] hover:underline underline-offset-4"
             onClick={() => {
               window.scrollTo(0, 0);
             }}
@@ -88,7 +88,7 @@ const ProjectCard = ({
             <p
               key={`${name}-${tag.name}`}
               style={{ background: `${firstWord}` }}
-              className={`text-[14px] p-[10px] rounded-full  text-[${firstWord}]`}
+              className={`text-[14px] p-[10px] rounded-full  text-[${firstWord}] hover:scale-[1.1] transition`}
             >
               #{tag.name}
             </p>
@@ -131,10 +131,10 @@ const Projects = () => {
           className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
           The Following projects showcases my skills and experience through
-          real-world examples of my work, courses i Took and personal Projects. Each project is briefly described with
-          links to code repositories and live demos in it. It reflects my
-          ability to solve complex problems, work with different technologies,
-          and manage projects effectively.
+          real-world examples of my work, courses i Took and personal Projects.
+          Each project is briefly described with links to code repositories and
+          live demos in it. It reflects my ability to solve complex problems,
+          work with different technologies, and manage projects effectively.
         </motion.p>
       </div>
 
@@ -159,7 +159,11 @@ const Projects = () => {
 
         <div className="mt-10 flex flex-wrap gap-7">
           {web3.map((project, index) => (
-            <ProjectCard key={`project-${project.index}`} index={project.index} {...project.value} />
+            <ProjectCard
+              key={`project-${project.index}`}
+              index={project.index}
+              {...project.value}
+            />
           ))}
         </div>
       </motion.div>

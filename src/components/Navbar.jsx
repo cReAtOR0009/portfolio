@@ -43,7 +43,7 @@ const Navbar = () => {
                     : "text-secondary"
                 } hover:-text-white hover:bg-[#915eff] hover:rounded hover:text-center hover:py-[10px] text-[18px] ${
                   link.title === "Contact"
-                    ? "text-[#050816]  rounded-full bg-[#915eff] text-[25px] px-[10px] text-center"
+                    ? "text-[#ffff]  rounded bg-[#915eff] text-[25px] px-[10px] text-center"
                     : ""
                 } font-medium cursor-pointer text-center transition-all`}
                 variants={navIn(

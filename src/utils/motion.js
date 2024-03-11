@@ -17,7 +17,6 @@ export const textVariant = (delay) => {
 };
 
 export const fadeIn = (direction, type, delay, duration) => {
-
   const xHidden = direction === "left" ? 200 : direction === "right" ? -200 : 0;
   const yHidden = direction === "up" ? 100 : direction === "down" ? -100 : 0;
   return {
@@ -47,9 +46,8 @@ export const navIn = (direction, type, delay, duration) => {
       y: direction === "up" ? 100 : direction === "down" ? -100 : 0,
       opacity: 0,
     },
-    hidden2:{
+    hidden2: {
       x: direction === "left" ? 200 : direction === "right" ? 30 : 0,
-      
     },
     show: {
       x: 0,
@@ -81,22 +79,22 @@ export const navIn = (direction, type, delay, duration) => {
   };
 };
 
-export const infinitescrollx= (y, width, delay, duration)=> {
-  return{
-    animate:{
-      x:[-1500,y-width,],
+export const infinitescrollx = (y, width, delay, duration) => {
+  return {
+    animate: {
+      x: [-1500, y - width],
       transition: {
         x: {
-          delay:delay, 
-          ease: 'linear', 
+          delay: delay,
+          ease: "linear",
           repeat: Infinity,
           duration: duration,
-          repeatType:"loop",
+          repeatType: "loop",
         },
-    }
-  }
-}
-}
+      },
+    },
+  };
+};
 
 // export const
 

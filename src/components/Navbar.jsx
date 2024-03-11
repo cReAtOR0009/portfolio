@@ -58,7 +58,11 @@ const Navbar = () => {
                   setActive(link.title);
                 }}
               >
-                <a href={`/#${link.id}`}>{link.title}</a>
+                {active == "projects" ? (
+                  <Link to={`/#${link.id}`}>{link.title}</Link>
+                ) : (
+                  <a href={`/#${link.id}`}>{link.title}</a>
+                )}
               </motion.li>
             );
           })}
@@ -102,7 +106,11 @@ const Navbar = () => {
                       setToggle(!Toggle);
                     }}
                   >
-                    <a href={`#${link.id}`}>{link.title}</a>
+                    {active == "projects" ? (
+                      <Link to={`/#${link.id}`}>{link.title}</Link>
+                    ) : (
+                      <Link to={`/#${link.id}`}>{link.title}</Link>
+                    )}
                   </motion.li>
                 );
               })}

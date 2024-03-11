@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import { SectionWrapper } from "../../hoc";
 import { allProjects } from "../../constants";
 // import { fadeIn, textVariant } from "../../utils/motion";
 
-const ProjectDetails = ({ }) => {
+const ProjectDetails = ({}) => {
   const { projectId } = useParams();
 
   const project = allProjects.find(
@@ -26,6 +26,11 @@ const ProjectDetails = ({ }) => {
     packagesUsed,
     source_code_link,
   } = project;
+
+  const [activeImage, setActiveImage] = useState(image[0]);
+  const changeMainImage = (activeImage) => {
+    setActiveImage(activeImage);
+  };
 
   return (
     <>
@@ -88,21 +93,36 @@ const ProjectDetails = ({ }) => {
             ))}
           </div>
         </div>
-        <div className="mt-20  flex flex-wrap gap-8">
+        <div className="mt-20  flex items-center justify-center flex-wrap gap-8">
+          <div className=" h-[200px] w-[200px] sm:w-[100%] sm:h-[100%]">
+            <img
+              src={activeImage}
+              alt={`activeImage`}
+              className="w-full h-full object-cover rounded-2xl"
+            />
+          </div>
+        </div>
+        <div className="mt-20  flex justify-center  flex-wrap gap-8">
           {image.map((image, index) => {
             return (
-              <div key={index} className="w-[320px] sm:h-[320px] h-[230px]">
+              <div
+                key={index}
+                className="w-[100px] h-[100px]  sm:h-[120px] border border-solid border-[#915eff] rounded p-[10px] hover:scale-[1.2] transition-all"
+                onClick={() => changeMainImage(image)}
+              >
                 <img
                   src={image}
                   alt={`${name}`}
                   key={`${name}-image-${index}`}
-                  className="w-full h-full object-cover rounded-2xl"
+                  className="w-full h-full object-cover "
                 />
               </div>
             );
           })}
         </div>
       </motion.div>
+
+      <div>{image.map}</div>
     </>
   );
 };

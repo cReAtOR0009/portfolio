@@ -51,6 +51,7 @@ import {
   screencapture,
   realestateImage1,
   crowdFundingApp,
+  TelegramBot,
   qrcodevoting1,
   qrcodevoting2,
   qrcodevoting3,
@@ -566,6 +567,68 @@ const allProjects = [
     keyFeatures: [],
     packagesUsed: [],
   },
+  {
+    name: "Smart Contract Listener-Telegram Bot",
+    description:
+      "I made a web3 script, using -web3- library and infura as a Node Provider that listens to smart contract deployemnt that matches a particular prescription using their ABI on the Blockchain(EVM compatible), this bot checks through the eth Blockchain using etherscan for new block creation, then scans the block for all smartContract Deployed, filtering out only the smart Contracts on the Block that matches the predefined Abi, the scripts works in line with a Telegram Bot using -node-telegram-bot-api- library, the script gets the information for a Matching Smart Contract and broadcasts it to a Telegram Group with the help of the Bot, the Bot can only be started or stopped by allowed Admins on the scripts using their msg id as a reference to check for permitted Admins using the -/start-, command message",
+    linkToWebsite: "https://t.me/+PcbQEyy5XjhmYjk0",
+    tags: [
+      {
+        name: "Blockchain",
+        color: "violet-500",
+      },
+      {
+        name: "web.js",
+        color: "teal-500",
+      },
+      {
+        name: "Telegram",
+        color: "lime-500",
+      },
+      {
+        name: "Bot",
+        color: "#teal-800",
+      },
+      {
+        name: "EVM",
+        color: "#69a2d8 -text-gradient",
+      },
+    ],
+    image: [TelegramBot],
+    source_code_link: "https://github.com/cReAtOR0009/TELEGRAM_BOT.git",
+    category: "web3",
+    keyFeatures: [],
+    packagesUsed: [],
+  },
+  {
+    name: "Blockchain Voting App Frontend Demo",
+    description:
+      "A Blockchain web3 App that allows blockchain enthusiasts to take advantage of the blockchain technology for decentralized voting, here you can take advantage of the blockchain and create a decentralized voting poll accessible to everyone, it gives you access to create elections and corresponding contestants. all information regarding the elections is stored on the blockchain making it immutable and secure.",
+    linkToWebsite: "https://master--web3ethtransfer.netlify.app/",
+    tags: [
+      {
+        name: "Solidity",
+        color: "gray-500",
+      },
+      {
+        name: "Ethers.js",
+        color: "teal-500",
+      },
+      {
+        name: "Blockchain",
+        color: "violet-500",
+      },
+      {
+        name: "Ethereum",
+        color: "#69a2d8 -text-gradient",
+      },
+    ],
+    image: [votingApp],
+    source_code_link: "https://github.com/cReAtOR0009/BlockchainVotingApp.git",
+    category: "web3",
+    keyFeatures: [],
+    packagesUsed: [],
+  },
 
   {
     name: "web3 Course",
@@ -596,35 +659,6 @@ const allProjects = [
     ],
     image: [web3Course],
     source_code_link: "https://github.com/cReAtOR0009/web3course1.git",
-    category: "web3",
-    keyFeatures: [],
-    packagesUsed: [],
-  },
-  {
-    name: "Blockchain Voting App Frontend Demo",
-    description:
-      "A Blockchain web3 App that allows blockchain enthusiasts to take advantage of the blockchain technology for decentralized voting, here you can take advantage of the blockchain and create a decentralized voting poll accessible to everyone, it gives you access to create elections and corresponding contestants. all information regarding the elections is stored on the blockchain making it immutable and secure.",
-    linkToWebsite: "https://master--web3ethtransfer.netlify.app/",
-    tags: [
-      {
-        name: "Solidity",
-        color: "gray-500",
-      },
-      {
-        name: "Ethers.js",
-        color: "teal-500",
-      },
-      {
-        name: "Blockchain",
-        color: "violet-500",
-      },
-      {
-        name: "Ethereum",
-        color: "#69a2d8 -text-gradient",
-      },
-    ],
-    image: [votingApp],
-    source_code_link: "https://github.com/cReAtOR0009/BlockchainVotingApp.git",
     category: "web3",
     keyFeatures: [],
     packagesUsed: [],
@@ -661,7 +695,7 @@ const allProjects = [
   {
     name: "CREATOR IPFS",
     description:
-      "This project demonstrates and allows a user to upload files to IPFS (InterPlanetary File System) and obtain the public link to the pinned file. The project utilizes Express.js for the backend server, Multer for handling file uploads, and ThirdwebStorage for interacting with IPFS. It also uses Vite for frontend, XHR for sending requests to the server, and packages like react-toastify and react-dropzone were also used.",
+      "This project demonstrates and allows a user to upload files to IPFS (InterPlanetary File System) and obtain the public link to the pinned file. The project utilizes Express.js for the backend server that handles the file upload to IPFS,  using Multer for handling file request, utilizing ThirdwebStorage for interacting with IPFS it gets the the pinned file url and sends it as a response to the request and . It also uses React Vite for frontend, XHR in the Frontend for sending requests to the server, and packages like react-toastify and react-dropzone were also used.",
     linkToWebsite: "https://ipfs-frontend.onrender.com/",
     tags: [
       {

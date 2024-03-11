@@ -60,6 +60,7 @@ import qrcodevoting5 from "./qrCodeVoting5.png"
 import web3Course from "./web3Course.png"
 import votingApp from "./votingApp.png"
 import crowdFundingApp from "./crowdFunding.png"
+import TelegramBot from "./TelegramBot.png"
 
 //ipfs project images
 import ipfs1 from "./ipfs1.png"
@@ -132,6 +133,7 @@ export {
   web3Course,
   votingApp,
   crowdFundingApp,
+  TelegramBot,
 
   //ipfs images export
   ipfs1,

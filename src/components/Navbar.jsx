@@ -27,12 +27,12 @@ const Navbar = () => {
           }}
         >
           <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
-          <p className=" text-white text-[18px] font-bold cursor-pointer flex lg:flex-col">
+          <p className=" text-white text-[18px] min-w-[180px] font-bold cursor-pointer flex sm:flex-col">
             _Creator's &nbsp;
             <span className="sm:block hidden"> | #WebManiac</span>
           </p>
         </Link>
-        <ul className="list-none hidden sm:flex flex-row gap-10">
+        <ul className="list-none hidden lg:flex justify-between flex-row lg:gap-10">
           {navLinks.map((link, index) => {
             return (
               <motion.li
@@ -63,7 +63,7 @@ const Navbar = () => {
             );
           })}
         </ul>
-        <div className="sm:hidden flex flex-1 justify-end items-center">
+        <div className="lg:hidden flex flex-1 justify-end items-center">
           <img
             src={Toggle ? close : menu}
             alt="menu"

@@ -29,21 +29,17 @@ const ProjectDetails = ({}) => {
 
   return (
     <>
-      <h1 className=" text-center text-white text-[30px]">
-        this page is currently in progress
-      </h1>
-
       <motion.div className="bg-[#3f2952] mx-auto mt-[20px] p-5 rounded-2xl  w-full">
         <div className="mt-3">
           <h1 className="text-white text-center font-bold text-[30px]">
             {name}
           </h1>
-          <p className="mt-2 text-secondary text-[14px]">{description}</p>
+          <p className="mt-2 text-secondary sm:text-[20px]">{description}</p>
           <a
             href={linkToWebsite}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-[150px] text-[25px]"
+            className="mt-[150px]  underline hover:scale-[1.1]"
           >
             link to website
           </a>
@@ -57,7 +53,7 @@ const ProjectDetails = ({}) => {
               <p
                 key={`${name}-${tag.name}`}
                 style={{ background: `${firstWord}` }}
-                className={`text-[14px] p-[10px] rounded-full  text-[${firstWord}]`}
+                className={`text-[14px] p-[10px] rounded-full  text-[${firstWord}] `}
               >
                 #{tag.name}
               </p>
@@ -65,18 +61,26 @@ const ProjectDetails = ({}) => {
           })}
         </div>
         <div className="mt-4">
-          <h1 className="text-[30px] text-center mb-[20px]">Key Features:</h1>
+          <h1 className="  text-[20px] sm:[30px] underline-offset-8 text-center mb-[20px] underline">
+            Key Features:
+          </h1>
           {keyFeatures.map((keyFeature) => (
-            <p className="mb-[10px] text-[20px] text-secondary">{keyFeature}</p>
+            <p className="mb-[10px] px-[5px]  rounded-[5px] border-l-[10px] border-l-solid text-[10px] sm:text-[20px] border-l-[#350d58] text-secondary hover:bg-[#915eff] hover:scale-[1.1] hover:text-[white] transition">
+              {keyFeature}
+            </p>
           ))}
         </div>
         <div className="mt-4">
-          <h1 className="text-[30px] text-center mb-[20px]">Packages Used:</h1>
-          {packagesUsed.map((packagge) => (
-            <ol className="mb-[10px] text-[20px] text-secondary">
-              <li>{packagge}</li>
-            </ol>
-          ))}
+          <h1 className="text-[20px] sm:[30px] underline underline-offset-8 text-center mb-[20px]">
+            Packages Used:
+          </h1>
+          <div className=" flex  flex-wrap gap-[10px] mb-[10px] text-[20px] text-secondary">
+            {packagesUsed.map((packagge) => (
+              <span className="p-[10px]  mb-[5px] rounded-[5px] border border-solid border-secondary text-[10px] sm:text-[20px] hover:bg-[#915eff] hover:scale-[1.1]  hover:text-[white] transition">
+                {packagge}
+              </span>
+            ))}
+          </div>
         </div>
         <div className="mt-20  flex flex-wrap gap-8">
           {image.map((image, index) => {

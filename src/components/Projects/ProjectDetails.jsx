@@ -46,12 +46,12 @@ const ProjectDetails = ({}) => {
         </div>
 
         <div className="mt-4 flex flex-wrap gap-2">
-          {tags.map((tag) => {
+          {tags.map((tag, index) => {
             const firstWord = tag.color.split("-")[0].toLowerCase();
             // console.log(firstWord)
             return (
               <p
-                key={`${name}-${tag.name}`}
+                key={`${name}-${tag.name}-${index}`}
                 style={{ background: `${firstWord}` }}
                 className={`text-[14px] p-[10px] rounded-full  text-[${firstWord}] `}
               >
@@ -64,8 +64,11 @@ const ProjectDetails = ({}) => {
           <h1 className="  text-[20px] sm:[30px] underline-offset-8 text-center mb-[20px] underline">
             Key Features:
           </h1>
-          {keyFeatures.map((keyFeature) => (
-            <p className="mb-[10px] px-[5px]  rounded-[5px] border-l-[10px] border-l-solid text-[10px] sm:text-[20px] border-l-[#350d58] text-secondary hover:bg-[#915eff] hover:scale-[1.1] hover:text-[white] transition">
+          {keyFeatures.map((keyFeature, index) => (
+            <p
+              key={`${name}-keyFeature-${index}`}
+              className="mb-[10px] px-[5px]  rounded-[5px] border-l-[10px] border-l-solid text-[10px] sm:text-[20px] border-l-[#350d58] text-secondary hover:bg-[#915eff] hover:scale-[1.1] hover:text-[white] transition"
+            >
               {keyFeature}
             </p>
           ))}
@@ -75,8 +78,11 @@ const ProjectDetails = ({}) => {
             Packages Used:
           </h1>
           <div className=" flex  flex-wrap gap-[10px] mb-[10px] text-[20px] text-secondary">
-            {packagesUsed.map((packagge) => (
-              <span className="p-[10px]  mb-[5px] rounded-[5px] border border-solid border-secondary text-[10px] sm:text-[20px] hover:bg-[#915eff] hover:scale-[1.1]  hover:text-[white] transition">
+            {packagesUsed.map((packagge, index) => (
+              <span
+                key={`${name}-package-${index}`}
+                className="p-[10px]  mb-[5px] rounded-[5px] border border-solid border-secondary text-[10px] sm:text-[20px] hover:bg-[#915eff] hover:scale-[1.1]  hover:text-[white] transition"
+              >
                 {packagge}
               </span>
             ))}
@@ -89,6 +95,7 @@ const ProjectDetails = ({}) => {
                 <img
                   src={image}
                   alt={`${name}`}
+                  key={`${name}-image-${index}`}
                   className="w-full h-full object-cover rounded-2xl"
                 />
               </div>
@@ -100,4 +107,4 @@ const ProjectDetails = ({}) => {
   );
 };
 
-export default SectionWrapper(ProjectDetails, "");
+export default SectionWrapper(ProjectDetails, ``);

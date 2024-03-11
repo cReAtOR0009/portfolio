@@ -14,7 +14,7 @@ const TechCard = ({ index, icon, name }) => {
     <Tilt>
       <motion.div
         variants={fadeIn("right", "spring", 0.2 * index, 0.45)}
-        className="w-[80px] h-[7.5rem] sm:w-28 sm:h-[8.5rem] text-center text-[#fff] border-2 border-[#915eff] rounded-lg p-[5px] sm:p-[20px]"
+        className="w-[80px] h-[7.5rem] sm:w-28 sm:h-[9rem] text-center text-[#fff] border-2 border-[#915eff] rounded-lg p-[5px] sm:p-[20px]"
       >
         <div className="flex flex-col justify-center items-center">
           <img src={icon} alt={`technology${name}`} />

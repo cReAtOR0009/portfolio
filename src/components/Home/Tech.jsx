@@ -28,7 +28,7 @@ const Tech = () => {
   return (
     <>
       <h1 className={styles.sectionHeadText}>Tools And Tecnologies</h1>
-      <div className="flex flex-row flex-wrap justify-center gap-5 sm:gap-10">
+      <div className="flex flex-row flex-wrap gap-5 sm:gap-10">
         {technologies.map((technology, index) => (
           <TechCard key={technology.name} index={index} {...technology} />
         ))}

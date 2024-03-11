@@ -5,7 +5,7 @@ import { SectionWrapper } from "../../hoc";
 import { allProjects } from "../../constants";
 // import { fadeIn, textVariant } from "../../utils/motion";
 
-const ProjectDetails = ({}) => {
+const ProjectDetails = ({ }) => {
   const { projectId } = useParams();
 
   const project = allProjects.find(

@@ -76,9 +76,9 @@ const Navbar = () => {
             } h-[100vh] w-[70vw] justify-center items-start py-6 absolute top-20 right-0  min-w-[140px] z-10 rounded-xl  bg-[#5b4785] transition-none `}
           >
             <ul className="list-none h-[80%] flex flex-col justify-between gap-[20px]">
-              {navLinks.map((link) => {
+              {navLinks.map((link, index) => {
                 return (
-                  <li
+                  <motion.li
                     key={link.id}
                     className={`${
                       active === link.title
@@ -86,16 +86,24 @@ const Navbar = () => {
                         : "text-secondary"
                     } hover:-text-white hover:bg-[#915eff] hover:rounded hover:text-center hover:py-[10px] text-[18px] ${
                       link.title === "Contact"
-                        ? "text-[#050816]  rounded-full bg-[#915eff] text-[25px] px-[10px] text-center"
+                        ? "rounded bg-[#915eff] text-[25px] px-[10px] text-white text-center"
                         : ""
                     } font-medium cursor-pointer text-center transition-all`}
+                    variants={navIn(
+                      "right",
+                      "spring",
+                      link.title === "Contact" ? 1 * index : 1 * index,
+                      link.title === "Contact" ? 1.5 : 2
+                    )}
+                    initial={link.title === "Contact" ? "hidden2" : "hidden"}
+                    animate={link.title === "Contact" ? "show2" : "show"}
                     onClick={() => {
                       setActive(link.title);
                       setToggle(!Toggle);
                     }}
                   >
                     <a href={`#${link.id}`}>{link.title}</a>
-                  </li>
+                  </motion.li>
                 );
               })}
             </ul>

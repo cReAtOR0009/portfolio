@@ -34,7 +34,7 @@ const Contact = () => {
 
     // Validate form fields
     if (!form.name || !form.email || !form.message) {
-      toast.error("Oops, something went wrong. empty field", {
+      toast.error("Oops, something went wrong. An Empty Field Detected", {
         autoClose: 3000,
       });
       return;
@@ -48,10 +48,10 @@ const Contact = () => {
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
-          to_name: "Sage",
+          to_name: "Creator",
           from_email: form.email,
           to_email: import.meta.env.VITE_EMAIL,
-          message: form.message,
+          message: `${form.message}${form.email}`,
         },
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
@@ -137,7 +137,8 @@ const Contact = () => {
 
           <button
             type="submit"
-            className="bg-[#804dee] py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"
+            disabled={loading}
+            className={`bg-[#804dee] ${loading?"bg-[red]":""} py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary`}
           >
             {loading ? "Sending..." : "Send"}
           </button>

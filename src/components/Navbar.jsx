@@ -134,8 +134,8 @@ const Navbar = () => {
                         {link.title}
                       </Link>
                     ) : (
-                      <Link
-                        to={`/#${link.id}`}
+                      <a
+                        href={`/#${link.id}`}
                         className={`${
                           active === link.title
                             ? "text-white bg-[#915eff] rounded p-[10px]"
@@ -147,7 +147,7 @@ const Navbar = () => {
                         } font-medium cursor-pointer text-center transition-all`}
                       >
                         {link.title}
-                      </Link>
+                      </a>
                     )}
                   </motion.li>
                 );

@@ -1,9 +1,35 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { styles } from "../../styles";
 import { ComputersCanvas } from "../canvas";
 import { illustration, illustration1, illustration2 } from "../../assets";
 const Hero = () => {
+  const [name, setName] = useState(["_", "C", "r", "e", "a", "t", "o", "r"]);
+  const [displayLetters, setDisplayLetters] = useState("");
+  const [leterCounter, setLetterCounter] = useState(0);
+
+  const updateName = () => {
+    // console.log("leterCounter :", leterCounter);
+    setDisplayLetters(`${displayLetters}` + `${name[leterCounter]}`);
+    // console.log("letters, ", displayLetters);
+    setLetterCounter(leterCounter + 1);
+    // console.log(displayLetters);
+    // console.log("displayLetters:", displayLetters.length);
+    if (displayLetters.length == 8) {
+      setLetterCounter(0);
+      setDisplayLetters("");
+    }
+  };
+
+  useEffect(() => {
+    setTimeout(() => {
+      updateName();
+    }, 700);
+
+    return () => {
+      clearInterval();
+    };
+  }, [displayLetters]);
   return (
     <section className="relative w-full mx-auto">
       <div className="flex flex-col justify-between">
@@ -15,15 +41,15 @@ const Hero = () => {
             <div className="w-1 sm:h-80 h-40  violet-gradient" />
           </div>
           <div>
-            <h1 className={`${styles.heroHeadText}`}>
+            <h1 className={`${styles.heroHeadText} transition`}>
               Hi, I'm{" "}
-              <span className="text-[#915eff] decoration-[underline]">
+              <span className="text-[#915eff] decoration-[underline] transition">
                 {" "}
-                _Creator
+                {displayLetters} &nbsp;|
               </span>{" "}
             </h1>
             <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-              a skilled and experienced web developer and  Graphics designer ,
+              a skilled and experienced web developer and Graphics designer ,
               <br className="sm:block hidden" />
               with passion for creating innovative and dynamic websites and web
               Applications with latest and indemand tools in the tech industry

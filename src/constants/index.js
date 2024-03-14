@@ -496,7 +496,6 @@ const allProjects = [
       "Implements dynamic styling using Tailwind CSS classes.",
       "Provides a user interface for adjusting the size of the QR code scanner.",
       "BACKEND",
-      
     ],
     packagesUsed: [
       "react",
@@ -520,6 +519,47 @@ const allProjects = [
       "nodemailer",
       "nodemon",
     ],
+  },
+  {
+    name: "Nitro Type Bot PLayer",
+    description:
+      "using Chrome puppeteer(puppeteer-extra, puppeteer-extra-plugin-stealth to make bot not easily detected), I wrote a simulation that Plays the NitroType game by taking  in a username, password, typing speed, and play times as a command through a discord Bot, the Discord Bot sends these parameters to the server that hosts the Discord Bot and the Game Play Scripts triggers a Function which Lauches a puppeteer Browser (Puppetteer Extra), Heads over to the Nitotype website, logs in with the provided Parameters, then make a simulation of a Game Play- it types the words by taking a map of all the words to type when it finds it way to the typing stage, using the trim method, it gets all the words to type from the words container, sets them into an array after formatting properly using the trim string method by formatting, then it Converts typingSpeed to WPM(wordsPerSecond) by dividing the typing speed parameter by 60(1 second), gets delayed in milliseconds before typing the next word- 1000/ wordsPerSecond. then doing all these it types all the words of the array in the trimmed Array and delay by the derived delay in milliseconds, it keeps reapting this simulation untill the number of game play parameter is exhaused",
+    linkToWebsite: "https://",
+    tags: [
+      {
+        name: "bot",
+        color: "#",
+      },
+      {
+        name: "node",
+        color: "#8469d8-text-gradient",
+      },
+      {
+        name: "scripts",
+        color: "#69a2d8 -text-gradient",
+      },
+      {
+        name: "discord",
+        color: "#351d75 -text-gradient",
+      },
+      {
+        name: "simulation",
+        color: "#8469d8-text-gradient",
+      },
+    ],
+    image: [
+      // qrcodevoting1,
+      // qrcodevoting2,
+      // qrcodevoting3,
+      qrcodevoting4,
+      qrcodevoting5,
+    ],
+    source_code_link: "https://github.com/cReAtOR0009/NITROBOTPLAYER",
+    category: "web2",
+    keyFeatures: [
+      
+    ],
+    packagesUsed: ["discord.js", "node"],
   },
   {
     name: "Deyspeak",

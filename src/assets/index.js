@@ -71,6 +71,12 @@ import ipfs5 from "./ipfs5.png"
 import ipfs6 from "./ipfs6.png"
 import ipfs7 from "./ipfs7.png"
 
+//nitroBot game Play
+import nitrobot1 from "./nitrobot1.png"
+import nitrobot2 from "./nitrobot2.png"
+import nitrobot3 from "./nitrobot3.png"
+import nitrobot4 from "./nitrobot4.png"
+
 export {
   illustration,
   illustration1,
@@ -142,5 +148,11 @@ export {
   ipfs4,
   ipfs5,
   ipfs6,
-  ipfs7
+  ipfs7,
+
+  //nitrobot GamePlay
+  nitrobot1,
+  nitrobot2,
+  nitrobot3,
+  nitrobot4,
 };

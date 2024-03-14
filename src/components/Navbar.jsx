@@ -32,20 +32,12 @@ const Navbar = () => {
             <span className="sm:block hidden"> | #WebManiac</span>
           </p>
         </Link>
-        <ul className="list-none hidden lg:flex justify-between flex-row lg:gap-10">
+        <ul className="list-none hidden lg:flex justify-between items-center flex-row lg:gap-10">
           {navLinks.map((link, index) => {
             return (
               <motion.li
                 key={link.id}
-                className={`${
-                  active === link.title
-                    ? "text-white bg-[#915eff] rounded p-[10px]"
-                    : "text-secondary"
-                } hover:-text-white hover:bg-[#915eff] hover:rounded hover:text-center hover:py-[10px] text-[18px] ${
-                  link.title === "Contact"
-                    ? "text-[#ffff]  rounded bg-[#915eff] text-[25px] px-[10px] text-center"
-                    : ""
-                } font-medium cursor-pointer text-center transition-all`}
+                className={link.id == "contact" ? "py-[10px] rounded " : ""}
                 variants={navIn(
                   "right",
                   "spring",
@@ -59,9 +51,35 @@ const Navbar = () => {
                 }}
               >
                 {active == "projects" ? (
-                  <Link to={`/#${link.id}`}>{link.title}</Link>
+                  <Link
+                    to={`/#${link.id}`}
+                    className={`${
+                      active === link.title
+                        ? "text-white bg-[#915eff] rounded p-[10px]"
+                        : "text-secondary"
+                    } hover:-text-white hover:bg-[#915eff] hover:rounded hover:text-center hover:py-[10px] text-[18px] ${
+                      link.title === "Contact"
+                        ? "text-white  rounded bg-[#915eff] text-[25px] px-[10px] text-center"
+                        : ""
+                    } font-medium cursor-pointer text-center transition-all`}
+                  >
+                    {link.title}
+                  </Link>
                 ) : (
-                  <a href={`/#${link.id}`}>{link.title}</a>
+                  <a
+                    href={`/#${link.id}`}
+                    className={`${
+                      active === link.title
+                        ? "text-white bg-[#915eff] rounded p-[10px]"
+                        : "text-secondary"
+                    } hover:-text-white hover:bg-[#915eff] hover:rounded hover:text-center hover:py-[10px] text-[18px] ${
+                      link.title === "Contact"
+                        ? "text-[#ffff] bg-[#915eff] text-[25px] p-[10px] text-center rounded"
+                        : ""
+                    } font-medium cursor-pointer text-center transition-all`}
+                  >
+                    {link.title}
+                  </a>
                 )}
               </motion.li>
             );
@@ -79,20 +97,14 @@ const Navbar = () => {
               !Toggle ? "hidden" : "flex"
             } h-[100vh] w-[70vw] justify-center items-start py-6 absolute top-20 right-0  min-w-[140px] z-10 rounded-xl  bg-[#5b4785] transition-none `}
           >
-            <ul className="list-none h-[80%] flex flex-col justify-between gap-[20px]">
+            <ul className="list-none h-[80%] flex flex-col justify-between items-center gap-[20px]">
               {navLinks.map((link, index) => {
                 return (
                   <motion.li
                     key={link.id}
-                    className={`${
-                      active === link.title
-                        ? "text-white bg-[#915eff] rounded p-[10px]"
-                        : "text-secondary"
-                    } hover:-text-white hover:bg-[#915eff] hover:rounded hover:text-center hover:py-[10px] text-[18px] ${
-                      link.title === "Contact"
-                        ? "rounded bg-[#915eff] text-[25px] px-[10px] text-white text-center"
-                        : ""
-                    } font-medium cursor-pointer text-center transition-all`}
+                    className={
+                      link.id == "contact" ? "py-[10px] rounded text-white" : ""
+                    }
                     variants={navIn(
                       "right",
                       "spring",
@@ -107,9 +119,35 @@ const Navbar = () => {
                     }}
                   >
                     {active == "projects" ? (
-                      <Link to={`/#${link.id}`}>{link.title}</Link>
+                      <Link
+                        to={`/#${link.id}`}
+                        className={`${
+                          active === link.title
+                            ? "text-white bg-[#915eff] rounded p-[10px]"
+                            : "text-secondary"
+                        } hover:-text-white hover:bg-[#915eff] hover:rounded hover:text-center hover:py-[10px] text-[18px] ${
+                          link.title === "Contact"
+                            ? "rounded bg-[#915eff] text-[25px] px-[10px] text-white text-center"
+                            : ""
+                        } font-medium cursor-pointer text-center transition-all`}
+                      >
+                        {link.title}
+                      </Link>
                     ) : (
-                      <Link to={`/#${link.id}`}>{link.title}</Link>
+                      <Link
+                        to={`/#${link.id}`}
+                        className={`${
+                          active === link.title
+                            ? "text-white bg-[#915eff] rounded p-[10px]"
+                            : "text-secondary"
+                        } hover:-text-white hover:bg-[#915eff] hover:rounded hover:text-center hover:py-[10px] text-[18px] ${
+                          link.title === "Contact"
+                            ? "rounded bg-[#915eff] text-[25px] p-[10px] text-white text-center"
+                            : ""
+                        } font-medium cursor-pointer text-center transition-all`}
+                      >
+                        {link.title}
+                      </Link>
                     )}
                   </motion.li>
                 );

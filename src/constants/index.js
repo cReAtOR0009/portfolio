@@ -66,6 +66,13 @@ import {
   ipfs5,
   ipfs6,
   ipfs7,
+
+  //import nitrobot 
+  nitrobot1,
+  nitrobot2,
+  nitrobot3,
+  nitrobot4,
+
 } from "../assets";
 
 export const navLinks = [
@@ -548,16 +555,24 @@ const allProjects = [
       },
     ],
     image: [
-      // qrcodevoting1,
-      // qrcodevoting2,
-      // qrcodevoting3,
-      qrcodevoting4,
-      qrcodevoting5,
+      nitrobot1,
+      nitrobot2,
+      nitrobot3,
+      nitrobot4,
     ],
     source_code_link: "https://github.com/cReAtOR0009/NITROBOTPLAYER",
     category: "web2",
     keyFeatures: [
-      
+      "Discord Bot Initialization: Initializes a Discord bot using the discord.js library and configures bot intents.",
+      "Interaction Handling: Listens for interaction events, extracts parameters from interaction options.",
+      "Puppeteer Integration: Utilizes Puppeteer for browser automation, applies a stealth plugin, and initializes a browser instance.",
+      "Start Game Function: Automates logging into NitroType and starting a game session, taking parameters- username, password, typing speed, and play times.",
+      "Error Handling: Implements multiple levels of error handling, catches and logs errors, and sends appropriate messages to Error Discord channels for Monitoring.",
+      "Asynchronous Operations: Uses async/await extensively for handling asynchronous operations without blocking the event loop.",
+      "Channel Communication: Communicates with Discord channels by sending messages using interaction.reply() and channel.send() methods.",
+      "Play Loop: Runs the main game loop until the specified number of play times is reached, types race words, and sends updates to Discord channels.",
+      "Timeout Handling: Sets timeout settings for various operations to prevent the script from hanging indefinitely, proceeds with alternative actions or logs errors if elements or operations are not found within a specified time.",
+      "Environment Variables: Uses environment variables to store sensitive information like Discord API tokens and channel IDs."
     ],
     packagesUsed: ["discord.js", "node"],
   },

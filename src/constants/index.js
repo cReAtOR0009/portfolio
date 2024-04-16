@@ -776,9 +776,9 @@ const allProjects = [
     packagesUsed: [],
   },
   {
-    name: "Smart Contract Listener-Telegram Bot",
+    name: "Erc20 Smart Contract Listener / Telegram Bot",
     description:
-      "I wrote a web3 script, using -web3- library and infura as a Node Provider that listens to smart contract deployment that matches a particular prescription using their ABI on the Blockchain(EVM compatible), this script uses the infura RPC as a provider for the -web3- library, then checks continuosly through the Eth Blockchain for new block creation at a specified interval, then scans the block for all smartContract Deployed, filtering out only the smart Contracts on the Block that matches the predefined Abi, the scripts works in line with a Telegram Bot using -node-telegram-bot-api- library, the script gets the information for a Matching Smart Contract, formats it according to preference and broadcasts it to a Telegram Group with the help of the Telegram Bot, the Bot can only be started or stopped by allowed Admins in Telegram Group on the scripts using their msg id as a reference to check for permitted Admins. the Bot can Be Triggered using the -/start-, command message",
+      "I wrote a web3 script, using -web3- library and infura as a Node Provider that listens to Erc-20 token deployment on the Ethereum Blockchain using the Eip20 token standard, this script uses the infura RPC as a provider for the -web3- library, then checks continuosly through the Eth Blockchain for new block creation at a specified interval, then scans the block for all smartContract Deployed, filtering out only the ERc20 token smart Contracts, working  in line with a Telegram Bot using -node-telegram-bot-api- library, the script gets information from The Erc20 smart Contracts by talinkg advantage of the standard, formats the information according to it preference and broadcasts it to a Telegram Group with the help of the Telegram Bot, the Bot can only be started or stopped by allowed Admins in Telegram Group on the scripts msg id of Group Members as a reference to check for permitted Admins. the Bot can Be Triggered using the -/start-, command  on the Telegram Group",
     linkToWebsite: "https://t.me/+PcbQEyy5XjhmYjk0",
     tags: [
       {
@@ -819,6 +819,7 @@ const allProjects = [
       "Saves data to JSON files using fs module",
       "Includes error handling for various scenarios",
       "Starts a Telegram bot listener for processing '/start' commands",
+      "Calls Funtion on Smart Contract Using Their ABI"
       // "Starts an Express server to listen for incoming HTTP requests"
     ],
     packagesUsed: [

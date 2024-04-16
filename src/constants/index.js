@@ -67,12 +67,15 @@ import {
   ipfs6,
   ipfs7,
 
-  //import nitrobot 
+  //import nitrobot
   nitrobot1,
   nitrobot2,
   nitrobot3,
   nitrobot4,
 
+  //tokrn deploymant
+  creatortoken,
+  creatortoken2,
 } from "../assets";
 
 export const navLinks = [
@@ -554,12 +557,7 @@ const allProjects = [
         color: "#8469d8-text-gradient",
       },
     ],
-    image: [
-      nitrobot1,
-      nitrobot2,
-      nitrobot3,
-      nitrobot4,
-    ],
+    image: [nitrobot2, creatortoken2, nitrobot3, nitrobot4],
     source_code_link: "https://github.com/cReAtOR0009/NITROBOTPLAYER",
     category: "web2",
     keyFeatures: [
@@ -572,7 +570,7 @@ const allProjects = [
       "Channel Communication: Communicates with Discord channels by sending messages using interaction.reply() and channel.send() methods.",
       "Play Loop: Runs the main game loop until the specified number of play times is reached, types race words, and sends updates to Discord channels.",
       "Timeout Handling: Sets timeout settings for various operations to prevent the script from hanging indefinitely, proceeds with alternative actions or logs errors if elements or operations are not found within a specified time.",
-      "Environment Variables: Uses environment variables to store sensitive information like Discord API tokens and channel IDs."
+      "Environment Variables: Uses environment variables to store sensitive information like Discord API tokens and channel IDs.",
     ],
     packagesUsed: ["discord.js", "node"],
   },
@@ -830,6 +828,52 @@ const allProjects = [
       "nodemon",
       "pm2",
       "fs",
+    ],
+  },
+  {
+    name: "Custom Token Deployment",
+    description:
+      "This project is a web3 Project that involves the creation and Deployment of an Erc20 following the EIP20 Standard Token named after me on the Ethereum Sepolia network",
+    linkToWebsite:
+      "https://sepolia.etherscan.io/address/0xA73e5943F1729ac5fD03fc3560F8591df6F93FF7#code",
+    tags: [
+      {
+        name: "Blockchain",
+        color: "violet-500",
+      },
+      {
+        name: "Ethers.js",
+        color: "teal-500",
+      },
+      {
+        name: "Hardhat",
+        color: "lime-500",
+      },
+      {
+        name: "Web3",
+        color: "#69a2d8 -text-gradient",
+      },
+    ],
+    image: [creatortoken2, creatortoken],
+    source_code_link: "https://github.com/cReAtOR0009/creator-erc-20",
+    category: "web3",
+    keyFeatures: [
+      "Follows the Secure Erc20 smart contract standard for erc20 token",
+      "An Extension of the Erc20 smart contract which provides all the standard erc20 capabilities",
+      "Includes a script that deploys smart contract and verifies smart contract when they are not deployed on highlighted test nets-hardhat and local network",
+      "Uses a deploy script that can be used by anybody to deploy their own custom erc20 token ",
+      "Uses hardhat configuration file to tailor compilation, deployment and verification to taste",
+      "",
+    ],
+    packagesUsed: [
+      "ethers",
+      "hardhat",
+      "@nomicfoundation/hardhat-toolbox",
+      "@nomiclabs/hardhat-ethers",
+      "@nomiclabs/hardhat-waffle",
+      "@nomiclabs/hardhat-etherscan",
+      "dotenv",
+      "hardhat-deploy",
     ],
   },
 

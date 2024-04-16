@@ -24,7 +24,7 @@ const Hero = () => {
   useEffect(() => {
     setTimeout(() => {
       updateName();
-    }, 700);
+    }, 600);
 
     return () => {
       clearInterval();

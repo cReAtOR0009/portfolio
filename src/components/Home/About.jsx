@@ -45,7 +45,7 @@ const ServiceCard = ({ index, title, icon }) => {
             scale: 1,
             speed: 250,
           }}
-          className="bg-tertiary border-2 border-[#915eff] rounded-lg py-5 px-[35px] min-h-[180px] sm:w[300px] w-[200px] flex justify-evenly items-center flex-col"
+          className="bg-tertiary border-2 border-[#915eff] rounded-lg py-5 px-[35px] min-h-[180px] sm:w-[220px] w-[200px] flex justify-evenly items-center flex-col"
         >
           <h3 className="text-white text-[20px] font-bold text-center">
             {title}

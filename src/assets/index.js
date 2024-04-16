@@ -11,15 +11,15 @@ import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 
-import illustration from "./illustration.jpg"
-import illustration1 from "./Static-website.svg"
-import illustration2 from "./Static-website.png"
+import illustration from "./illustration.jpg";
+import illustration1 from "./Static-website.svg";
+import illustration2 from "./Static-website.png";
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
 import figma from "./tech/figma.png";
 import git from "./tech/git.png";
 import html from "./tech/html.png";
-import javascript from "./tech/javascript.png"; 
+import javascript from "./tech/javascript.png";
 import mongodb from "./tech/mongodb.png";
 import nodejs from "./tech/nodejs.png";
 import reactjs from "./tech/reactjs.png";
@@ -42,40 +42,44 @@ import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 import portfolio from "./portfoliowebsite.png";
-import blog1 from "./blog1.png"
+import blog1 from "./blog1.png";
 import disney from "./disneyclone.png";
 import kasuwa from "./kasuwa.png";
 import deyspeak from "./deyspeak.png";
 import foodorder from "./foodordering.png";
 import groceryapp from "./groceryapp.png";
-import creatornikestore from "./creatornikestore.png"
-import screencapture from "./screencapture.png"
-import realestateImage1 from "./realestateImage1.png"
-import qrcodevoting1 from "./qrCodeVoting1.png"
-import qrcodevoting2 from "./qrCodeVoting2.png"
-import qrcodevoting3 from "./qrCodeVoting3.png"
-import qrcodevoting4 from "./qrCodeVoting4.png"
-import qrcodevoting5 from "./qrCodeVoting5.png"
+import creatornikestore from "./creatornikestore.png";
+import screencapture from "./screencapture.png";
+import realestateImage1 from "./realestateImage1.png";
+import qrcodevoting1 from "./qrCodeVoting1.png";
+import qrcodevoting2 from "./qrCodeVoting2.png";
+import qrcodevoting3 from "./qrCodeVoting3.png";
+import qrcodevoting4 from "./qrCodeVoting4.png";
+import qrcodevoting5 from "./qrCodeVoting5.png";
 
-import web3Course from "./web3Course.png"
-import votingApp from "./votingApp.png"
-import crowdFundingApp from "./crowdFunding.png"
-import TelegramBot from "./TelegramBot.png"
+import web3Course from "./web3Course.png";
+import votingApp from "./votingApp.png";
+import crowdFundingApp from "./crowdFunding.png";
+import TelegramBot from "./TelegramBot.png";
 
 //ipfs project images
-import ipfs1 from "./ipfs1.png"
-import ipfs2 from "./ipfs2.png"
-import ipfs3 from "./ipfs3.png"
-import ipfs4 from "./ipfs4.png"
-import ipfs5 from "./ipfs5.png"
-import ipfs6 from "./ipfs6.png"
-import ipfs7 from "./ipfs7.png"
+import ipfs1 from "./ipfs1.png";
+import ipfs2 from "./ipfs2.png";
+import ipfs3 from "./ipfs3.png";
+import ipfs4 from "./ipfs4.png";
+import ipfs5 from "./ipfs5.png";
+import ipfs6 from "./ipfs6.png";
+import ipfs7 from "./ipfs7.png";
 
 //nitroBot game Play
-import nitrobot1 from "./nitrobot1.png"
-import nitrobot2 from "./nitrobot2.png"
-import nitrobot3 from "./nitrobot3.png"
-import nitrobot4 from "./nitrobot4.png"
+import nitrobot1 from "./nitrobot1.png";
+import nitrobot2 from "./nitrobot2.png";
+import nitrobot3 from "./nitrobot3.png";
+import nitrobot4 from "./nitrobot4.png";
+
+//token Deployment
+import creatortoken from "./creatortoken.png"
+import creatortoken2 from "./creatortoken2.png"
 
 export {
   illustration,
@@ -117,7 +121,6 @@ export {
   telegram_icon,
   linkdin_icon,
   twitter,
-
   portfolio,
   disney,
   kasuwa,
@@ -128,14 +131,11 @@ export {
   blog1,
   screencapture,
   realestateImage1,
-
   qrcodevoting1,
   qrcodevoting2,
   qrcodevoting3,
   qrcodevoting4,
   qrcodevoting5,
-
-
   web3Course,
   votingApp,
   crowdFundingApp,
@@ -155,4 +155,8 @@ export {
   nitrobot2,
   nitrobot3,
   nitrobot4,
+
+  //token deployment
+  creatortoken,
+  creatortoken2
 };

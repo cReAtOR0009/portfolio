@@ -81,6 +81,10 @@ import nitrobot4 from "./nitrobot4.png";
 import creatortoken from "./creatortoken.png"
 import creatortoken2 from "./creatortoken2.png"
 
+//3d Product website
+import threeDtool from "./3dtool.png"
+import threeDtool2 from "./3dtool2.png"
+
 export {
   illustration,
   illustration1,
@@ -158,5 +162,9 @@ export {
 
   //token deployment
   creatortoken,
-  creatortoken2
+  creatortoken2,
+
+  //3d  tool Product website
+  threeDtool,
+  threeDtool2
 };

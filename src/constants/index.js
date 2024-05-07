@@ -76,6 +76,10 @@ import {
   //tokrn deploymant
   creatortoken,
   creatortoken2,
+
+  //3d tool website
+  threeDtool,
+  threeDtool2
 } from "../assets";
 
 export const navLinks = [
@@ -702,6 +706,31 @@ const allProjects = [
     ],
     image: [kasuwa],
     source_code_link: "https://github.com/",
+    category: "web2",
+    keyFeatures: [],
+    packagesUsed: [],
+  },
+  {
+    name: "3d Product Website",
+    description:
+      "As made a 3d website that showcase a 3d tool using three js and webgl",
+    linkToWebsite: "https://creator-3dproduct.netlify.app/",
+    tags: [
+      {
+        name: "Three.js",
+        color: "#b6a6e8-text-gradient",
+      },
+      {
+        name: "webgi",
+        color: "#8469d8-text-gradient",
+      },
+      {
+        name: "typescript",
+        color: "#69a2d8 -text-gradient",
+      },
+    ],
+    image: [threeDtool, threeDtool2],
+    source_code_link: "https://github.com/3dToolWebsite",
     category: "web2",
     keyFeatures: [],
     packagesUsed: [],

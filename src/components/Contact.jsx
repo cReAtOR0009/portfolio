@@ -147,7 +147,7 @@ const Contact = () => {
         <motion.div className="flex gap-4 py-2 flex-wrap">
           {socials.map((social, index) => (
             <motion.div
-              key={social.name}
+              key={index}
               onClick={() => window.open(social.link, "_blank")}
               className="w-[35px] h-[35px] text-center justify-center text-[#fff] border-2 border-tertiary  cursor-pointer rounded-[50%] p-[10px]"
             >

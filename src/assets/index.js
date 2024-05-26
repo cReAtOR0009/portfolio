@@ -1,12 +1,12 @@
 import logo from "./logo.png";
-import backend from "./backend.png";
-import creator from "./creator.png";
+import backend from "./backend.jpeg";
+import creator from "./creator.jpeg";
 import mobile from "./mobile.png";
 import web from "./web.png";
 import react from "./react.png";
-import node from "./node.png";
-import contentcreation from "./contentcreation.png";
-import customer from "./customer.png";
+import node from "./node.png"; 
+import contentcreation from "./contentcreation.jpeg";
+import customer from "./customer.jpeg";
 import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
@@ -38,29 +38,29 @@ import twitter from "./socials/twitter_icon.jpg";
 import telegram_icon from "./socials/telegram_icon.jpg";
 import linkdin_icon from "./socials/linkdln_icon.jpg";
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+import carrent from "./carrent.jpeg";
+import jobit from "./jobit.jpeg";
+import tripguide from "./tripguide.jpeg";
 import portfolio from "./portfoliowebsite.png";
-import blog1 from "./blog1.png";
-import disney from "./disneyclone.png";
+import blog1 from "./blog1.jpeg";
+import disney from "./disneyclone.jpeg";
 import kasuwa from "./kasuwa.png";
-import deyspeak from "./deyspeak.png";
-import foodorder from "./foodordering.png";
-import groceryapp from "./groceryapp.png";
+import deyspeak from "./deyspeak.jpeg";
+import foodorder from "./foodordering.jpeg";
+import groceryapp from "./groceryapp.jpeg";
 import creatornikestore from "./creatornikestore.png";
 import screencapture from "./screencapture.png";
 import realestateImage1 from "./realestateImage1.png";
-import qrcodevoting1 from "./qrCodeVoting1.png";
-import qrcodevoting2 from "./qrCodeVoting2.png";
-import qrcodevoting3 from "./qrCodeVoting3.png";
-import qrcodevoting4 from "./qrCodeVoting4.png";
-import qrcodevoting5 from "./qrCodeVoting5.png";
+import qrcodevoting1 from "./qrCodeVoting.jpeg";
+import qrcodevoting2 from "./qrCodeVoting1.png";
+import qrcodevoting3 from "./qrCodeVoting2.png";
+import qrcodevoting4 from "./qrCodeVoting3.png";
+import qrcodevoting5 from "./qrCodeVoting4.png";
 
-import web3Course from "./web3Course.png";
-import votingApp from "./votingApp.png";
-import crowdFundingApp from "./crowdFunding.png";
-import TelegramBot from "./TelegramBot.png";
+import web3Course from "./web3Course.jpeg";
+import votingApp from "./votingApp.jpeg";
+import crowdFundingApp from "./crowdFunding.jpeg";
+import TelegramBot from "./TelegramBot.jpeg";
 
 //ipfs project images
 import ipfs1 from "./ipfs1.png";
@@ -78,11 +78,11 @@ import nitrobot3 from "./nitrobot3.png";
 import nitrobot4 from "./nitrobot4.png";
 
 //token Deployment
-import creatortoken from "./creatortoken.png"
-import creatortoken2 from "./creatortoken2.png"
+import creatortoken from "./creatortoken.jpeg"
+import creatortoken2 from "./creatortoken2.jpeg"
 
 //3d Product website
-import threeDtool from "./3dtool.png"
+import threeDtool from "./3dtool.jpeg"
 import threeDtool2 from "./3dtool2.png"
 
 export {

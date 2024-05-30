@@ -85,6 +85,10 @@ import creatortoken2 from "./creatortoken2.jpeg"
 import threeDtool from "./3dtool.jpeg"
 import threeDtool2 from "./3dtool2.png"
 
+//creators crowdfunding
+import creators from "./creators1.png"
+import creators2 from "./creators2.png"
+
 export {
   illustration,
   illustration1,
@@ -166,5 +170,9 @@ export {
 
   //3d  tool Product website
   threeDtool,
-  threeDtool2
+  threeDtool2,
+
+  //creators
+  creators,
+  creators2
 };

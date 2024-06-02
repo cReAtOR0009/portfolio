@@ -580,7 +580,7 @@ const allProjects = [
       "Timeout Handling: Sets timeout settings for various operations to prevent the script from hanging indefinitely, proceeds with alternative actions or logs errors if elements or operations are not found within a specified time.",
       "Environment Variables: Uses environment variables to store sensitive information like Discord API tokens and channel IDs.",
     ],
-    packagesUsed: ["discord.js", "node"],
+    packagesUsed: ["discord.js","dotenv", "puppeteer", "puppeteer-extra","puppeteer-extra-plugin-stealth", "node"],
   },
   {
     name: "Deyspeak",

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { HashLink } from "react-router-hash-link";
 import { Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { navIn, textVariant } from "../utils/motion";
@@ -37,7 +38,7 @@ const Navbar = () => {
             return (
               <motion.li
                 key={link.id}
-                className={link.id == "contact" ? "py-[10px] rounded " : ""}
+                className={link.id == "contact" ? "py-[10px rounded-full " : ""}
                 variants={navIn(
                   "right",
                   "spring",
@@ -50,37 +51,20 @@ const Navbar = () => {
                   setActive(link.title);
                 }}
               >
-                {active == "projects" ? (
-                  <Link
-                    to={`/#${link.id}`}
-                    className={`${
-                      active === link.title
-                        ? "text-white bg-[#915eff] rounded p-[10px]"
-                        : "text-secondary"
-                    } hover:-text-white hover:bg-[#915eff] hover:rounded hover:text-center hover:py-[10px] text-[18px] ${
-                      link.title === "Contact"
-                        ? "text-white  rounded bg-[#915eff] text-[25px] px-[10px] text-center"
-                        : ""
-                    } font-medium cursor-pointer text-center transition-all`}
-                  >
-                    {link.title}
-                  </Link>
-                ) : (
-                  <a
-                    href={`/#${link.id}`}
-                    className={`${
-                      active === link.title
-                        ? "text-white bg-[#915eff] rounded p-[10px]"
-                        : "text-secondary"
-                    } hover:-text-white hover:bg-[#915eff] hover:rounded hover:text-center hover:py-[10px] text-[18px] ${
-                      link.title === "Contact"
-                        ? "text-[#ffff] bg-[#915eff] text-[25px] p-[10px] text-center rounded"
-                        : ""
-                    } font-medium cursor-pointer text-center transition-all`}
-                  >
-                    {link.title}
-                  </a>
-                )}
+                <HashLink
+                  to={`/#${link.id}`}
+                  className={`${
+                    active === link.title
+                      ? "text-white border-b-4 border-b-[#915eff] bg-[#915eff rounded px-[10px] pb-[5px]"
+                      : "text-secondary border-b-transparent border-b-2"
+                  } hover:-text-white hover:border-b-[#915eff] text-[18px] ${
+                    link.title === "Contact"
+                      ? "text-white   bg-[#915eff] rounded-full text-[25px] px-[10px] text-center"
+                      : ""
+                  } font-medium cursor-pointer text-center transition-all`}
+                >
+                  {link.title}
+                </HashLink>
               </motion.li>
             );
           })}
@@ -92,68 +76,50 @@ const Navbar = () => {
             className="w-[28px] h-[28px] object-contain cursor-pointer"
             onClick={() => setToggle(!Toggle)}
           />
-          <div
+
+          <ul
             className={`${
               !Toggle ? "hidden" : "flex"
-            } h-[100vh] w-[70vw] justify-center items-start py-6 absolute top-20 right-0  min-w-[140px] z-10 rounded-xl  bg-[#5b4785] transition-none `}
+            } flex-col justify-between h-[50vh] w-[40vw]  items-center py-6 px-4 absolute top-20 right-0  z-10 rounded-xl  bg-[#5b4785] transition-none `}
           >
-            <ul className="list-none h-[80%] flex flex-col justify-between items-center gap-[20px]">
-              {navLinks.map((link, index) => {
-                return (
-                  <motion.li
-                    key={link.id}
-                    className={
-                      link.id == "contact" ? "py-[10px] rounded text-white" : ""
-                    }
-                    variants={navIn(
-                      "right",
-                      "spring",
-                      link.title === "Contact" ? 1 * index : 1 * index,
-                      link.title === "Contact" ? 1.5 : 2
-                    )}
-                    initial={link.title === "Contact" ? "hidden2" : "hidden"}
-                    animate={link.title === "Contact" ? "show2" : "show"}
-                    onClick={() => {
-                      setActive(link.title);
-                      setToggle(!Toggle);
-                    }}
+            {navLinks.map((link, index) => {
+              return (
+                <motion.li
+                  key={link.id}
+                  className={
+                    `self-center content-start text-left ${link.id == "contact" ? " rounded-full text-white" : ""}`
+                  }
+                  variants={navIn(
+                    "right",
+                    "spring",
+                    link.title === "Contact" ? 1 * index : 1 * index,
+                    link.title === "Contact" ? 1.5 : 2
+                  )}
+                  initial={link.title === "Contact" ? "hidden2" : "hidden"}
+                  animate={link.title === "Contact" ? "show2" : "show"}
+                  onClick={() => {
+                    setActive(link.title);
+                    setToggle(!Toggle);
+                  }}
+                >
+                  <HashLink
+                    to={`/#${link.id}`}
+                    className={`${
+                      active === link.title
+                        ? "text-white border-b-4 border-b-[#915eff] bg-[#915eff rounded px-[10px] pb-[5px]"
+                        : "text-secondary border-b-transparent border-b-2"
+                    } hover:-text-white hover:border-b-[#915eff] text-[18px] ${
+                      link.title === "Contact"
+                        ? "text-white   bg-[#915eff] rounded-full text-[25px] px-[10px] "
+                        : ""
+                    } font-medium cursor-pointer text-center transition-all`}
                   >
-                    {active == "projects" ? (
-                      <Link
-                        to={`/#${link.id}`}
-                        className={`${
-                          active === link.title
-                            ? "text-white bg-[#915eff] rounded p-[10px]"
-                            : "text-secondary"
-                        } hover:-text-white hover:bg-[#915eff] hover:rounded hover:text-center hover:py-[10px] text-[18px] ${
-                          link.title === "Contact"
-                            ? "rounded bg-[#915eff] text-[25px] px-[10px] text-white text-center"
-                            : ""
-                        } font-medium cursor-pointer text-center transition-all`}
-                      >
-                        {link.title}
-                      </Link>
-                    ) : (
-                      <a
-                        href={`/#${link.id}`}
-                        className={`${
-                          active === link.title
-                            ? "text-white bg-[#915eff] rounded p-[10px]"
-                            : "text-secondary"
-                        } hover:-text-white hover:bg-[#915eff] hover:rounded hover:text-center hover:py-[10px] text-[18px] ${
-                          link.title === "Contact"
-                            ? "rounded bg-[#915eff] text-[25px] p-[10px] text-white text-center"
-                            : ""
-                        } font-medium cursor-pointer text-center transition-all`}
-                      >
-                        {link.title}
-                      </a>
-                    )}
-                  </motion.li>
-                );
-              })}
-            </ul>
-          </div>
+                    {link.title}
+                  </HashLink>
+                </motion.li>
+              );
+            })}
+          </ul>
         </div>
       </div>
     </motion.nav>

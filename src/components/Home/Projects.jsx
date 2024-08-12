@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -29,8 +29,8 @@ const ProjectCard = ({
 
   return (
     <motion.div
-    key={index}
-      variants={fadeIn("up", "spring", index * 0.5, 0.75)}
+      key={index}
+      variants={fadeIn("up", "spring", index * 0.1, 0.75)}
       initial="hidden"
       animate="show"
       className="bg-[#3f2952] p-5 rounded-2xl sm:w-[360px] w-full"
@@ -69,7 +69,7 @@ const ProjectCard = ({
         <p className="mt-2 text-secondary text-[14px]">
           {truncatedContent}{" "}
           <Link
-            className="p-[3px] rounded text-white bg-[#e63e3e] hover:underline underline-offset-4"
+            className=" rounded text-white border-b-2 border-b-[#e63e3e] hover:underline underline-offset-4"
             onClick={() => {
               window.scrollTo(0, 0);
             }}
@@ -87,8 +87,8 @@ const ProjectCard = ({
           return (
             <p
               key={`${name}-${tag.name}`}
-              style={{ background: `${firstWord}` }}
-              className={`text-[14px] p-[10px] rounded-full  text-[${firstWord}] hover:scale-[1.1] transition`}
+              // style={{ color: `${firstWord}` }}
+              className={`text-[14px] rounded-full  text-[${firstWord}] hover:scale-[1.1] transition`}
             >
               #{tag.name}
             </p>
@@ -112,8 +112,58 @@ const web3 = AllProjectsWithIndex.filter(
 );
 // console.log(web3);
 const freelancing = AllProjectsWithIndex.filter(
-  (project) => project.value.category == "freelancing"
+  (project) =>
+    project.value.category == "freelancing" ||
+    project.value.category == "webscrapping"
 );
+
+const api = AllProjectsWithIndex.filter(
+  (project) => project.value.category == "api"
+);
+
+const ProjectSection = ({ items }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [animationKey, setAnimationKey] = useState(0);
+
+  const cardPerDisp = 3;
+  const totalPages = Math.ceil(items.length / cardPerDisp);
+
+  const startIndex = currentIndex * cardPerDisp;
+  const endIndex = Math.min(startIndex + cardPerDisp - 1, items.length - 1);
+  const toDisplay = items.slice(startIndex, endIndex + 1);
+
+  const updateDisplayItem = (index) => {
+    setCurrentIndex(index);
+    setAnimationKey((prevKey) => prevKey + 1); // Update the animation key to force re-render
+  };
+
+  return (
+    <>
+      <div className="mt-20 flex flex-wrap gap-7">
+        {toDisplay.map((project, index) => (
+          <ProjectCard
+            key={`project-${project.index}`}
+            index={project.index}
+            {...project.value}
+          />
+        ))}
+      </div>
+      <div className="flex justify-center items-center gap-4">
+        {Array.from({ length: totalPages }, (_, index) => (
+          <button
+            key={index}
+            onClick={() => updateDisplayItem(index)}
+            className={`${
+              currentIndex === index ? " scale-[1.3] w-6" : "hover:scale-[1.3]"
+            } bg-[#915eff] p-1 my-6 w-4 h-2 rounded-full animate-slide-in`}
+          >
+            {/* {index + 1} */}
+          </button>
+        ))}
+      </div>
+    </>
+  );
+};
 
 const Projects = () => {
   return (
@@ -138,15 +188,7 @@ const Projects = () => {
         </motion.p>
       </div>
 
-      <div className="mt-20 flex flex-wrap gap-7">
-        {web2.map((project, index) => (
-          <ProjectCard
-            key={`project-${project.index}`}
-            index={project.index}
-            {...project.value}
-          />
-        ))}
-      </div>
+      <ProjectSection items={web2} />
 
       <motion.div
         variants={textVariant()}
@@ -157,15 +199,7 @@ const Projects = () => {
         {/* <p className={styles.sectionSubText}>My Web Projects</p> */}
         <h2 className={styles.sectionHeadText}>My Web3 Projects.</h2>
 
-        <div className="mt-10 flex flex-wrap gap-7">
-          {web3.map((project, index) => (
-            <ProjectCard
-              key={`project-${project.index}`}
-              index={project.index}
-              {...project.value}
-            />
-          ))}
-        </div>
+        <ProjectSection items={web3} />
       </motion.div>
 
       <motion.div
@@ -178,15 +212,7 @@ const Projects = () => {
         <h2 className={styles.sectionHeadText}>My Freelancing Journey...</h2>
 
         <div className="mt-10 flex flex-wrap gap-7">
-          {freelancing.map((project, index) => (
-            <ProjectCard
-              key={`project-${index}`}
-              index={index}
-              {...project.value}
-            />
-          ))}
-          loading...#currently bringing together the content for my Freelancing
-          Journey
+        <ProjectSection items={freelancing} />
         </div>
       </motion.div>
 
@@ -197,7 +223,7 @@ const Projects = () => {
         className="my-[20px]"
       >
         <h2 className={styles.sectionHeadText}>APIs</h2>
-        <div className="mt-10 flex flex-wrap gap-7">loading...#API</div>
+        <ProjectSection items={api} />
       </motion.div>
     </>
   );

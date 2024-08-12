@@ -89,6 +89,9 @@ import threeDtool2 from "./3dtool2.png"
 import creators from "./creators1.png"
 import creators2 from "./creators2.png"
 
+//freelancing
+import freelanceBanner from "./freelanceBanner.png"
+
 export {
   illustration,
   illustration1,
@@ -174,5 +177,8 @@ export {
 
   //creators
   creators,
-  creators2
+  creators2,
+
+  // freelancing
+  freelanceBanner
 };

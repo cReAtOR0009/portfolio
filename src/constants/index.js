@@ -84,6 +84,9 @@ import {
   //creators
   creators,
   creators2,
+
+  // freelancing
+  freelanceBanner
 } from "../assets";
 
 export const navLinks = [
@@ -273,6 +276,7 @@ const testimonials = [
 //
 
 const allProjects = [
+
   // {
   //   name: "Disney cloned",
   //   description:
@@ -303,145 +307,77 @@ const allProjects = [
   //   packagesUsed: []
   // },
   {
-    name: "A Real Estate Website",
+    name: "Deyspeak",
     description:
-      "I am pouring a lot of efforts into this, its a real estate web app that allows you to buy and sell real estate propeerties, basicaly you can signup as a regualar user and be priviledged to buy property or as an agent and be permitted to list real estate properties, properties listed would contain a very extensive detail of the property which includes amenities showcase, surroundind amenities, property sales and rent history, owners history, and also a link to virtual tour where you can preview properties virtually in 3d wherever you are in the world",
-    linkToWebsite: "https://creator-real-estate-market.netlify.app/",
+      "Introducing one of my standout projects featured in my portfolio, which i made Voluntarily as a fullStack web developer, while on the Deyspeak Developer Team – a language learning app waitlist website. Joining the exclusive waitlist offers you the opportunity to be at the forefront of a revolutionary African language learning experience. This app is meticulously designed to transcend language barriers, foster cultural connections, and empower users to communicate fluently in multiple African languages. As you explore my portfolio, discover how I contributed to creating a captivating and user-friendly platform. The waitlist website showcases my skills in crafting compelling content and an enticing user experience from Figma design, enticing visitors to embark on their linguistic journey.",
+    linkToWebsite: "https://phenomenal-gelato-370181.netlify.app/",
     tags: [
       {
         name: "React",
         color: "#b6a6e8-text-gradient",
-      },
-      {
-        name: "Figma to Design",
-        color: "#69a2d8 -text-gradient",
-      },
-      {
-        name: "Tailwind",
-        color: "#8469d8-text-gradient",
-      },
-      {
-        name: "React Router Dom",
-        color: "#69a2d8 -text-gradient",
-      },
-    ],
-    image: [realestateImage1, screencapture],
-    source_code_link: "https://github.com/cReAtOR0009/Real_Estate",
-    category: "web2",
-    keyFeatures: [
-      "Redux Toolkit for state management and asynchronous logic",
-      "Context API for global state management (CartContext and NavigationContext)",
-      "Local storage usage for persisting cart state",
-      "React Router DOM for client-side routing",
-      "Protected routes for authentication (RequireAuth)",
-      "Dynamic route configuration using createRoutesFromChildren",
-      "Authentication logic (Signup, Login, Welcome)",
-      "File upload functionality for property images",
-      "Usage of useState hook for local state management (NavigationProvider)",
-      "Dynamically adding and updating form fields (formReducer)",
-      "Conditional rendering based on authentication status",
-      "Handling complex state structures (e.g., nested objects)",
-      "Dynamic routing with parameters (propertyid)",
-      "Custom styling with CSS (App.css)",
-      "React Router DOM for client-side routing",
-      "Form handling techniques including controlled components and form submission",
-      "Authentication logic with JWT tokens",
-      "File upload functionality",
-      "Dynamic form fields management",
-      "Conditional rendering based on authentication status and form validation",
-      "Error handling for form validation and API requests",
-      "State management using React useState, UseContext, useReducer and Redux Toolkit",
-      "API requests handling with Redux Toolkit's createApi and fetchBaseQuery",
-      "Custom styling using Tailwind CSS classes",
-      "Usage of various React hooks such as useState, useEffect, useReducer, useSelector, and useLocation",
-      "Nested state management for complex data structures",
-      "Form input validation with error message display",
-      "Manipulation of arrays for features like additional features and nearby amenities, ratings, property history, and image uploads",
-      "Handling field dependencies and dynamic state updates",
-      "Form submission handling and data processing",
-      "Dynamic field mapping to state properties",
-      "Initialization of form fields with default values using useState",
-    ],
-    packagesUsed: [
-      "React",
-      "vite",
-      "postcss",
-      "tailwindcss",
-      "react-redux",
-      "react-router-dom",
-      "react-icons",
-      "@reduxjs/toolkit",
-      "bcryptjs",
-      "body-parser",
-      "cookie-parser",
-      "cors",
-      "dotenv",
-      "express",
-      "jsonwebtoken",
-      "mongoose",
-      "nodemailer",
-      "nodemon",
-      "stripe",
-    ],
-  },
-  {
-    name: "portfolio Website",
-    description:
-      "My Portfolio website, showcasing my web2 and web3 journey as a Fullstack web developer, here you can journey with me as I highlight important details about my journey which includes a brief description of me, the technology I use, projects I have worked on and I am still working on, ways you can reach me, and more. :)",
-    linkToWebsite: "https://web-dev-crib.netlify.app/",
-    tags: [
-      {
-        name: "React",
-        color: "#b6a6e8-text-gradient",
-      },
-      {
-        name: "Tailwindcss",
-        color: "#8469d8-text-gradient",
       },
       {
         name: "Framer-motion",
-        color: "#69a2d8 -text-gradient",
+        color: "#8469d8-text-gradient",
       },
       {
-        name: "Three-js",
+        name: "react-router-dom",
+        color: "#8469d8-text-gradient",
+      },
+      {
+        name: "pure CSS",
         color: "#69a2d8 -text-gradient",
       },
     ],
-    image: [portfolio],
-    source_code_link: "https://github.com/cReAtOR0009/portfolio",
+    image: [deyspeak],
+    source_code_link: "https://github.com/cReAtOR0009/deyspeak",
     category: "web2",
     keyFeatures: [
-      " Utilizes react useContext for Providing Nav state Management to all Component.",
-      "Utilizes React Router's Link component for navigation.",
-      "Implements responsive design using CSS media queries.",
-      "Uses Framer Motion for animations and transitions.",
-      "Uses an Higher Order Function as a wrapper component for other components.",
-      "Utilizes React Router's Outlet component for nested routing.",
-      "Shows a loading progress bar before 3d Items load using Three.js and React Drei.",
-      "Utilizes useProgress hook from react-three to track loading progress.",
-      "Utilizes React Router's useParams hook to extract parameters from the URL.",
-      "Retrieves project details based on the provided projectId.",
-      "Utilizes staggered animations for multiple components.",
-      "Utilizes React Router's Link component for internal navigation.",
-      "Utilizes React Tilt for tilt effect on Cards Component.",
+      "State management using useState hook for loading state and individual letter states from A to Z",
+      "Initialization of alphabet array containing characters A to Z and some additional characters ut8 dosen't recognize",
+      "Setting loading state after a delay of 3000 milliseconds using setTimeout, to give Enough time For Loader Animation",
+      "Generating random letters for each alphabet character using setInterval and pickRandom function, this ensure that all the Random Letters Displayed are Induvidually Rendered and StandAlone",
+      "Rendering The loader animation until loading state becomes true",
+      "Using AnimatePresence from framer-motion for smooth animations during component presence changes",
+      "Applying animation variants for loader container and loader content using framer-motion",
+      "Dynamic rendering of letters in a table format while loading",
+      "Dynamic rendering of  text using motion spans while loading",
+      "A count Down Timer counting Down to a Launching Date",
     ],
     packagesUsed: [
-      "react",
-      "@mail.js/browser",
-      "@react-three-drei",
-      "react-three-fiber",
-      "framer-motion",
-      "maath",
       "react-router-dom",
-      "tailwindcss",
-      "postcss",
-      "react-icons",
-      "react-toastify",
-      "react-tilt",
-      "react-vertical-timeline-component",
-      "three",
+      "vite",
+      "eslint",
+      "react",
+      "framer-motion",
       "dotenv",
+      "react-one-signal",
     ],
+  },
+  {
+    name: "Kasuwa",
+    description:
+      "Presenting a dynamic full-stack website with an integrated admin panel for Kasuwa Farms. This platform provides visitors with real-time access to agricultural commodity prices, along with the percentage increase and decrease conveniently displayed on the landing page. Admin users wield the power to update commodity prices, add new commodities with corresponding prices, delete items, and more. A standout feature of this website lies in its use of dynamic APIs, exclusively serving user requests. The percentage increase and decrease are automatically calculated in real-time as admin users update commodity prices. This showcases the website's responsiveness and ability to provide users with the most current and accurate information.",
+    linkToWebsite: "https://newkasuwa.onrender.com/",
+    tags: [
+      {
+        name: "React",
+        color: "#b6a6e8-text-gradient",
+      },
+      {
+        name: "styled-component",
+        color: "#8469d8-text-gradient",
+      },
+      {
+        name: "Node.js",
+        color: "#69a2d8 -text-gradient",
+      },
+    ],
+    image: [kasuwa],
+    source_code_link: "https://github.com/",
+    category: "web2",
+    keyFeatures: [],
+    packagesUsed: [],
   },
   {
     name: "QR Code Voting",
@@ -583,57 +519,152 @@ const allProjects = [
     packagesUsed: ["discord.js","dotenv", "puppeteer", "puppeteer-extra","puppeteer-extra-plugin-stealth", "node"],
   },
   {
-    name: "Deyspeak",
+    name: "A Real Estate Website",
     description:
-      "Introducing one of my standout projects featured in my portfolio, which i made Voluntarily as a fullStack web developer, while on the Deyspeak Developer Team – a language learning app waitlist website. Joining the exclusive waitlist offers you the opportunity to be at the forefront of a revolutionary African language learning experience. This app is meticulously designed to transcend language barriers, foster cultural connections, and empower users to communicate fluently in multiple African languages. As you explore my portfolio, discover how I contributed to creating a captivating and user-friendly platform. The waitlist website showcases my skills in crafting compelling content and an enticing user experience from Figma design, enticing visitors to embark on their linguistic journey.",
-    linkToWebsite: "https://phenomenal-gelato-370181.netlify.app/",
+      "I am pouring a lot of efforts into this, its a real estate web app that allows you to buy and sell real estate propeerties, basicaly you can signup as a regualar user and be priviledged to buy property or as an agent and be permitted to list real estate properties, properties listed would contain a very extensive detail of the property which includes amenities showcase, surroundind amenities, property sales and rent history, owners history, and also a link to virtual tour where you can preview properties virtually in 3d wherever you are in the world",
+    linkToWebsite: "https://creator-real-estate-market.netlify.app/",
     tags: [
       {
         name: "React",
         color: "#b6a6e8-text-gradient",
       },
       {
-        name: "Framer-motion",
+        name: "Figma to Design",
+        color: "#69a2d8 -text-gradient",
+      },
+      {
+        name: "Tailwind",
         color: "#8469d8-text-gradient",
       },
       {
-        name: "react-router-dom",
-        color: "#8469d8-text-gradient",
-      },
-      {
-        name: "pure CSS",
+        name: "React Router Dom",
         color: "#69a2d8 -text-gradient",
       },
     ],
-    image: [deyspeak],
-    source_code_link: "https://github.com/cReAtOR0009/deyspeak",
+    image: [realestateImage1, screencapture],
+    source_code_link: "https://github.com/cReAtOR0009/Real_Estate",
     category: "web2",
     keyFeatures: [
-      "State management using useState hook for loading state and individual letter states from A to Z",
-      "Initialization of alphabet array containing characters A to Z and some additional characters ut8 dosen't recognize",
-      "Setting loading state after a delay of 3000 milliseconds using setTimeout, to give Enough time For Loader Animation",
-      "Generating random letters for each alphabet character using setInterval and pickRandom function, this ensure that all the Random Letters Displayed are Induvidually Rendered and StandAlone",
-      "Rendering The loader animation until loading state becomes true",
-      "Using AnimatePresence from framer-motion for smooth animations during component presence changes",
-      "Applying animation variants for loader container and loader content using framer-motion",
-      "Dynamic rendering of letters in a table format while loading",
-      "Dynamic rendering of  text using motion spans while loading",
-      "A count Down Timer counting Down to a Launching Date",
+      "Redux Toolkit for state management and asynchronous logic",
+      "Context API for global state management (CartContext and NavigationContext)",
+      "Local storage usage for persisting cart state",
+      "React Router DOM for client-side routing",
+      "Protected routes for authentication (RequireAuth)",
+      "Dynamic route configuration using createRoutesFromChildren",
+      "Authentication logic (Signup, Login, Welcome)",
+      "File upload functionality for property images",
+      "Usage of useState hook for local state management (NavigationProvider)",
+      "Dynamically adding and updating form fields (formReducer)",
+      "Conditional rendering based on authentication status",
+      "Handling complex state structures (e.g., nested objects)",
+      "Dynamic routing with parameters (propertyid)",
+      "Custom styling with CSS (App.css)",
+      "React Router DOM for client-side routing",
+      "Form handling techniques including controlled components and form submission",
+      "Authentication logic with JWT tokens",
+      "File upload functionality",
+      "Dynamic form fields management",
+      "Conditional rendering based on authentication status and form validation",
+      "Error handling for form validation and API requests",
+      "State management using React useState, UseContext, useReducer and Redux Toolkit",
+      "API requests handling with Redux Toolkit's createApi and fetchBaseQuery",
+      "Custom styling using Tailwind CSS classes",
+      "Usage of various React hooks such as useState, useEffect, useReducer, useSelector, and useLocation",
+      "Nested state management for complex data structures",
+      "Form input validation with error message display",
+      "Manipulation of arrays for features like additional features and nearby amenities, ratings, property history, and image uploads",
+      "Handling field dependencies and dynamic state updates",
+      "Form submission handling and data processing",
+      "Dynamic field mapping to state properties",
+      "Initialization of form fields with default values using useState",
     ],
     packagesUsed: [
-      "react-router-dom",
+      "React",
       "vite",
-      "eslint",
-      "react",
-      "framer-motion",
+      "postcss",
+      "tailwindcss",
+      "react-redux",
+      "react-router-dom",
+      "react-icons",
+      "@reduxjs/toolkit",
+      "bcryptjs",
+      "body-parser",
+      "cookie-parser",
+      "cors",
       "dotenv",
-      "react-one-signal",
+      "express",
+      "jsonwebtoken",
+      "mongoose",
+      "nodemailer",
+      "nodemon",
+      "stripe",
     ],
   },
   {
-    name: "Nike Store",
+    name: "portfolio Website",
     description:
-      "As a web designer, I crafted a dynamic portfolio project showcasing Nike's athletic world. The website features the latest products like the Play With Electric Nike Adapt 2.0 Sneakers and emphasizes Nike's iconic Air technology. It offers an engaging user experience, allowing visitors to explore top-rated sales, featured items, and learn about Nike's commitment to community and sustainability. The design reflects my skills in creating visually appealing and user-friendly platforms, capturing the essence of Nike's sportsmanship and style.",
+      "My Portfolio website, showcasing my web2 and web3 journey as a Fullstack web developer, here you can journey with me as I highlight important details about my journey which includes a brief description of me, the technology I use, projects I have worked on and I am still working on, ways you can reach me, and more. :)",
+    linkToWebsite: "https://web-dev-crib.netlify.app/",
+    tags: [
+      {
+        name: "React",
+        color: "#b6a6e8-text-gradient",
+      },
+      {
+        name: "Tailwindcss",
+        color: "#8469d8-text-gradient",
+      },
+      {
+        name: "Framer-motion",
+        color: "#69a2d8 -text-gradient",
+      },
+      {
+        name: "Three-js",
+        color: "#69a2d8 -text-gradient",
+      },
+    ],
+    image: [portfolio],
+    source_code_link: "https://github.com/cReAtOR0009/portfolio",
+    category: "web2",
+    keyFeatures: [
+      " Utilizes react useContext for Providing Nav state Management to all Component.",
+      "Utilizes React Router's Link component for navigation.",
+      "Implements responsive design using CSS media queries.",
+      "Uses Framer Motion for animations and transitions.",
+      "Uses an Higher Order Function as a wrapper component for other components.",
+      "Utilizes React Router's Outlet component for nested routing.",
+      "Shows a loading progress bar before 3d Items load using Three.js and React Drei.",
+      "Utilizes useProgress hook from react-three to track loading progress.",
+      "Utilizes React Router's useParams hook to extract parameters from the URL.",
+      "Retrieves project details based on the provided projectId.",
+      "Utilizes staggered animations for multiple components.",
+      "Utilizes React Router's Link component for internal navigation.",
+      "Utilizes React Tilt for tilt effect on Cards Component.",
+    ],
+    packagesUsed: [
+      "react",
+      "@mail.js/browser",
+      "@react-three-drei",
+      "react-three-fiber",
+      "framer-motion",
+      "maath",
+      "react-router-dom",
+      "tailwindcss",
+      "postcss",
+      "react-icons",
+      "react-toastify",
+      "react-tilt",
+      "react-vertical-timeline-component",
+      "three",
+      "dotenv",
+    ],
+  },
+
+  //freelancing
+   {
+    name: "product Fetcher",
+    description:
+      "",
     linkToWebsite: "https://creator-nikestore.netlify.app",
     tags: [
       {
@@ -653,67 +684,135 @@ const allProjects = [
         color: "#69a2d8 -text-gradient",
       },
     ],
-    image: [creatornikestore],
+    image: [freelanceBanner],
     source_code_link: "https://github.com/cReAtOR0009/nikeStore",
-    category: "web2",
-    keyFeatures: [],
-    packagesUsed: [],
-  },
-  {
-    name: "todaydeliver Grocery api",
-    description:
-      "This is a Fullstack e-commerce website that seamlessly integrates a Grocery API with an Admin Panel, offering users a streamlined online grocery shopping experience. With secure authentication, an extensive product catalog, an intuitive shopping cart, and a user-friendly checkout, the platform ensures convenience across devices. The Admin Panel empowers administrators to efficiently manage products, users, and orders, with access to valuable analytics and reports. Technologically, the website adopts a Fullstack architecture, combining frontend frameworks- React.js with backend technology- Node.js, and MongoDB for the database.",
-    linkToWebsite: "https://admin.todaydeliver.in/login",
-    tags: [
-      {
-        name: "React",
-        color: "#b6a6e8-text-gradient",
-      },
-      {
-        name: "CSS",
-        color: "#8469d8-text-gradient",
-      },
-      {
-        name: "Node.js",
-        color: "#69a2d8 -text-gradient",
-      },
-      {
-        name: "Firebase",
-        color: "#69a2d8 -text-gradient",
-      },
-    ],
-    image: [groceryapp],
-    source_code_link: "https://github.com/cReAtOR0009/groceryapp",
-    category: "web2",
+    category: "freelancing",
     keyFeatures: [],
     packagesUsed: [],
   },
 
   {
-    name: "Kasuwa",
+    name: "fuel Price Fetcher",
     description:
-      "Presenting a dynamic full-stack website with an integrated admin panel for Kasuwa Farms. This platform provides visitors with real-time access to agricultural commodity prices, along with the percentage increase and decrease conveniently displayed on the landing page. Admin users wield the power to update commodity prices, add new commodities with corresponding prices, delete items, and more. A standout feature of this website lies in its use of dynamic APIs, exclusively serving user requests. The percentage increase and decrease are automatically calculated in real-time as admin users update commodity prices. This showcases the website's responsiveness and ability to provide users with the most current and accurate information.",
-    linkToWebsite: "https://newkasuwa.onrender.com/",
+      "",
+    linkToWebsite: "https://creator-nikestore.netlify.app",
     tags: [
       {
         name: "React",
         color: "#b6a6e8-text-gradient",
       },
       {
-        name: "styled-component",
+        name: "Tailwindcss",
         color: "#8469d8-text-gradient",
       },
       {
-        name: "Node.js",
+        name: "Redux",
+        color: "#8469d8-text-gradient",
+      },
+      {
+        name: "Nike demo store",
         color: "#69a2d8 -text-gradient",
       },
     ],
-    image: [kasuwa],
-    source_code_link: "https://github.com/",
-    category: "web2",
+    image: [freelanceBanner],
+    source_code_link: "https://github.com/cReAtOR0009/nikeStore",
+    category: "freelancing",
     keyFeatures: [],
     packagesUsed: [],
   },
+
+
+  //api
+  {
+    name: "DeySpeak Language Learning Api",
+    description:
+      "",
+    linkToWebsite: "https://creator-nikestore.netlify.app",
+    tags: [
+      {
+        name: "React",
+        color: "#b6a6e8-text-gradient",
+      },
+      {
+        name: "Tailwindcss",
+        color: "#8469d8-text-gradient",
+      },
+      {
+        name: "Redux",
+        color: "#8469d8-text-gradient",
+      },
+      {
+        name: "Nike demo store",
+        color: "#69a2d8 -text-gradient",
+      },
+    ],
+    image: [freelanceBanner],
+    source_code_link: "https://github.com/cReAtOR0009/nikeStore",
+    category: "api",
+    keyFeatures: [],
+    packagesUsed: [],
+  },
+ 
+ 
+  // {
+  //   name: "Nike Store",
+  //   description:
+  //     "As a web designer, I crafted a dynamic portfolio project showcasing Nike's athletic world. The website features the latest products like the Play With Electric Nike Adapt 2.0 Sneakers and emphasizes Nike's iconic Air technology. It offers an engaging user experience, allowing visitors to explore top-rated sales, featured items, and learn about Nike's commitment to community and sustainability. The design reflects my skills in creating visually appealing and user-friendly platforms, capturing the essence of Nike's sportsmanship and style.",
+  //   linkToWebsite: "https://creator-nikestore.netlify.app",
+  //   tags: [
+  //     {
+  //       name: "React",
+  //       color: "#b6a6e8-text-gradient",
+  //     },
+  //     {
+  //       name: "Tailwindcss",
+  //       color: "#8469d8-text-gradient",
+  //     },
+  //     {
+  //       name: "Redux",
+  //       color: "#8469d8-text-gradient",
+  //     },
+  //     {
+  //       name: "Nike demo store",
+  //       color: "#69a2d8 -text-gradient",
+  //     },
+  //   ],
+  //   image: [creatornikestore],
+  //   source_code_link: "https://github.com/cReAtOR0009/nikeStore",
+  //   category: "web2",
+  //   keyFeatures: [],
+  //   packagesUsed: [],
+  // },
+  // {
+  //   name: "todaydeliver Grocery api",
+  //   description:
+  //     "This is a Fullstack e-commerce website that seamlessly integrates a Grocery API with an Admin Panel, offering users a streamlined online grocery shopping experience. With secure authentication, an extensive product catalog, an intuitive shopping cart, and a user-friendly checkout, the platform ensures convenience across devices. The Admin Panel empowers administrators to efficiently manage products, users, and orders, with access to valuable analytics and reports. Technologically, the website adopts a Fullstack architecture, combining frontend frameworks- React.js with backend technology- Node.js, and MongoDB for the database.",
+  //   linkToWebsite: "https://admin.todaydeliver.in/login",
+  //   tags: [
+  //     {
+  //       name: "React",
+  //       color: "#b6a6e8-text-gradient",
+  //     },
+  //     {
+  //       name: "CSS",
+  //       color: "#8469d8-text-gradient",
+  //     },
+  //     {
+  //       name: "Node.js",
+  //       color: "#69a2d8 -text-gradient",
+  //     },
+  //     {
+  //       name: "Firebase",
+  //       color: "#69a2d8 -text-gradient",
+  //     },
+  //   ],
+  //   image: [groceryapp],
+  //   source_code_link: "https://github.com/cReAtOR0009/groceryapp",
+  //   category: "web2",
+  //   keyFeatures: [],
+  //   packagesUsed: [],
+  // },
+
   {
     name: "3d Product Website",
     description:

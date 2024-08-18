@@ -2,34 +2,21 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { styles } from "../../styles";
 import { ComputersCanvas } from "../canvas";
+import TypingEffect from "./TypingEffect";
 import { illustration, illustration1, illustration2 } from "../../assets";
 const Hero = () => {
   const [name, setName] = useState(["_", "C", "r", "e", "a", "t", "o", "r"]);
   const [displayLetters, setDisplayLetters] = useState("");
   const [leterCounter, setLetterCounter] = useState(0);
 
-  const updateName = () => {
-    // console.log("leterCounter :", leterCounter);
-    setDisplayLetters(`${displayLetters}` + `${name[leterCounter]}`);
-    // console.log("letters, ", displayLetters);
-    setLetterCounter(leterCounter + 1);
-    // console.log(displayLetters);
-    // console.log("displayLetters:", displayLetters.length);
-    if (displayLetters.length == 8) {
-      setLetterCounter(0);
-      setDisplayLetters("");
-    }
-  };
+  const words = [
+    { word: "Creator", delay: 2000 },
+    { word: "a Frontend Developer", delay: 2000 },
+    { word: "a Backend Developer", delay: 2000 },
+    { word: "a Blockchain Developer", delay: 2000 },
+  ];
 
-  useEffect(() => {
-    setTimeout(() => {
-      updateName();
-    }, 600);
 
-    return () => {
-      clearInterval();
-    };
-  }, [displayLetters]);
   return (
     <section className="relative w-full mx-auto">
       <div className="flex flex-col justify-between">
@@ -45,7 +32,7 @@ const Hero = () => {
               Hi, I'm{" "}
               <span className="text-[#915eff] decoration-[underline] transition">
                 {" "}
-                {displayLetters} &nbsp;|
+                {<TypingEffect words={words} />} &nbsp;|
               </span>{" "}
             </h1>
             <p className={`${styles.heroSubText} mt-2 text-white-100`}>

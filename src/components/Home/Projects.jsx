@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 import { styles } from "../../styles";
-import { github } from "../../assets";
+import { arrow, github } from "../../assets";
 import { SectionWrapper } from "../../hoc";
 import { allProjects } from "../../constants";
 import { fadeIn, textVariant } from "../../utils/motion";
@@ -17,6 +17,7 @@ const ProjectCard = ({
   tags,
   image,
   source_code_link,
+  category,
 }) => {
   const truncateContent = (content, maxLength) => {
     // console.log(content);
@@ -30,7 +31,7 @@ const ProjectCard = ({
   return (
     <motion.div
       key={index}
-      variants={fadeIn("up", "spring", index * 0.1, 0.75)}
+      variants={fadeIn("up", "spring", index * 0.081, 0.75)}
       initial="hidden"
       animate="show"
       className="bg-[#3f2952] p-5 rounded-2xl sm:w-[360px] w-full"
@@ -63,7 +64,11 @@ const ProjectCard = ({
           rel="noopener noreferrer"
           className="mt-[20px] text-secondary hover:underline underline-offset-4"
         >
-          link to website
+          {category == "web2"
+            ? "link to website"
+            : category == "web3"
+            ? "link to website"
+            : "link to code/demonstration"}
         </a>
         <h3 className="text-white font-bold text-[24px]">{name}</h3>
         <p className="mt-2 text-secondary text-[14px]">
@@ -110,7 +115,6 @@ const web2 = AllProjectsWithIndex.filter(
 const web3 = AllProjectsWithIndex.filter(
   (project) => project.value.category == "web3"
 );
-// console.log(web3);
 const freelancing = AllProjectsWithIndex.filter(
   (project) =>
     project.value.category == "freelancing" ||
@@ -132,6 +136,24 @@ const ProjectSection = ({ items }) => {
   const endIndex = Math.min(startIndex + cardPerDisp - 1, items.length - 1);
   const toDisplay = items.slice(startIndex, endIndex + 1);
 
+  const handleLeftClick = () => {
+    if (currentIndex <= 0) {
+      return setCurrentIndex(0);
+    } else {
+      setCurrentIndex((prev) => prev - 1);
+      // setAnimationKey((prevKey) => prevKey - 1);
+    }
+  };
+
+  const handleRightClick = () => {
+    if (currentIndex >= totalPages - 1) {
+      return setCurrentIndex(0);
+    } else {
+      setCurrentIndex((prev) => prev + 1);
+      // setAnimationKey((prevKey) => prevKey + 1);
+    }
+  };
+
   const updateDisplayItem = (index) => {
     setCurrentIndex(index);
     setAnimationKey((prevKey) => prevKey + 1); // Update the animation key to force re-render
@@ -139,27 +161,54 @@ const ProjectSection = ({ items }) => {
 
   return (
     <>
-      <div className="mt-20 flex flex-wrap gap-7">
-        {toDisplay.map((project, index) => (
-          <ProjectCard
-            key={`project-${project.index}`}
-            index={project.index}
-            {...project.value}
+      <div className="relative">
+        <div className=" mt-20 flex flex-wrap gap-7">
+          {toDisplay.map((project, index) => (
+            <ProjectCard
+              key={`project-${project.index}`}
+              index={project.index}
+              {...project.value}
+            />
+          ))}
+        </div>
+
+        <span
+          className="absolute top-1/2 rotate-180 -left-6 p-2 rounded-full bg-[#915eff]  cursor-pointer"
+          onClick={handleLeftClick}
+        >
+          <img
+            src={arrow}
+            alt="arrow image to scroll left"
+            srcset=""
+            className=""
           />
-        ))}
-      </div>
-      <div className="flex justify-center items-center gap-4">
-        {Array.from({ length: totalPages }, (_, index) => (
-          <button
-            key={index}
-            onClick={() => updateDisplayItem(index)}
-            className={`${
-              currentIndex === index ? " scale-[1.3] w-6" : "hover:scale-[1.3]"
-            } bg-[#915eff] p-1 my-6 w-4 h-2 rounded-full animate-slide-in`}
-          >
-            {/* {index + 1} */}
-          </button>
-        ))}
+        </span>
+        <span
+          className="absolute top-1/2 -right-6 p-2 rounded-full bg-[#915eff] animate-pulse cursor-pointer"
+          onClick={handleRightClick}
+        >
+          <img
+            src={arrow}
+            alt="arrow image to scroll left"
+            srcset=""
+            className=""
+          />
+        </span>
+        <div className="flex justify-center items-center gap-4">
+          {Array.from({ length: totalPages }, (_, index) => (
+            <button
+              key={index}
+              onClick={() => updateDisplayItem(index)}
+              className={`${
+                currentIndex === index
+                  ? " scale-[1.3] w-6"
+                  : "hover:scale-[1.3]"
+              } bg-[#915eff] p-1 my-6 w-4 h-2 rounded-full animate-slide-in`}
+            >
+              {/* {index + 1} */}
+            </button>
+          ))}
+        </div>
       </div>
     </>
   );
@@ -211,9 +260,9 @@ const Projects = () => {
         {/* <p className={styles.sectionSubText}>My Web Projects</p> */}
         <h2 className={styles.sectionHeadText}>My Freelancing Journey...</h2>
 
-        <div className="mt-10 flex flex-wrap gap-7">
+        {/* <div className="mt-10 flex flex-wrap gap-7"> */}
         <ProjectSection items={freelancing} />
-        </div>
+        {/* </div> */}
       </motion.div>
 
       <motion.div

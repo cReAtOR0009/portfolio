@@ -100,7 +100,7 @@ export const navLinks = [
   },
   {
     id: "tech",
-    title: "Tech_Stack",
+    title: "Tech Stack",
   },
   {
     id: "projects",
@@ -240,6 +240,7 @@ const experiences = [
       "writting web bot for listening to blockchain events, and Telegram Bots ",
       "writting webscrapper, Discord Bot, Game Playing bot",
       "Helping client deploy web applications on node js server",
+      "and lot more...",
     ],
   },
 ];

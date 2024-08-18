@@ -38,6 +38,8 @@ import twitter from "./socials/twitter_icon.jpg";
 import telegram_icon from "./socials/telegram_icon.jpg";
 import linkdin_icon from "./socials/linkdln_icon.jpg";
 
+import arrow from "./right-arrow.png"
+
 import carrent from "./carrent.jpeg";
 import jobit from "./jobit.jpeg";
 import tripguide from "./tripguide.jpeg";
@@ -151,6 +153,8 @@ export {
   votingApp,
   crowdFundingApp,
   TelegramBot,
+
+  arrow,
 
   //ipfs images export
   ipfs1,

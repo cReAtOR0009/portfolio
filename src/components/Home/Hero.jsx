@@ -1,13 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { styles } from "../../styles";
 import { ComputersCanvas } from "../canvas";
 import TypingEffect from "./TypingEffect";
 import { illustration, illustration1, illustration2 } from "../../assets";
+import { ThemeContext } from "../../context/themeContext";
 const Hero = () => {
   const [name, setName] = useState(["_", "C", "r", "e", "a", "t", "o", "r"]);
   const [displayLetters, setDisplayLetters] = useState("");
   const [leterCounter, setLetterCounter] = useState(0);
+  const {theme} = useContext(ThemeContext)
 
   const words = [
     { word: "Creator", delay: 2000 },
@@ -16,15 +18,15 @@ const Hero = () => {
     { word: "a Blockchain Developer", delay: 2000 },
   ];
 
-
   return (
     <section className="relative w-full mx-auto">
+      <div className="absolute inset-0 bg-cover bg-no-repeat bg-center"></div>
       <div className="flex flex-col justify-between">
         <div
           className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}
         >
           <div className="flex flex-col justify-center items-center mt-5">
-            <div className="w-5 h-5 rounded-full bg-[#915eff]" />
+            <div className="w-5 h-5 rounded-full bg-primary" />
             <div className="w-1 sm:h-80 h-40  violet-gradient" />
           </div>
           <div>
@@ -35,15 +37,15 @@ const Hero = () => {
                 {<TypingEffect words={words} />} &nbsp;|
               </span>{" "}
             </h1>
-            <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-              a skilled and experienced web developer and Graphics designer ,
+            <p className={`${styles.heroSubText} mt-2 ${theme==="dark"?"text-secondary":"text-secondary2"} `}>
+              a skilled and experienced fullstack web developer,
               <br className="sm:block hidden" />
-              with passion for creating innovative and dynamic websites and web
-              Applications with latest and indemand tools in the tech industry
+              with seasoned skill for creating innovative and dynamic websites and web
+              Applications with latest, industry standard and indemand tools in the tech industry
             </p>
           </div>
           <div className="flex flex-col justify-center items-center mt-5">
-            <div className="w-5 h-5 rounded-full bg-[#915eff]" />
+            <div className="w-5 h-5 rounded-full bg-primary" />
             <div className="w-1 sm:h-80 h-40  violet-gradient" />
           </div>
         </div>

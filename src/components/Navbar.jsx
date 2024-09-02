@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { BiSolidMoon, BiMoon } from "react-icons/bi";
 import { HashLink } from "react-router-hash-link";
 import { Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -7,13 +8,15 @@ import { navIn, textVariant } from "../utils/motion";
 import { styles } from "../styles";
 import { navLinks } from "../constants";
 import { logo, menu, close } from "../assets";
+import { ThemeContext } from "../context/themeContext";
 const Navbar = () => {
   const [active, setActive] = useState("Contact");
   const [Toggle, setToggle] = useState(false);
+  const { toggleTheme, theme } = useContext(ThemeContext);
 
   return (
     <motion.nav
-      className={`${styles.paddingX} w-screen flex items-center py-5 fixed top-0 z-20 border-b-4 bg-[#5b4785]`}
+      className={`${styles.paddingX} w-screen flex items-center py-5 fixed top-0 z-20 border-b-4 bg-primary_200`}
       initial={{ y: -250 }}
       animate={{ y: -10 }}
       transition={{ delay: 0.5, duration: 1, type: "spring", stiffness: 120 }}
@@ -55,11 +58,11 @@ const Navbar = () => {
                   to={`/#${link.id}`}
                   className={`${
                     active === link.title
-                      ? "text-white border-b-4 border-b-[#915eff] bg-[#915eff rounded px-[10px] pb-[5px]"
+                      ? "text-white border-b-4 border-b-primary bg-[#915eff rounded px-[10px] pb-[5px]"
                       : "text-secondary border-b-transparent border-b-2"
-                  } hover:-text-white hover:border-b-[#915eff] text-[18px] ${
+                  } hover:-text-white hover:border-b-primary text-[18px] ${
                     link.title === "Contact"
-                      ? "text-white   bg-[#915eff] rounded-full text-[25px] px-[10px] text-center"
+                      ? "text-white   bg-primary rounded-full text-[25px] px-[10px] text-center"
                       : ""
                   } font-medium cursor-pointer text-center transition-all`}
                 >
@@ -68,7 +71,13 @@ const Navbar = () => {
               </motion.li>
             );
           })}
+          <BiSolidMoon
+            fontSize="2em"
+            color={theme == "dark" ? "#000000" : `#ffffff`}
+            onClick={toggleTheme}
+          />
         </ul>
+
         <div className="lg:hidden flex flex-1 justify-end items-center">
           <img
             src={Toggle ? close : menu}
@@ -80,15 +89,15 @@ const Navbar = () => {
           <ul
             className={`${
               !Toggle ? "hidden" : "flex"
-            } flex-col justify-between h-[50vh] w-[40vw]  items-center py-6 px-4 absolute top-20 right-0  z-10 rounded-xl  bg-[#5b4785] transition-none `}
+            } flex-col justify-between h-[50vh] w-[40vw]  items-center py-6 px-4 absolute top-20 right-0  z-10 rounded-xl  bg-primary_200 transition-none `}
           >
             {navLinks.map((link, index) => {
               return (
                 <motion.li
                   key={link.id}
-                  className={
-                    `self-center content-start text-left ${link.id == "contact" ? " rounded-full text-white" : ""}`
-                  }
+                  className={`self-center content-start text-left ${
+                    link.id == "contact" ? " rounded-full text-white" : ""
+                  }`}
                   variants={navIn(
                     "right",
                     "spring",
@@ -106,11 +115,11 @@ const Navbar = () => {
                     to={`/#${link.id}`}
                     className={`${
                       active === link.title
-                        ? "text-white border-b-4 border-b-[#915eff] bg-[#915eff rounded px-[10px] pb-[5px]"
+                        ? "text-white border-b-4 border-b-primary bg-[#915eff rounded px-[10px] pb-[5px]"
                         : "text-secondary border-b-transparent border-b-2"
-                    } hover:-text-white hover:border-b-[#915eff] text-[18px] ${
+                    } hover:-text-white hover:border-b-primary text-[18px] ${
                       link.title === "Contact"
-                        ? "text-white   bg-[#915eff] rounded-full text-[25px] px-[10px] "
+                        ? "text-white   bg-primary rounded-full text-[25px] px-[10px] "
                         : ""
                     } font-medium cursor-pointer text-center transition-all`}
                   >
@@ -119,6 +128,11 @@ const Navbar = () => {
                 </motion.li>
               );
             })}
+            <BiSolidMoon
+              fontSize="2em"
+              color={theme == "dark" ? "#000000" : `#ffffff`}
+              onClick={toggleTheme}
+            />
           </ul>
         </div>
       </div>

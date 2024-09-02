@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 
@@ -6,6 +6,7 @@ import { styles } from "../../styles";
 import { services } from "../../constants";
 import { SectionWrapper } from "../../hoc/index";
 import { fadeIn, textVariant, infinitescrollx } from "../../utils/motion";
+import { ThemeContext } from "../../context/themeContext";
 
 const ServiceCard = ({ index, title, icon }) => {
   // const [animationVariants, setAnimationVariants] = useState({ type: '', props: {} });
@@ -37,7 +38,7 @@ const ServiceCard = ({ index, title, icon }) => {
     <Tilt className="xs:w-[300px] w-[200px] h-full bg-[transparent] border-2 border-[#915eff]  p-[15px] rounded-lg">
       <motion.div
         variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
-        className="sm:w-[200px] w-[200px] bg-[#915eff] border-2 p-[20px] rounded-lg"
+        className="sm:w-[200px] w-[200px] bg-primary border-2 p-[20px] rounded-lg"
       >
         <div
           options={{
@@ -58,18 +59,27 @@ const ServiceCard = ({ index, title, icon }) => {
 };
 
 const About = () => {
+  const { theme } = useContext(ThemeContext);
   return (
-    <div style={{ boxShadow: "-1px -40px 55px 12px rgba(0,17,36,1)" }}>
+    <div >
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={`${styles.sectionHeadText}`}>Overview.</h2>
+        <h2
+          className={`${styles.sectionHeadText} ${
+            theme == "dark" ? "text-white" : "text-black"
+          }`}
+        >
+          Overview.
+        </h2>
       </motion.div>
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
+        className={`mt-4 ${
+          theme == "dark" ? "text-secondary" : "text-secondary2"
+        } text-[17px] max-w-3xl leading-[30px]`}
       >
-        As a highly skilled web developer, I am proficient in HTML, CSS, and
+        As a highly skilled fullstack web developer, I am proficient in HTML, CSS, and
         JavaScript, and I have extensive experience with popular front-end
         frameworks and Libraries such as React, Three.js, Framer Motion,
         React-Router, Redux, Tailwind, React-Bootstrap, recharts, and also

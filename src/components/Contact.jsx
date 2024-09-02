@@ -1,6 +1,7 @@
 // require('dotenv').config()
-import React, { useRef, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 import { motion } from "framer-motion";
+import { BiMoon } from "react-icons/bi";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
 import { styles } from "../styles";
@@ -8,6 +9,7 @@ import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 import { socials } from "../constants";
+import { ThemeContext } from "../context/themeContext";
 
 const Contact = () => {
   const formRef = useRef();
@@ -84,6 +86,7 @@ const Contact = () => {
       );
   };
 
+  const { theme } = useContext(ThemeContext);
   return (
     <div
       className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
@@ -94,7 +97,13 @@ const Contact = () => {
         className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
       >
         <p className={styles.sectionSubText}>Reach Me Here</p>
-        <h3 className={styles.sectionHeadText}>Contact.</h3>
+        <h3
+          className={`${styles.sectionHeadText} ${
+            theme == "dark" ? "text-white" : "text-secondary"
+          }`}
+        >
+          Contact.
+        </h3>
 
         <form
           ref={formRef}
@@ -138,7 +147,9 @@ const Contact = () => {
           <button
             type="submit"
             disabled={loading}
-            className={`bg-[#804dee] ${loading?"bg-[red]":""} py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary`}
+            className={`bg-[#804dee] ${
+              loading ? "bg-[red]" : ""
+            } py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary`}
           >
             {loading ? "Sending..." : "Send"}
           </button>

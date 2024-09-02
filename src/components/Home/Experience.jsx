@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -12,13 +12,14 @@ import { styles } from "../../styles";
 import { experiences } from "../../constants";
 import { SectionWrapper } from "../../hoc";
 import { textVariant } from "../../utils/motion";
+import { ThemeContext } from "../../context/themeContext";
 
-const ExperienceCard = ({ experience }) => {
+const ExperienceCard = ({ experience, theme }) => {
   return (
     <VerticalTimelineElement
       contentStyle={{
         background: "#915eff",
-        color: "#fff",
+        color: theme == "dark" ? "#fff" : "#001124",
         // border:"2px solid #915eff"
       }}
       contentArrowStyle={{ borderRight: "10px solid  #fff" }}
@@ -35,7 +36,9 @@ const ExperienceCard = ({ experience }) => {
       }
     >
       <div>
-        <h3 className="text-white text-[24px] font-bold">{experience.title}</h3>
+        <h3 className={` text-white text-[24px] font-bold`}>
+          {experience.title}
+        </h3>
         <p
           className="text-secondary text-[16px] font-semibold"
           style={{ margin: 0 }}
@@ -59,13 +62,19 @@ const ExperienceCard = ({ experience }) => {
 };
 
 const Experience = () => {
+  const { theme } = useContext(ThemeContext);
+
   return (
     <>
       <motion.div variants={textVariant()}>
         {/* <p className={`${styles.sectionSubText} text-center`}>
           What I have done so far
         </p> */}
-        <h2 className={`${styles.sectionHeadText}`}>
+        <h2
+          className={`${styles.sectionHeadText} ${
+            theme == "dark" ? "text-white" : "text-secondary2"
+          }`}
+        >
           Work Experience.
         </h2>
       </motion.div>
@@ -76,6 +85,7 @@ const Experience = () => {
             <ExperienceCard
               key={`experience-${index}`}
               experience={experience}
+              theme={theme}
             />
           ))}
         </VerticalTimeline>

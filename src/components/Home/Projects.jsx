@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useContext } from "react";
 import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -8,6 +8,7 @@ import { arrow, github } from "../../assets";
 import { SectionWrapper } from "../../hoc";
 import { allProjects } from "../../constants";
 import { fadeIn, textVariant } from "../../utils/motion";
+import { ThemeContext } from "../../context/themeContext";
 
 const ProjectCard = ({
   index,
@@ -26,6 +27,8 @@ const ProjectCard = ({
     return words.length > maxLength ? `${truncated}...` : content;
   };
 
+  const [windowsize, setWindowSize] = useState(window.innerWidth);
+
   const truncatedContent = truncateContent(description, 30);
 
   return (
@@ -34,7 +37,7 @@ const ProjectCard = ({
       variants={fadeIn("up", "spring", index * 0.081, 0.75)}
       initial="hidden"
       animate="show"
-      className="bg-[#3f2952] p-5 rounded-2xl sm:w-[360px] w-full"
+      className="bg-primary_300 p-5 rounded-2xl sm:w-[360px] w-full"
     >
       <div className="relative w-full h-[230px]">
         <img
@@ -128,12 +131,13 @@ const api = AllProjectsWithIndex.filter(
 const ProjectSection = ({ items }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [animationKey, setAnimationKey] = useState(0);
+  const [windowsize, setWindowSize] = useState(window.innerWidth);
 
-  const cardPerDisp = 3;
-  const totalPages = Math.ceil(items.length / cardPerDisp);
+  const [cardPerPage, setCardPerPage] = useState(3);
+  const totalPages = Math.ceil(items.length / cardPerPage);
 
-  const startIndex = currentIndex * cardPerDisp;
-  const endIndex = Math.min(startIndex + cardPerDisp - 1, items.length - 1);
+  const startIndex = currentIndex * cardPerPage;
+  const endIndex = Math.min(startIndex + cardPerPage - 1, items.length - 1);
   const toDisplay = items.slice(startIndex, endIndex + 1);
 
   const handleLeftClick = () => {
@@ -159,10 +163,30 @@ const ProjectSection = ({ items }) => {
     setAnimationKey((prevKey) => prevKey + 1); // Update the animation key to force re-render
   };
 
+  useEffect(() => {
+    const resize = window.addEventListener("resize", () => {
+      setWindowSize(window.innerWidth);
+      console.log("window resized...", windowsize);
+    });
+
+    if (windowsize > 1500) {
+      setCardPerPage(3);
+    } else if (windowsize < 1000) {
+      setCardPerPage(2);
+    }
+
+    return () => {
+      window.removeEventListener("resize", resize);
+    };
+  }, [windowsize, cardPerPage]);
   return (
     <>
       <div className="relative">
-        <div className=" mt-20 flex flex-wrap gap-7">
+        <div
+          className={`mt-20 flex flex-wrap items-stretch ${
+            items.length > 2 ? "justify-center" : "justify-start"
+          } gap-7`}
+        >
           {toDisplay.map((project, index) => (
             <ProjectCard
               key={`project-${project.index}`}
@@ -173,7 +197,7 @@ const ProjectSection = ({ items }) => {
         </div>
 
         <span
-          className="absolute top-1/2 rotate-180 -left-6 p-2 rounded-full bg-[#915eff]  cursor-pointer"
+          className="absolute top-1/2 rotate-180 -left-6 p-2 rounded-full bg-primary  cursor-pointer"
           onClick={handleLeftClick}
         >
           <img
@@ -184,7 +208,7 @@ const ProjectSection = ({ items }) => {
           />
         </span>
         <span
-          className="absolute top-1/2 -right-6 p-2 rounded-full bg-[#915eff] animate-pulse cursor-pointer"
+          className="absolute top-1/2 -right-6 p-2 rounded-full bg-primary animate-pulse cursor-pointer"
           onClick={handleRightClick}
         >
           <img
@@ -203,7 +227,7 @@ const ProjectSection = ({ items }) => {
                 currentIndex === index
                   ? " scale-[1.3] w-6"
                   : "hover:scale-[1.3]"
-              } bg-[#915eff] p-1 my-6 w-4 h-2 rounded-full animate-slide-in`}
+              } bg-primary p-1 my-6 w-4 h-2 rounded-full animate-slide-in`}
             >
               {/* {index + 1} */}
             </button>
@@ -215,11 +239,18 @@ const ProjectSection = ({ items }) => {
 };
 
 const Projects = () => {
+  const { theme } = useContext(ThemeContext);
   return (
     <>
       <motion.div variants={textVariant()} initial="hidden" animate="show">
         <p className={styles.sectionSubText}>My Projects</p>
-        <h2 className={styles.sectionHeadText}>Projects.</h2>
+        <h2
+          className={`${styles.sectionHeadText} ${
+            theme == "dark" ? "text-white" : "text-secondary2"
+          }`}
+        >
+          Projects.
+        </h2>
       </motion.div>
 
       <div className="w-full flex">
@@ -227,7 +258,9 @@ const Projects = () => {
           variants={textVariant(1)}
           initial="hidden"
           animate="show"
-          className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
+          className={`mt-3 ${
+            theme == "dark" ? "text-secondary" : "text-secondary2"
+          } text-[17px] max-w-3xl leading-[30px]`}
         >
           The Following projects showcases my skills and experience through
           real-world examples of my work, courses i Took and personal Projects.
@@ -246,7 +279,13 @@ const Projects = () => {
         className="my-[20px]"
       >
         {/* <p className={styles.sectionSubText}>My Web Projects</p> */}
-        <h2 className={styles.sectionHeadText}>My Web3 Projects.</h2>
+        <h2
+          className={`${styles.sectionHeadText} ${
+            theme == "dark" ? "text-white" : "text-secondary2"
+          }`}
+        >
+          My Web3 Projects.
+        </h2>
 
         <ProjectSection items={web3} />
       </motion.div>
@@ -258,7 +297,13 @@ const Projects = () => {
         className="my-[20px]"
       >
         {/* <p className={styles.sectionSubText}>My Web Projects</p> */}
-        <h2 className={styles.sectionHeadText}>My Freelancing Journey...</h2>
+        <h2
+          className={`${styles.sectionHeadText} ${
+            theme == "dark" ? "text-white" : "text-secondary2"
+          }`}
+        >
+          My Freelancing Journey...
+        </h2>
 
         {/* <div className="mt-10 flex flex-wrap gap-7"> */}
         <ProjectSection items={freelancing} />
@@ -271,7 +316,13 @@ const Projects = () => {
         animate="show"
         className="my-[20px]"
       >
-        <h2 className={styles.sectionHeadText}>APIs</h2>
+        <h2
+          className={`${styles.sectionHeadText} ${
+            theme == "dark" ? "text-white" : "text-secondary2"
+          }`}
+        >
+          APIs
+        </h2>
         <ProjectSection items={api} />
       </motion.div>
     </>

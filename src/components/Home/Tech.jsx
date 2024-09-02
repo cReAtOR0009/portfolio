@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { motion } from "framer-motion";
 import { Tilt } from "react-tilt";
 
@@ -7,6 +7,7 @@ import { SectionWrapper } from "../../hoc";
 import { socials, technologies } from "../../constants";
 import { navIn, fadeIn } from "../../utils/motion";
 import { styles } from "../../styles";
+import { ThemeContext } from "../../context/themeContext";
 
 const TechCard = ({ index, icon, name }) => {
   // console.log("technology",technology)
@@ -25,9 +26,16 @@ const TechCard = ({ index, icon, name }) => {
   );
 };
 const Tech = () => {
+  const { theme } = useContext(ThemeContext);
   return (
     <>
-      <h1 className={styles.sectionHeadText}>Tools And Tecnologies</h1>
+      <h1
+        className={`${styles.sectionHeadText} ${
+          theme == "dark" ? "text-white" : "text-secondary2"
+        }`}
+      >
+        Tools And Tecnologies
+      </h1>
       <div className="flex flex-row flex-wrap gap-5 sm:gap-10">
         {technologies.map((technology, index) => (
           <TechCard key={technology.name} index={index} {...technology} />

@@ -248,7 +248,7 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Creator proved me wrong.",
+      "Creator is very Patient, yet fast and pays attention to details.",
     name: "Petwilson Olatunde",
     designation: "Product Manager",
     company: "AGRIARCHE LIMITED",
@@ -666,27 +666,31 @@ const allProjects = [
     name: "product Fetcher",
     description:
       "",
-    linkToWebsite: "https://creator-nikestore.netlify.app",
+    linkToWebsite: "https://github.com/cReAtOR0009/productfetcher",
     tags: [
       {
-        name: "React",
-        color: "#b6a6e8-text-gradient",
-      },
-      {
-        name: "Tailwindcss",
+        name: "Node.js",
         color: "#8469d8-text-gradient",
       },
       {
-        name: "Redux",
+        name: "express",
         color: "#8469d8-text-gradient",
       },
       {
-        name: "Nike demo store",
-        color: "#69a2d8 -text-gradient",
+        name: "json2csv",
+        color: "#8469d8-text-gradient",
+      },
+      {
+        name: "csv-writer",
+        color: "#8469d8 -text-gradient",
+      },
+      {
+        name: "puppeteer-extra-plugin-stealth",
+        color: "#8469d8-text-gradient",
       },
     ],
     image: [freelanceBanner],
-    source_code_link: "https://github.com/cReAtOR0009/nikeStore",
+    source_code_link: "https://github.com/cReAtOR0009/productfetcher",
     category: "freelancing",
     keyFeatures: [],
     packagesUsed: [],
@@ -696,27 +700,31 @@ const allProjects = [
     name: "fuel Price Fetcher",
     description:
       "",
-    linkToWebsite: "https://creator-nikestore.netlify.app",
+    linkToWebsite: "https://github.com/cReAtOR0009/fuelbot3",
     tags: [
       {
-        name: "React",
+        name: "node.js",
         color: "#b6a6e8-text-gradient",
       },
       {
-        name: "Tailwindcss",
+        name: "puppeteer-extra-plugin-stealth",
         color: "#8469d8-text-gradient",
       },
       {
-        name: "Redux",
+        name: "express",
         color: "#8469d8-text-gradient",
       },
       {
-        name: "Nike demo store",
+        name: "puppeteer",
         color: "#69a2d8 -text-gradient",
+      },
+      {
+        name: "cors",
+        color: "#8469d8-text-gradient",
       },
     ],
     image: [freelanceBanner],
-    source_code_link: "https://github.com/cReAtOR0009/nikeStore",
+    source_code_link: "https://github.com/cReAtOR0009/fuelbot3",
     category: "freelancing",
     keyFeatures: [],
     packagesUsed: [],
@@ -728,22 +736,34 @@ const allProjects = [
     name: "DeySpeak Language Learning Api",
     description:
       "",
-    linkToWebsite: "https://creator-nikestore.netlify.app",
+    linkToWebsite: "https://github.com/cReAtOR0009/",
     tags: [
       {
-        name: "React",
+        name: "Node.js",
         color: "#b6a6e8-text-gradient",
       },
       {
-        name: "Tailwindcss",
+        name: "Express",
         color: "#8469d8-text-gradient",
       },
       {
-        name: "Redux",
+        name: "MongoDb",
         color: "#8469d8-text-gradient",
       },
       {
-        name: "Nike demo store",
+        name: "joi",
+        color: "#69a2d8 -text-gradient",
+      },
+      {
+        name: "mongoose",
+        color: "#8469d8-text-gradient",
+      },
+      {
+        name: "bcrypt",
+        color: "#69a2d8 -text-gradient",
+      },
+      {
+        name: "nodemailer",
         color: "#69a2d8 -text-gradient",
       },
     ],

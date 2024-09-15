@@ -99,14 +99,18 @@ const Navbar = () => {
           <ul
             className={`${
               !Toggle ? "hidden" : "flex"
-            } flex-col justify-between h-[50vh] w-[40vw]  items-center py-6 px-4 absolute top-20 right-0  z-10 rounded-xl  bg-primary_200 transition-none `}
+            } flex-col justify-between h-[50vh] w-[40vw]  items-center py-6 px-4 absolute top-20 right-0  z-10 rounded-xl  ${
+              theme === "dark" ? "bg-primary_200" : "glassBg2"
+            } transition-none `}
           >
             {navLinks.map((link, index) => {
               return (
                 <motion.li
                   key={link.id}
-                  className={`self-center content-start text-left ${
-                    link.id == "contact" ? " rounded-full text-white" : ""
+                  className={` ${
+                    theme === "dark" ? "text-white" : "text-primary"
+                  } self-start sm:self-center  ${
+                    link.id == "contact" ? " rounded-full" : ""
                   }`}
                   variants={navIn(
                     "right",
@@ -123,15 +127,17 @@ const Navbar = () => {
                 >
                   <HashLink
                     to={`/#${link.id}`}
-                    className={`${
+                    className={` ${
+                    theme === "dark" ? "text-white" : "text-primary"
+                  } ${
                       active === link.title
-                        ? "text-white border-b-4 border-b-primary bg-[#915eff rounded px-[10px] pb-[5px]"
-                        : "text-secondary border-b-transparent border-b-2"
+                        ? " border-b-4 border-b-primary bg-[#915eff rounded  pb-[5px]"
+                        : " border-b-transparent border-b-2"
                     } hover:-text-white hover:border-b-primary text-[18px] ${
                       link.title === "Contact"
                         ? "text-white   bg-primary rounded-full text-[25px] px-[10px] "
                         : ""
-                    } font-medium cursor-pointer text-center transition-all`}
+                    } font-medium cursor-pointer text-left transition-all`}
                   >
                     {link.title}
                   </HashLink>

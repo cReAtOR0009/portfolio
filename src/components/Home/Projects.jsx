@@ -65,16 +65,16 @@ const ProjectCard = ({
           href={linkToWebsite}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-[20px] text-secondary hover:underline underline-offset-4"
+          className="mt-[20px] text-secondary underline underline-offset-4"
         >
           {category == "web2"
-            ? "link to website"
+            ? "link to project"
             : category == "web3"
-            ? "link to website"
+            ? "link to project"
             : "link to code/demonstration"}
         </a>
         <h3 className="text-white font-bold text-[24px]">{name}</h3>
-        <p className="mt-2 text-secondary text-[14px]">
+        <p className="mt-2 text-white text-[14px]">
           {truncatedContent}{" "}
           <Link
             className=" rounded text-white border-b-2 border-b-[#e63e3e] hover:underline underline-offset-4"
@@ -259,7 +259,7 @@ const Projects = () => {
           initial="hidden"
           animate="show"
           className={`mt-3 ${
-            theme == "dark" ? "text-secondary" : "text-secondary2"
+            theme == "dark" ? "text-white" : "text-secondary2"
           } text-[17px] max-w-3xl leading-[30px]`}
         >
           The Following projects showcases my skills and experience through
@@ -329,4 +329,4 @@ const Projects = () => {
   );
 };
 
-export default SectionWrapper(Projects, "projects");
+export default SectionWrapper(Projects, "projects", "bg-darktext");

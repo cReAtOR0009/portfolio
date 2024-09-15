@@ -1,11 +1,14 @@
-import { useState, useRef, Suspense } from "react";
+import { useState, useRef, Suspense, useContext } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial, Preload } from "@react-three/drei";
 import * as random from "maath/random/dist/maath-random.esm";
+import { ThemeContext } from "../../context/themeContext";
 
 const Stars = (props) => {
   const ref = useRef();
   const [sphere] = useState(() => random.inSphere(new Float32Array(5000), { radius: 1.2 }));
+  const {theme} = useContext(ThemeContext)
+  const color = theme==="light"?"#915eff":"#915eff"
 
   useFrame((state, delta) => {
     ref.current.rotation.x -= delta / 10;
@@ -17,7 +20,7 @@ const Stars = (props) => {
       <Points ref={ref} positions={sphere} stride={3} frustumCulled {...props}>
         <PointMaterial
           transparent
-          color='#915eff'
+          color={color}
           size={0.002}
           sizeAttenuation={true}
           depthWrite={false}
@@ -28,9 +31,12 @@ const Stars = (props) => {
 };
 
 const StarsCanvas = () => {
+  const {theme} = useContext(ThemeContext)
   return (
     <div className='w-full h-auto absolute inset-0 z-[-1]'>
-      <Canvas camera={{ position: [0, 0, 1] }}>
+      <Canvas camera={{ position: [0, 0, 1] }}   className={`relative z-0 ${
+          theme == "dark" ? "bg-primary_100" : "bg-white"
+        }`}>
         <Suspense fallback={null}>
           <Stars />
         </Suspense>

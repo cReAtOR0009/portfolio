@@ -35,7 +35,7 @@ const StarsCanvas = () => {
   return (
     <div className='w-full h-auto absolute inset-0 z-[-1]'>
       <Canvas camera={{ position: [0, 0, 1] }}   className={`relative z-0 ${
-          theme == "dark" ? "bg-primary_100" : "bg-white"
+          theme == "dark" ? "bg-primary_100" : "bg-primary_100"
         }`}>
         <Suspense fallback={null}>
           <Stars />

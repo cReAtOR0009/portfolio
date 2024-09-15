@@ -243,7 +243,9 @@ const Projects = () => {
   return (
     <>
       <motion.div variants={textVariant()} initial="hidden" animate="show">
-        <p className={styles.sectionSubText}>My Projects</p>
+        <p className={`${styles.sectionSubText} ${
+            theme == "dark" ? "text-white" : "text-secondary2"
+          }`}>My Projects</p>
         <h2
           className={`${styles.sectionHeadText} ${
             theme == "dark" ? "text-white" : "text-secondary2"

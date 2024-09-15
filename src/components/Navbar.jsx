@@ -16,7 +16,11 @@ const Navbar = () => {
 
   return (
     <motion.nav
-      className={`${styles.paddingX} w-screen flex items-center py-5 fixed top-0 z-20 border-b-4 bg-primary_200`}
+      className={`${
+        styles.paddingX
+      } w-screen flex items-center py-5 fixed top-0 z-20 border-b-4 ${
+        theme == "dark" ? "bg-primary_200" : "glassBg"
+      }`}
       initial={{ y: -250 }}
       animate={{ y: -10 }}
       transition={{ delay: 0.5, duration: 1, type: "spring", stiffness: 120 }}
@@ -31,7 +35,11 @@ const Navbar = () => {
           }}
         >
           <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
-          <p className=" text-white text-[18px] min-w-[180px] font-bold cursor-pointer flex sm:flex-col">
+          <p
+            className={` ${
+              theme === "dark" ? "text-white" : "text-primary"
+            } text-[18px] min-w-[180px] font-bold cursor-pointer flex sm:flex-col`}
+          >
             _Creator's &nbsp;
             <span className="sm:block hidden"> | #WebManiac</span>
           </p>
@@ -55,8 +63,10 @@ const Navbar = () => {
                 }}
               >
                 <HashLink
-                  to={link.id!=="contact"?`/#${link.id}`:`#${link.id}`}
-                  className={`text-white ${
+                  to={link.id !== "contact" ? `/#${link.id}` : `#${link.id}`}
+                  className={` ${
+                    theme === "dark" ? "text-white" : "text-primary"
+                  } ${
                     active === link.title
                       ? " border-b-4 border-b-primary bg-[#915eff rounded px-[10px] pb-[5px]"
                       : "border-b-transparent border-b-2"

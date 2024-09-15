@@ -16,6 +16,7 @@ module.exports = {
         tertiary: "#151030",
         "black-100": "#100d25",
         "black-200": "#090325",
+        "black-300":"#19181a",
         "white-100": "#f3f3f3",
       },
       boxShadow: {
@@ -29,7 +30,8 @@ module.exports = {
         "dark-bg": "url('/src/assets/darkbg1.jpg')",
         "dark-bg2": "linear-gradient(340deg, rgb(0 0 0), rgb(29 0 233 / 23%)), url('/src/assets/darkbg2.jpg')",
         //  "linear-gradient(153deg, rgb(60 60 64), rgb(45 44 47 / 71%)), url(/src/assets/doctor6.jpg)",
-        "lightBg": " linear-gradient(340deg, rgb(0, 0, 0), rgba(29, 0, 233, 0.23)), url('/src/assets/lightbg.jpg')",
+        "light-bg": " linear-gradient(340deg, rgb(0, 0, 0), rgba(29, 0, 233, 0.23)), url('/src/assets/lightbg.jpg')",
+        "light-bg2": " url('/src/assets/lightbg2.jpg')",
         darktext: "linear-gradient(340deg, rgb(0, 0, 0), rgba(29, 0, 233, 0.23))",
       },
     },

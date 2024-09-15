@@ -58,6 +58,7 @@ const ServiceCard = ({ index, title, icon }) => {
   );
 };
 
+
 const About = () => {
   const { theme } = useContext(ThemeContext);
   return (
@@ -76,7 +77,7 @@ const About = () => {
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
         className={`mt-4 ${
-          theme == "dark" ? "text-white" : "text-white"
+          theme == "dark" ? "text-white" : "text-secondary2"
         } text-[17px] max-w-3xl leading-[30px]`}
       >
         As a highly skilled fullstack web developer, I am proficient in HTML, CSS, and

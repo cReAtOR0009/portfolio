@@ -19,41 +19,41 @@ const Hero = () => {
   ];
 
   return (
-    <section className="relative w-full mx-auto">
+    <section className="relative bg-light-bg h-screen w-full mx-auto">
       <div className="absolute inset-0 bg-cover bg-no-repeat bg-center"></div>
       <div className="flex flex-col justify-between">
         <div
           className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}
         >
-          <div className="flex flex-col justify-center items-center mt-5">
+          {/* <div className="flex flex-col justify-center items-center mt-5">
             <div className="w-5 h-5 rounded-full bg-primary" />
             <div className="w-1 sm:h-80 h-40  violet-gradient" />
-          </div>
+          </div> */}
           <div>
-            <h1 className={`${styles.heroHeadText} transition`}>
+            <h1 className={`${styles.heroHeadText} ${theme==="dark"?"text-white":"text-white"} transition`}>
               Hi, I'm{" "}
               <span className="text-[#915eff] decoration-[underline] transition">
                 {" "}
                 {<TypingEffect words={words} />} &nbsp;|
               </span>{" "}
             </h1>
-            <p className={`${styles.heroSubText} mt-2 ${theme==="dark"?"text-secondary":"text-secondary2"} `}>
+            {/* <p className={`${styles.heroSubText} mt-2 ${theme==="dark"?"text-secondary":"text-secondary2"} `}>
               a skilled and experienced fullstack web developer,
               <br className="sm:block hidden" />
               with seasoned skill for creating innovative and dynamic websites and web
               Applications with latest, industry standard and indemand tools in the tech industry
-            </p>
+            </p> */}
           </div>
-          <div className="flex flex-col justify-center items-center mt-5">
+          {/* <div className="flex flex-col justify-center items-center mt-5">
             <div className="w-5 h-5 rounded-full bg-primary" />
             <div className="w-1 sm:h-80 h-40  violet-gradient" />
-          </div>
+          </div> */}
         </div>
-        <div className=" md:block mt-[364px] flex flex-col justify-center items-center m-auto">
-          {/* <ComputersCanvas /> */}
+        {/* <div className=" md:block mt-[364px] flex flex-col justify-center items-center m-auto">
           <img src={illustration1} alt="creator" />
-        </div>
+        </div> */}
       </div>
+          <ComputersCanvas />
 
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
         <a href="#about">

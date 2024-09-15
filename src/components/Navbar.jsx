@@ -55,11 +55,11 @@ const Navbar = () => {
                 }}
               >
                 <HashLink
-                  to={`/#${link.id}`}
-                  className={`${
+                  to={link.id!=="contact"?`/#${link.id}`:`#${link.id}`}
+                  className={`text-white ${
                     active === link.title
-                      ? "text-white border-b-4 border-b-primary bg-[#915eff rounded px-[10px] pb-[5px]"
-                      : "text-secondary border-b-transparent border-b-2"
+                      ? " border-b-4 border-b-primary bg-[#915eff rounded px-[10px] pb-[5px]"
+                      : "border-b-transparent border-b-2"
                   } hover:-text-white hover:border-b-primary text-[18px] ${
                     link.title === "Contact"
                       ? "text-white   bg-primary rounded-full text-[25px] px-[10px] text-center"
@@ -73,7 +73,7 @@ const Navbar = () => {
           })}
           <BiSolidMoon
             fontSize="2em"
-            color={theme == "dark" ? "#000000" : `#ffffff`}
+            color={theme == "dark" ? "#ffffff" : `#000000`}
             onClick={toggleTheme}
           />
         </ul>
@@ -130,7 +130,7 @@ const Navbar = () => {
             })}
             <BiSolidMoon
               fontSize="2em"
-              color={theme == "dark" ? "#000000" : `#ffffff`}
+              color={theme == "dark" ? "#ffffff" : `#000000`}
               onClick={toggleTheme}
             />
           </ul>

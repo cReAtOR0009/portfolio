@@ -61,7 +61,7 @@ const ServiceCard = ({ index, title, icon }) => {
 const About = () => {
   const { theme } = useContext(ThemeContext);
   return (
-    <div >
+    <div className="">
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Introduction</p>
         <h2
@@ -76,7 +76,7 @@ const About = () => {
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
         className={`mt-4 ${
-          theme == "dark" ? "text-secondary" : "text-secondary2"
+          theme == "dark" ? "text-white" : "text-white"
         } text-[17px] max-w-3xl leading-[30px]`}
       >
         As a highly skilled fullstack web developer, I am proficient in HTML, CSS, and
@@ -114,4 +114,4 @@ const About = () => {
   );
 };
 // export default About
-export default SectionWrapper(About, "about");
+export default SectionWrapper(About, "about", "bg-darktext");

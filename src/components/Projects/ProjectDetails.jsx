@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import { SectionWrapper } from "../../hoc";
 import { allProjects } from "../../constants";
+import { ThemeContext } from "../../context/themeContext";
 // import { fadeIn, textVariant } from "../../utils/motion";
 
 const ProjectDetails = ({}) => {
   const { projectId } = useParams();
+  const {theme} = useContext(ThemeContext)
 
   const project = allProjects.find(
     (project, index) => index == parseInt(projectId)
@@ -34,7 +36,10 @@ const ProjectDetails = ({}) => {
 
   return (
     <>
-      <motion.div className="bg-[#3f2952] mx-auto mt-[20px] p-5 rounded-2xl  w-full">
+      <motion.div className={`${
+          theme == "dark" ? "bg-primary_100" : "bg-white"
+        } mx-auto mt-[20px] p-5 rounded-2xl  w-full`}>
+          <div>back</div>
         <div className="mt-3">
           <h1 className="text-white text-center font-bold text-[30px]">
             {name}
@@ -72,7 +77,7 @@ const ProjectDetails = ({}) => {
           {keyFeatures.map((keyFeature, index) => (
             <p
               key={`${name}-keyFeature-${index}`}
-              className="mb-[10px] px-[5px]  rounded-[5px] border-l-[10px] border-l-solid text-[10px] sm:text-[20px] border-l-[#350d58] text-secondary hover:bg-[#915eff] hover:scale-[1.1] hover:text-[white] transition"
+              className="mb-[10px] px-[5px]  rounded-[5px] border-l-[10px] border-l-solid text-[10px] sm:text-[20px] border-l-[#350d58] text-secondary hover:bg-primary hover:scale-[1.1] hover:text-[white] transition"
             >
               {keyFeature}
             </p>
@@ -86,7 +91,7 @@ const ProjectDetails = ({}) => {
             {packagesUsed.map((packagge, index) => (
               <span
                 key={`${name}-package-${index}`}
-                className="p-[10px]  mb-[5px] rounded-[5px] border border-solid border-secondary text-[10px] sm:text-[20px] hover:bg-[#915eff] hover:scale-[1.1]  hover:text-[white] transition"
+                className="p-[10px]  mb-[5px] rounded-[5px] border border-solid border-secondary text-[10px] sm:text-[20px] hover:bg-primary hover:scale-[1.1]  hover:text-[white] transition"
               >
                 {packagge}
               </span>

@@ -12,14 +12,15 @@ import { socials } from "../constants";
 import { ThemeContext } from "../context/themeContext";
 
 const Contact = () => {
+  const { theme } = useContext(ThemeContext);
   const formRef = useRef();
+  const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({
     name: "",
     email: "",
     message: "",
   });
-
-  const [loading, setLoading] = useState(false);
+const color = theme==="light"?"#915eff":"#151030"
 
   const handleChange = (e) => {
     const { target } = e;
@@ -86,15 +87,14 @@ const Contact = () => {
       );
   };
 
-  const { theme } = useContext(ThemeContext);
   return (
     <div
-      className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
+      // className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
       styles={{ justifyContent: "start" }}
     >
       <motion.div
         variants={slideIn("up", "tween", 0.2, 1)}
-        className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
+        className="flex-[0.75] bg-primary_200 p-8 rounded-2xl"
       >
         <p className={styles.sectionSubText}>Reach Me Here</p>
         <h3
@@ -155,17 +155,17 @@ const Contact = () => {
           </button>
         </form>
 
-        <motion.div className="flex gap-4 py-2 flex-wrap">
+        <motion.div className="flex gap-4 py-2 max-sm:justify-between flex-wrap">
           {socials.map((social, index) => (
             <motion.div
               key={index}
               onClick={() => window.open(social.link, "_blank")}
-              className="w-[35px] h-[35px] text-center justify-center text-[#fff] border-2 border-tertiary  cursor-pointer rounded-[50%] p-[10px]"
+              className="w-auto h-auto text-center justify-center text-[#fff]   cursor-pointer rounded-[50%] p-0 sm:p-[25px]"
             >
               <div className="flex flex-col justify-center items-center">
-                <h1>
-                  <social.icon fontSize="1em" color="#915eff" />
-                </h1>
+                {/* <h1> */}
+                  <social.icon fontSize="2em" color={color} />
+                {/* </h1> */}
                 <p style={{ fontSize: "10px" }}>{social.platform}</p>
               </div>
             </motion.div>
@@ -173,12 +173,12 @@ const Contact = () => {
         </motion.div>
       </motion.div>
 
-      <motion.div
-        variants={slideIn("up", "tween", 0.2, 1)}
-        className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px] sm:h-[350px]"
-      >
-        <EarthCanvas />
-      </motion.div>
+        {/* <motion.div
+          variants={slideIn("up", "tween", 0.2, 1)}
+          className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px] sm:h-[350px]"
+        >
+          <EarthCanvas />
+        </motion.div> */}
     </div>
   );
 };

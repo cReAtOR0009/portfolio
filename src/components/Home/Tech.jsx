@@ -22,7 +22,7 @@ const TechCard = ({ index, icon, name }) => {
           <img src={icon} alt={`technology${name}`} />
           <p  className={`mt-4 ${
           theme == "dark" ? "text-white" : "text-secondary2"
-        } text-[17px] max-w-3xl leading-[15px]`}>{name}</p>
+        } text-[15px] sm:text-[17px] max-w-3xl sm:leading-[15px]`}>{name}</p>
         </div>
       </motion.div>
     </Tilt>

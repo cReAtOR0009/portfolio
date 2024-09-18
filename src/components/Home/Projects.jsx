@@ -65,7 +65,7 @@ const ProjectCard = ({
           href={linkToWebsite}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-[20px] text-secondary underline underline-offset-4"
+          className="mt-[20px] text-primary underline underline-offset-4"
         >
           {category == "web2"
             ? "link to project"
@@ -77,7 +77,7 @@ const ProjectCard = ({
         <p className="mt-2 text-white text-[14px]">
           {truncatedContent}{" "}
           <Link
-            className=" rounded text-white border-b-2 border-b-[#e63e3e] hover:underline underline-offset-4"
+            className=" rounded text-white border-b-2 border-b-primary hover:underline underline-offset-4"
             onClick={() => {
               window.scrollTo(0, 0);
             }}

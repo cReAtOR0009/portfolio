@@ -34,22 +34,30 @@ const ProjectDetails = ({}) => {
     setActiveImage(activeImage);
   };
 
+  const goBack = () => {
+    window.history.back();  // This will navigate to the previous page
+  };
+
   return (
     <>
       <motion.div className={`${
           theme == "dark" ? "bg-primary_100" : "bg-white"
         } mx-auto mt-[20px] p-5 rounded-2xl  w-full`}>
-          <div>back</div>
+          <div className={`${
+            theme == "dark" ? "text-white" : "text-secondary2"
+          } pointer underline px-2`} onClick={goBack}>back</div>
         <div className="mt-3">
           <h1 className="text-white text-center font-bold text-[30px]">
             {name}
           </h1>
-          <p className="mt-2 text-secondary sm:text-[20px]">{description}</p>
+          <p className={`mt-2 ${
+            theme == "dark" ? "text-white" : "text-secondary2"
+          } sm:text-[20px]`}>{description}</p>
           <a
             href={linkToWebsite}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-[150px]  underline hover:scale-[1.1]"
+            className={` text-primary mt-[150px]  underline hover:scale-[1.1]`}
           >
             link to website
           </a>

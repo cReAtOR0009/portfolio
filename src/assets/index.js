@@ -10,6 +10,8 @@ import customer from "./customer.jpeg";
 import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
+import lightning from "./lightning.png";
+import lightning2 from "./lightning2.png";
 
 import illustration from "./illustration.jpg";
 import illustration1 from "./Static-website.svg";
@@ -46,7 +48,6 @@ import tripguide from "./tripguide.jpeg";
 import portfolio from "./portfoliowebsite.png";
 import blog1 from "./blog1.jpeg";
 import disney from "./disneyclone.jpeg";
-import kasuwa from "./kasuwa.png";
 import deyspeak from "./deyspeak.jpeg";
 import foodorder from "./foodordering.jpeg";
 import groceryapp from "./groceryapp.jpeg";
@@ -63,6 +64,20 @@ import web3Course from "./web3Course.jpeg";
 import votingApp from "./votingApp.jpeg";
 import crowdFundingApp from "./crowdFunding.jpeg";
 import TelegramBot from "./TelegramBot.jpeg";
+
+//denurx
+import denurxScreen1 from "./denurxScreen1.png"
+import denurxScreen2 from "./denurxScreen2.png"
+import denurxScreen3 from "./denurxScreen3.png"
+
+//kasuwa
+
+import kasuwa from "./kasuwa.png";
+import kasuwa2 from "./kasuwa2.png";
+import kasuwa3 from "./kasuwa3.png";
+import kasuwa4 from "./kasuwa4.png";
+import kasuwa5 from "./kasuwa5.png";
+import kasuwa6 from "./kasuwa6.png";
 
 //ipfs project images
 import ipfs1 from "./ipfs1.png";
@@ -136,7 +151,6 @@ export {
   twitter,
   portfolio,
   disney,
-  kasuwa,
   deyspeak,
   foodorder,
   groceryapp,
@@ -155,6 +169,22 @@ export {
   TelegramBot,
 
   arrow,
+  lightning,
+  lightning2,
+
+  // Denurx
+  denurxScreen1,
+  denurxScreen2,
+  denurxScreen3,
+
+
+  //Kasuwa
+  kasuwa,
+  kasuwa2,
+  kasuwa3,
+  kasuwa4,
+  kasuwa5,
+  kasuwa6,
 
   //ipfs images export
   ipfs1,

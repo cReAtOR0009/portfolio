@@ -4,11 +4,14 @@ import { motion } from "framer-motion";
 import { SectionWrapper } from "../../hoc";
 import { allProjects } from "../../constants";
 import { ThemeContext } from "../../context/themeContext";
+import { lightning, lightning2 } from "../../assets";
+import { styles } from "../../styles";
 // import { fadeIn, textVariant } from "../../utils/motion";
 
 const ProjectDetails = ({}) => {
   const { projectId } = useParams();
-  const {theme} = useContext(ThemeContext)
+  const { theme } = useContext(ThemeContext);
+  const icon = theme !== "dark" ? lightning : lightning2;
 
   const project = allProjects.find(
     (project, index) => index == parseInt(projectId)
@@ -27,6 +30,8 @@ const ProjectDetails = ({}) => {
     keyFeatures,
     packagesUsed,
     source_code_link,
+    resultAndImapcts,
+    challengesAndSolutions,
   } = project;
 
   const [activeImage, setActiveImage] = useState(image[0]);
@@ -35,29 +40,46 @@ const ProjectDetails = ({}) => {
   };
 
   const goBack = () => {
-    window.history.back();  // This will navigate to the previous page
+    window.history.back(); // This will navigate to the previous page
   };
 
   return (
     <>
-      <motion.div className={`${
+      <motion.div
+        className={`${
           theme == "dark" ? "bg-primary_100" : "bg-white"
-        } mx-auto mt-[20px] p-5 rounded-2xl  w-full`}>
-          <div className={`${
-            theme == "dark" ? "text-white" : "text-secondary2"
-          } pointer underline px-2`} onClick={goBack}>back</div>
+        } mx-auto mt-[20px] p-5 rounded-2xl  w-full`}
+      >
+        <div
+          className={`${
+            theme == "dark" ? "text-white-100" : "text-secondary2"
+          } cursor-pointer underline px-2`}
+          onClick={goBack}
+        >
+          back
+        </div>
         <div className="mt-3">
-          <h1 className="text-white text-center font-bold text-[30px]">
+          <h2
+            className={`${
+              styles.heroHeadText2
+            } text-[20px] sm:[30px] text-center mb-[20px] ${
+              theme == "dark" ? "text-white-100" : "text-black"
+            }`}
+          >
             {name}
-          </h1>
-          <p className={`mt-2 ${
-            theme == "dark" ? "text-white" : "text-secondary2"
-          } sm:text-[20px]`}>{description}</p>
+          </h2>
+          <p
+            className={`mt-2 ${
+              theme == "dark" ? "text-white-100" : "text-secondary2"
+            } sm:text-[20px]`}
+          >
+            {description}
+          </p>
           <a
             href={linkToWebsite}
             target="_blank"
             rel="noopener noreferrer"
-            className={` text-primary mt-[150px]  underline hover:scale-[1.1]`}
+            className={` text-primary mt-[150px]  underline `}
           >
             link to website
           </a>
@@ -79,27 +101,109 @@ const ProjectDetails = ({}) => {
           })}
         </div>
         <div className="mt-4">
-          <h1 className="  text-[20px] sm:[30px] underline-offset-8 text-center mb-[20px] underline">
+          <h2
+            className={`${
+              styles.heroSubText
+            } text-[20px] sm:[30px] underline-offset-8 text-center mb-[20px] underline ${
+              theme == "dark" ? "text-white-100" : "text-black"
+            }`}
+          >
             Key Features:
-          </h1>
+          </h2>
           {keyFeatures.map((keyFeature, index) => (
-            <p
+            <div
               key={`${name}-keyFeature-${index}`}
-              className="mb-[10px] px-[5px]  rounded-[5px] border-l-[10px] border-l-solid text-[10px] sm:text-[20px] border-l-[#350d58] text-secondary hover:bg-primary hover:scale-[1.1] hover:text-[white] transition"
+              className="flex items-center"
             >
-              {keyFeature}
-            </p>
+              <img src={icon} alt="" className="w-8 h-8" />
+              <p
+                className={`${styles.paragraph}  ${
+                  theme == "dark" ? "text-white-100-100" : "text-secondary2"
+                } mb-[10px] px-[5px]  rounded-[5px] hover:bg-primary  hover:text-[white] transition`}
+              >
+                {keyFeature}
+              </p>
+            </div>
           ))}
         </div>
+
+        {resultAndImapcts && (
+          <div className="mt-4">
+            <h2
+              className={`${
+                styles.heroSubText
+              } text-[20px] sm:[30px] underline-offset-8 text-center mb-[20px] underline ${
+                theme == "dark" ? "text-white-100" : "text-black"
+              }`}
+            >
+              Results And Impact:
+            </h2>
+
+            {resultAndImapcts?.map((resultAndImapct, index) => (
+              <div key={resultAndImapct.title}>
+                <h3 className={`${styles.h3}`}>{resultAndImapct.title}</h3>
+
+                <p
+                  key={`${name}-keyFeature-${index}`}
+                  className={`${styles.paragraph} ${
+                    theme == "dark" ? "text-white-100" : "text-secondary2"
+                  } mb-[10px] px-[5px]  rounded-[5px] border-l-[10px] border-l-solid  border-l-[#350d58] text-secondary hover:bg-primary  hover:text-[white] transition`}
+                >
+                  {resultAndImapct.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {challengesAndSolutions && (
+          <div className="mt-4">
+            <h2
+              className={`${
+                styles.heroSubText
+              } font-bold text-[20px] sm:[30px] underline-offset-8 text-center mb-[20px] underline ${
+                theme == "dark" ? "text-white-100" : "text-black"
+              }`}
+            >
+              Challenges and Solution:
+            </h2>
+            {challengesAndSolutions.map((challengesAndSolution, index) => (
+              <div
+                key={`${name}-keyFeature-${index}`}
+                className="flex items-center"
+              >
+                <img src={icon} alt="" className="w-8 h-8" />
+                <div className="">
+                  <h3 className={`${styles.h3}`}>{challengesAndSolution.title}</h3>
+                  <p
+                    className={` ${styles.paragraph} ${
+                      theme == "dark" ? "text-white-100" : "text-secondary2"
+                    } mb-[10px] px-[5px]  rounded-[5px]  text-secondary hover:bg-primary  hover:text-[white] transition`}
+                  >
+                    {challengesAndSolution.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+
         <div className="mt-4">
-          <h1 className="text-[20px] sm:[30px] underline underline-offset-8 text-center mb-[20px]">
+          <h2
+            className={`${
+              styles.heroSubText
+            } text-[20px] sm:[30px] underline-offset-8 text-center mb-[20px] underline ${
+              theme == "dark" ? "text-white-100" : "text-black"
+            }`}
+          >
             Packages Used:
-          </h1>
+          </h2>
+
           <div className=" flex  flex-wrap gap-[10px] mb-[10px] text-[20px] text-secondary">
             {packagesUsed.map((packagge, index) => (
               <span
                 key={`${name}-package-${index}`}
-                className="p-[10px]  mb-[5px] rounded-[5px] border border-solid border-secondary text-[10px] sm:text-[20px] hover:bg-primary hover:scale-[1.1]  hover:text-[white] transition"
+                className="p-[10px]  mb-[5px] rounded-[5px] border border-solid border-secondary text-[10px] sm:text-[20px] hover:bg-primary   hover:text-[white] transition"
               >
                 {packagge}
               </span>
@@ -111,7 +215,7 @@ const ProjectDetails = ({}) => {
             <img
               src={activeImage}
               alt={`activeImage`}
-              className="w-full h-full object-cover rounded-2xl"
+              className={` w-full h-full object-cover rounded-2xl`}
             />
           </div>
         </div>
@@ -120,7 +224,7 @@ const ProjectDetails = ({}) => {
             return (
               <div
                 key={index}
-                className="w-[100px] h-[100px]  sm:h-[120px] border border-solid border-[#915eff] rounded p-[10px] hover:scale-[1.2] transition-all"
+                className={`${activeImage == image ? "bg-primary":""} w-[100px] h-[100px]  sm:h-[120px] border border-solid border-[#915eff] rounded p-[10px] hover:scale-[1.2] transition-all`}
                 onClick={() => changeMainImage(image)}
               >
                 <img

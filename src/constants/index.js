@@ -41,7 +41,6 @@ import {
   portfolio,
   deyspeak,
   disney,
-  kasuwa,
   foodorder,
   groceryapp,
   creatornikestore,
@@ -66,13 +65,13 @@ import {
   ipfs5,
   ipfs6,
   ipfs7,
-
+  
   //import nitrobot
   nitrobot1,
   nitrobot2,
   nitrobot3,
   nitrobot4,
-
+  
   //tokrn deploymant
   creatortoken,
   creatortoken2,
@@ -80,13 +79,24 @@ import {
   //3d tool website
   threeDtool,
   threeDtool2,
-
+  
   //creators
   creators,
   creators2,
-
+  
   // freelancing
-  freelanceBanner
+  freelanceBanner,
+  denurxScreen1,
+  denurxScreen2,
+  denurxScreen3,
+
+  //kasuwa
+  kasuwa,
+  kasuwa2,
+  kasuwa3,
+  kasuwa4,
+  kasuwa5,
+  kasuwa6
 } from "../assets";
 
 export const navLinks = [
@@ -277,7 +287,6 @@ const testimonials = [
 //
 
 const allProjects = [
-
   // {
   //   name: "Disney cloned",
   //   description:
@@ -308,7 +317,104 @@ const allProjects = [
   //   packagesUsed: []
   // },
   {
-    name: "Deyspeak",
+    name: "Denurx Landing Page",
+    description:
+      "This React project is a landing page for a telemedicine mobile app that connects patients with healthcare providers. The primary objective of the landing page is to provide information about the app, its features, benefits, and services. It also includes a form for onboarding two user types: patients and healthcare providers using mailchimp.",
+    linkToWebsite: "https://denurx.com/",
+    tags: [
+      {
+        name: "React",
+        color: "#b6a6e8-text-gradient",
+      },
+      {
+        name: "Landing Page",
+        color: "#8469d8-text-gradient",
+      },
+      {
+        name: "minimal",
+        color: "#b6a6e8-text-gradient",
+      },
+      {
+        name: "react-router-dom",
+        color: "#8469d8-text-gradient",
+      },
+      {
+        name: "Tailwind CSS",
+        color: "#69a2d8 -text-gradient",
+      },
+    ],
+  denurxScreen2,
+    image: [  denurxScreen1,denurxScreen2, denurxScreen3    ],
+    source_code_link: "https://github.com/cReAtOR0009/denurx",
+    category: "web2",
+    keyFeatures: [
+       "Research-Driven Design: The minimalistic design decisions were made based on persona research gathered during the initial stages of the project, aligning with the app’s goals and user needs.",
+      ,
+     "Local Storage for Active Page: Local storage is used to store the active page, allowing users to return to their last viewed section without losing progress.",
+      ,
+      "Onboarding Form: Form allows patients and healthcare providers to sign up using Mailchimp for subscription, collecting user details such as name, contact information, and user type.",
+      "Responsive Design: the Landing page is designed to work seamlessly on both desktop and mobile devices using Tailwind CSS.",
+      "App Information: the website Provides information about the app’s features, benefits, and services, helping users understand the app’s value.",
+      "Minimalistic Use of Colors and Animations: Minimal colors and animations were employed to align with the app’s persona and user expectations.",
+      "State-related operations like toggling buttons, hamburger menus, and rendering content dynamically are managed using React.js.",
+     "Mailchimp Integration for Forms\; Mailchimp was used to manage subscriptions and form submission efficiently for onboarding users.",
+      ,
+       "Persistent Animations: Click state, hover state, and toggle state optimizations ensure that animations remain persistent and smooth.",
+      ,
+    ],
+
+    resultAndImapcts: [
+      {
+        title: "Improved User Experience",
+        description:
+          "The minimalistic design and intuitive navigation enhance the user’s overall experience by providing clear information and easy navigation.",
+      },
+      {
+        title: "Efficiency in State Management",
+        description:
+          "The use of React's state management and local storage ensures faster page transitions and optimized content rendering.",
+      },
+      {
+        title: "Seamless Form Interaction",
+        description:
+          "Mailchimp’s integration streamlined the form interaction process and Email marketing Onboarding, ensuring smooth data handling and user onboarding.",
+      },
+    ],
+
+    challengesAndSolutions: [
+      {
+        title: "Handling Multiple User Types",
+        description:
+          "Managing both patient and healthcare provider onboarding within the same form required conditional logic to ensure a seamless experience for each user type.",
+      },
+      {
+        title: "Responsive Design",
+        description:
+          "Ensuring that the page remained responsive on all devices was a challenge. Tailwind CSS was used to maintain layout consistency and flexibility across different screen sizes.",
+      },
+      {
+        title: "Form Integration",
+        description:
+          "Integrating a subscription system with Mailchimp presented some configuration challenges. This was resolved by carefully aligning the form submission process with Mailchimp’s API.",
+      },
+      {
+        title: "Persistent Animations",
+        description:
+          "Maintaining smooth and continuous animations was challenging, especially with state changes. Optimization of toggle, click, and hover states ensured that the animations stayed intact.",
+      },
+    ],
+    packagesUsed:[
+      "dotenv",
+      "react",
+      "react-dom",
+      "react-helmet-async",
+      "react-mailchimp-subscribe",
+      "react-router-dom",
+      "react-router-hash-link"
+  ]
+  },
+  {
+    name: "Deyspeak Wailtlist",
     description:
       "Introducing one of my standout projects featured in my portfolio, which i made Voluntarily as a fullStack web developer, while on the Deyspeak Developer Team – a language learning app waitlist website. Joining the exclusive waitlist offers you the opportunity to be at the forefront of a revolutionary African language learning experience. This app is meticulously designed to transcend language barriers, foster cultural connections, and empower users to communicate fluently in multiple African languages. As you explore my portfolio, discover how I contributed to creating a captivating and user-friendly platform. The waitlist website showcases my skills in crafting compelling content and an enticing user experience from Figma design, enticing visitors to embark on their linguistic journey.",
     linkToWebsite: "https://phenomenal-gelato-370181.netlify.app/",
@@ -374,7 +480,7 @@ const allProjects = [
         color: "#69a2d8 -text-gradient",
       },
     ],
-    image: [kasuwa],
+    image: [kasuwa, kasuwa2, kasuwa3, kasuwa4, kasuwa5, kasuwa6],
     source_code_link: "https://github.com/",
     category: "web2",
     keyFeatures: [],
@@ -517,7 +623,14 @@ const allProjects = [
       "Timeout Handling: Sets timeout settings for various operations to prevent the script from hanging indefinitely, proceeds with alternative actions or logs errors if elements or operations are not found within a specified time.",
       "Environment Variables: Uses environment variables to store sensitive information like Discord API tokens and channel IDs.",
     ],
-    packagesUsed: ["discord.js","dotenv", "puppeteer", "puppeteer-extra","puppeteer-extra-plugin-stealth", "node"],
+    packagesUsed: [
+      "discord.js",
+      "dotenv",
+      "puppeteer",
+      "puppeteer-extra",
+      "puppeteer-extra-plugin-stealth",
+      "node",
+    ],
   },
   {
     name: "A Real Estate Website",
@@ -662,10 +775,9 @@ const allProjects = [
   },
 
   //freelancing
-   {
+  {
     name: "product Fetcher",
-    description:
-      "",
+    description: "",
     linkToWebsite: "https://github.com/cReAtOR0009/productfetcher",
     tags: [
       {
@@ -698,8 +810,7 @@ const allProjects = [
 
   {
     name: "fuel Price Fetcher",
-    description:
-      "",
+    description: "",
     linkToWebsite: "https://github.com/cReAtOR0009/fuelbot3",
     tags: [
       {
@@ -730,12 +841,11 @@ const allProjects = [
     packagesUsed: [],
   },
 
-
   //api
   {
     name: "DeySpeak Language Learning Api",
     description:
-      "",
+      "This Language Learning API was developed as part of a collaborative effort within a cross-functional team, focusing on delivering a robust and scalable backend solution. The API supports multiple languages and provides a modular learning experience for users, allowing them to engage with lessons tailored to different proficiency levels. The project focused on design, development, and project management, resulting in a clean and maintainable codebase that emphasizes efficient performance, scalability, and security.",
     linkToWebsite: "https://github.com/cReAtOR0009/",
     tags: [
       {
@@ -759,22 +869,84 @@ const allProjects = [
         color: "#8469d8-text-gradient",
       },
       {
-        name: "bcrypt",
+        name: "backend",
         color: "#69a2d8 -text-gradient",
       },
       {
-        name: "nodemailer",
+        name: "api",
         color: "#69a2d8 -text-gradient",
       },
     ],
     image: [freelanceBanner],
     source_code_link: "https://github.com/cReAtOR0009/nikeStore",
     category: "api",
-    keyFeatures: [],
-    packagesUsed: [],
+    keyFeatures: [
+      "This project was built in collaboration with designers, developers, and project managers to ensure the final product met both user experience and technical requirements.",
+      "Central Server Architecture: A central server was implemented using Node.js and Express.js, providing ease of maintenance, upgradeability and even scalability. This architecture made it simple to apply updates, deploy new features, and manage the system efficiently.",
+      "Language Support: The app supports multiple languages and is adaptable to new languages being added without significant code changes.",
+      "Robust API: The API is capable of handling complex user interactions, supporting features like lesson progress tracking, user management, and media uploads for enhanced learning experiences.",
+      "Security:Robust authorization and authentication mechanisms were put in place, ensuring the security of user accounts and safeguarding sensitive data. Middleware was used to handle request validation and ensure that only authorized users could access protected resources.",
+      "Media Data: The app includes functionality for media uploads, allowing users to upload and manage media files (such as lesson-related images or audio) that enhance the learning experience.",
+      "Data Validation: The project implemented strong data validation using Joi to ensure all API inputs were secure and consistent. This reduced errors caused by invalid user submissions and maintained data integrity.",
+      "Database Seeder: A database seeder was implemented for testint, to populate the database with initial data, such as default lessons, languages, and user roles. This made testing and deployment more efficient by ensuring the system was always seeded with essential content.",
+      "Efficient and Modular Code: The codebase was designed to be highly modular and easy to upgrade. By breaking down the functionality into distinct modules, the API can be extended or modified without affecting other parts of the system. This ensured that the code remained efficient and easy to understand for future development.",
+      "Utility Functions: To avoid code duplication, utility functions were used to handle common tasks across different parts of the API, such as data formatting, validation, and error handling. This made the code easier to maintain and less prone to bugs.",
+    ],
+    resultAndImapcts: [
+      {
+        title: "Scalability",
+        description:
+          "The API was designed with scalability in mind, capable of supporting up to 10,000 concurrent users. Its modular architecture ensures the system can grow with minimal performance degradation, with an average response time of less than 200ms.",
+      },
+      {
+        title: "User Engagement:",
+        description:
+          "The modular content management system allows for the continuous addition of new lessons, languages, and levels without downtime, keeping users engaged and encouraging frequent returns to the platform.",
+      },
+      {
+        title: "Seamless Frontend-Backend Communication:",
+        description:
+          "The API was designed to work seamlessly with multiple front-end clients (e.g., web and mobile) with ease, thanks to the implementation of consistent server response data structure and the use of CORS for cross-origin compatibility.",
+      },
+    ],
+    challengesAndSolutions: [
+      {
+        title: "Organizing Modular Learning Content:",
+        description:
+          "Structuring language learning content across different languages and levels was complex. A modular database schema helped solve this, allowing new languages and levels to be added without requiring significant code changes.",
+      },
+      {
+        title: "Request Validation & Error Handling:",
+        description:
+          "Ensuring incoming data was valid and preventing errors from disrupting the system required careful validation. The use of the Joi package for request validation ensured that only valid data was processed, while a global error handler provided detailed feedback in the event of issues.",
+      },
+      {
+        title: "Collaboration and Code Maintenance:",
+        description:
+          "Collaborating with a cross-functional team meant ensuring the codebase was clean and well-documented for other developers. The emphasis on modular, reusable code and clear documentation made it easy for team members to contribute without causing conflicts.",
+      },
+    ],
+    packagesUsed: [
+      "bcrypt",
+      "cloudinary",
+      "cors",
+      "datauri",
+      "dotenv",
+      "express",
+      "faker",
+      "fast-csv",
+      "joi",
+      "joi-key-extensions",
+      "joi-objectid",
+      "jsonwebtoken",
+      "migrate",
+      "mongoose",
+      "multer",
+      "nodemailer",
+      "nodemon",
+    ],
   },
- 
- 
+
   // {
   //   name: "Nike Store",
   //   description:
@@ -955,7 +1127,7 @@ const allProjects = [
         color: "#69a2d8 -text-gradient",
       },
     ],
-    image: [ creators2, creators],
+    image: [creators2, creators],
     source_code_link: "https://github.com/cReAtOR0009/creators.git",
     category: "web3",
     keyFeatures: [
@@ -1293,7 +1465,7 @@ const allProjects = [
       "postcss",
     ],
   },
- 
+
   {
     name: "Blockchain Voting App Frontend Demo",
     description:

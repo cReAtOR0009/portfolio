@@ -10,7 +10,7 @@ import { navLinks } from "../constants";
 import { logo, menu, close } from "../assets";
 import { ThemeContext } from "../context/themeContext";
 const Navbar = () => {
-  const [active, setActive] = useState("Contact");
+  const [active, setActive] = useState("");
   const [Toggle, setToggle] = useState(false);
   const { toggleTheme, theme } = useContext(ThemeContext);
 
@@ -28,20 +28,22 @@ const Navbar = () => {
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <Link
           to="/"
-          className="flex items-center gap-2"
+          className="flex items-center justify-center gap-2"
           onClick={() => {
             setActive("Contact");
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
+          {/* <img src={logo} alt="logo" className="w-9 h-9 object-contain" /> */}
+          <h3 className={`${styles.logo} whitespace-nowrap text-primary`}> &lt;Creator/&gt;</h3>
           <p
             className={` ${
               theme === "dark" ? "text-white" : "text-primary"
-            } text-[18px] min-w-[180px] font-bold cursor-pointer flex sm:flex-col`}
+            } sm:flex hidden text-[18px] min-w-[180px] font-bold cursor-pointer sm:flex-col`}
           >
-            _Creator's &nbsp;
-            <span className="sm:block hidden"> | #WebManiac</span>
+           {/* &lt;Creator/&gt; */}| #WebManiac
+           &nbsp;
+            {/* <span className="sm:block hidden"> | #WebManiac</span> */}
           </p>
         </Link>
         <ul className="list-none hidden lg:flex justify-between items-center flex-row lg:gap-10">
@@ -49,7 +51,11 @@ const Navbar = () => {
             return (
               <motion.li
                 key={link.id}
-                className={link.id == "contact" ? "py-[10px rounded-full " : ""}
+                className={` ${link.id == "contact" ? "py-[10px rounded-full] rounded-full" : ""} ${
+                  active === link.title
+                    ? " border-b-4 border-b-primary rounded pr-[10px]"
+                    : "border-b-4 border-b-transparent"
+                } transition-all`}
                 variants={navIn(
                   "right",
                   "spring",
@@ -64,15 +70,11 @@ const Navbar = () => {
               >
                 <HashLink
                   to={link.id !== "contact" ? `/#${link.id}` : `#${link.id}`}
-                  className={` ${
-                    theme === "dark" ? "text-white" : "text-primary"
-                  } ${
-                    active === link.title
-                      ? " border-b-4 border-b-primary bg-[#915eff rounded px-[10px] pb-[5px]"
-                      : "border-b-transparent border-b-2"
-                  } hover:-text-white hover:border-b-primary text-[18px] ${
+                  className={` whitespace-nowrap  ${
+                    theme === "dark" ? "text-white hover:text-primary" : "text-primary"
+                  } text-[18px] ${
                     link.title === "Contact"
-                      ? "text-white   bg-primary rounded-full text-[25px] px-[10px] text-center"
+                      ? "text-white   bg-primary rounded-full text-[20px] px-[10px] text-center"
                       : ""
                   } font-medium cursor-pointer text-center transition-all`}
                 >
@@ -106,42 +108,42 @@ const Navbar = () => {
             {navLinks.map((link, index) => {
               return (
                 <motion.li
-                  key={link.id}
-                  className={` ${
-                    theme === "dark" ? "text-white" : "text-primary"
-                  } self-start sm:self-center  ${
-                    link.id == "contact" ? " rounded-full" : ""
-                  }`}
-                  variants={navIn(
-                    "right",
-                    "spring",
-                    link.title === "Contact" ? 1 * index : 1 * index,
-                    link.title === "Contact" ? 1.5 : 2
-                  )}
-                  initial={link.title === "Contact" ? "hidden2" : "hidden"}
-                  animate={link.title === "Contact" ? "show2" : "show"}
-                  onClick={() => {
-                    setActive(link.title);
-                    setToggle(!Toggle);
-                  }}
+                key={link.id}
+                className={`${
+                  
+                  theme === "dark" ? "text-white" : "text-primary"
+                }  ${
+                    active === link.title
+                      ? "border-b-4 border-b-primary  rounded "
+                      : "border-b-transparent border-b-0"
+                  } self-start sm:self-center ${link.id === "contact" ? "rounded-full px-4  bg-primary" : ""}`}
+                variants={navIn(
+                  "right",
+                  "spring",
+                  index,
+                  link.title === "Contact" ? 1.5 : 2
+                )}
+                initial={link.title === "Contact" ? "hidden2" : "hidden"}
+                animate={link.title === "Contact" ? "show2" : "show"}
+                onClick={() => {
+                  setActive(link.title);
+                  setToggle(!Toggle);
+                }}
+              >
+                <HashLink
+                  to={`/#${link.id}`}
+                  className={`${
+                    theme === "dark" ? "text-white hover:text-primary" : "text-primary"
+                  }  hover:border-b-primary hover:border-b-4 text-[18px] ${
+                    link.title === "Contact"
+                      ? "text-white"
+                      : ""
+                  } font-medium cursor-pointer text-left transition-all`}
                 >
-                  <HashLink
-                    to={`/#${link.id}`}
-                    className={` ${
-                    theme === "dark" ? "text-white" : "text-primary"
-                  } ${
-                      active === link.title
-                        ? " border-b-4 border-b-primary bg-[#915eff rounded  pb-[5px]"
-                        : " border-b-transparent border-b-2"
-                    } hover:-text-white hover:border-b-primary text-[18px] ${
-                      link.title === "Contact"
-                        ? "text-white   bg-primary rounded-full text-[25px] px-[10px] "
-                        : ""
-                    } font-medium cursor-pointer text-left transition-all`}
-                  >
-                    {link.title}
-                  </HashLink>
-                </motion.li>
+                  {link.title}
+                </HashLink>
+              </motion.li>
+              
               );
             })}
             <BiSolidMoon

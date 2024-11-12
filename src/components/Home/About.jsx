@@ -66,8 +66,8 @@ const About = () => {
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Introduction</p>
         <h2
-          className={`${styles.sectionHeadText} ${
-            theme == "dark" ? "text-white" : "text-black"
+           className={`${styles.sectionHeadText} ${
+            theme == "dark" ? "text-white" : "text-secondary2"
           }`}
         >
           Overview.

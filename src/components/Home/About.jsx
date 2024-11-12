@@ -82,15 +82,15 @@ const About = () => {
       >
         As a highly skilled fullstack web developer, I am proficient in HTML, CSS, and
         JavaScript, and I have extensive experience with popular front-end
-        frameworks and Libraries such as React, Three.js, Framer Motion,
-        React-Router, Redux, Tailwind, React-Bootstrap, recharts, and also
+        frameworks and Libraries such as React, Redux, Three.js, Framer Motion,
+        React-Router, Material UI, Tailwind, React-Bootstrap, recharts, and also
         frameworks and Libraries for Node.js, Google Firebase Inclusive--I'm
         very open to Learn more. I'm a quick learner and enjoy collaborating
         with clients and other developers to develop effective and scalable
         solutions that address real-world challenges. I am Currently Extending
         my knowledge and experience to the blockchain industry using solidity.
         with my skills and your ideas, we're bound to make the Best of magic in
-        Web Development!
+        redefining your web Projects!
       </motion.p>
       <div
         className="mt-20 h-[auto] py-2 sm-overflow-hidden sm-w-[70vw]"

@@ -16,6 +16,7 @@ const styles = {
   sectionSubText:
     "sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider",
     paragraph: "text-sm md:text-base lg:text-lg xl:text-lg dark:text-dark-text",
+    logo: "text-xl md:text-3xl lg:text-3xl xl:text-4xl font-semibold leading-none sm:leading-normal dark:text-dark-text",
     h3: "text-xl md:text-2xl lg:text-2xl xl:text-2xl font-semibold leading-none sm:leading-normal dark:text-dark-text",
 };
 

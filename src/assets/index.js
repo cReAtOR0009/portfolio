@@ -70,6 +70,12 @@ import denurxScreen1 from "./denurxScreen1.png"
 import denurxScreen2 from "./denurxScreen2.png"
 import denurxScreen3 from "./denurxScreen3.png"
 
+//360 Trading
+import trading360 from "./360trading.jpeg"
+import trading360_2 from "./360trading2.jpeg"
+import trading360_3 from "./360trading3.jpeg"
+import trading360_4 from "./360trading4.jpeg"
+
 //kasuwa
 
 import kasuwa from "./kasuwa.png";
@@ -176,6 +182,12 @@ export {
   denurxScreen1,
   denurxScreen2,
   denurxScreen3,
+
+  //360Trading
+  trading360,
+  trading360_2,
+  trading360_3,
+  trading360_4,
 
 
   //Kasuwa

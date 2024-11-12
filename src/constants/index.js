@@ -65,13 +65,13 @@ import {
   ipfs5,
   ipfs6,
   ipfs7,
-  
+
   //import nitrobot
   nitrobot1,
   nitrobot2,
   nitrobot3,
   nitrobot4,
-  
+
   //tokrn deploymant
   creatortoken,
   creatortoken2,
@@ -79,16 +79,22 @@ import {
   //3d tool website
   threeDtool,
   threeDtool2,
-  
+
   //creators
   creators,
   creators2,
-  
+
   // freelancing
   freelanceBanner,
   denurxScreen1,
   denurxScreen2,
   denurxScreen3,
+
+  //360Trading
+  trading360,
+  trading360_2,
+  trading360_3,
+  trading360_4,
 
   //kasuwa
   kasuwa,
@@ -96,7 +102,7 @@ import {
   kasuwa3,
   kasuwa4,
   kasuwa5,
-  kasuwa6
+  kasuwa6,
 } from "../assets";
 
 export const navLinks = [
@@ -263,11 +269,11 @@ const testimonials = [
     designation: "Product Manager",
     company: "AGRIARCHE LIMITED",
     image:
-      "https://images.unsplash.com/photo-1484517186945-df8151a1a871?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cmFuZG9tJTIwYmxhY2slMjBhZnJpY2FuJTIwbmlnZXJpYW4lMjBwZW9wbGV8ZW58MHx8MHx8fDA%3D",
+    "https://images.unsplash.com/photo-1484517186945-df8151a1a871?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cmFuZG9tJTIwYmxhY2slMjBhZnJpY2FuJTIwbmlnZXJpYW4lMjBwZW9wbGV8ZW58MHx8MHx8fDA%3D",
   },
   {
     testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Creator does.",
+    "I've never met a web developer who truly cares about their clients' success like Creator does.",
     name: "Endurance Murgho",
     designation: "CEO",
     company: "Deyspeak coop",
@@ -280,42 +286,13 @@ const testimonials = [
     designation: "Project Manager",
     company: "D0tCircleLabs",
     image:
-      "https://images.unsplash.com/photo-1506634572416-48cdfe530110?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8cmFuZG9tJTIwYmxhY2slMjBhZnJpY2FuJTIwbmlnZXJpYW4lMjBwZW9wbGV8ZW58MHx8MHx8fDA%3D",
+    "https://images.unsplash.com/photo-1506634572416-48cdfe530110?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8cmFuZG9tJTIwYmxhY2slMjBhZnJpY2FuJTIwbmlnZXJpYW4lMjBwZW9wbGV8ZW58MHx8MHx8fDA%3D",
   },
 ];
 
 //
 
 const allProjects = [
-  // {
-  //   name: "Disney cloned",
-  //   description:
-  //     "This is a Disney clone website platform designed to replicate the look and feel of the official Disney website, offering a similar user experience and content structure. Typically created for educational and portfolio purposes, the Disney clone site mimics the layout, color schemes, and interactive elements found on the official Disney site. It includes sections dedicated to various Disney movies and their classifications.",
-  //   linkToWebsite: "https://disneywebclone2.netlify.app",
-  //   tags: [
-  //     {
-  //       name: "React",
-  //       color: "#b6a6e8-text-gradient",
-  //     },
-  //     {
-  //       name: "Firebase",
-  //       color: "#8469d8-text-gradient",
-  //     },
-  //     {
-  //       name: "Redux",
-  //       color: "#8469d8-text-gradient",
-  //     },
-  //     {
-  //       name: "Disney WebApp clone",
-  //       color: "#69a2d8 -text-gradient",
-  //     },
-  //   ],
-  //   image: [disney],
-  //   source_code_link: "https://github.com/cReAtOR0009/disneyWebclone",
-  //   category: "web2",
-  //   keyFeatures: [],
-  //   packagesUsed: []
-  // },
   {
     name: "Denurx Landing Page",
     description:
@@ -343,26 +320,26 @@ const allProjects = [
         color: "#69a2d8 -text-gradient",
       },
     ],
-  denurxScreen2,
-    image: [  denurxScreen1,denurxScreen2, denurxScreen3    ],
+    denurxScreen2,
+    image: [denurxScreen1, denurxScreen2, denurxScreen3],
     source_code_link: "https://github.com/cReAtOR0009/denurx",
     category: "web2",
     keyFeatures: [
-       "Research-Driven Design: The minimalistic design decisions were made based on persona research gathered during the initial stages of the project, aligning with the app’s goals and user needs.",
+      "Research-Driven Design: The minimalistic design decisions were made based on persona research gathered during the initial stages of the project, aligning with the app’s goals and user needs.",
       ,
-     "Local Storage for Active Page: Local storage is used to store the active page, allowing users to return to their last viewed section without losing progress.",
+      "Local Storage for Active Page: Local storage is used to store the active page, allowing users to return to their last viewed section without losing progress.",
       ,
       "Onboarding Form: Form allows patients and healthcare providers to sign up using Mailchimp for subscription, collecting user details such as name, contact information, and user type.",
       "Responsive Design: the Landing page is designed to work seamlessly on both desktop and mobile devices using Tailwind CSS.",
       "App Information: the website Provides information about the app’s features, benefits, and services, helping users understand the app’s value.",
       "Minimalistic Use of Colors and Animations: Minimal colors and animations were employed to align with the app’s persona and user expectations.",
       "State-related operations like toggling buttons, hamburger menus, and rendering content dynamically are managed using React.js.",
-     "Mailchimp Integration for Forms\; Mailchimp was used to manage subscriptions and form submission efficiently for onboarding users.",
+      "Mailchimp Integration for Forms; Mailchimp was used to manage subscriptions and form submission efficiently for onboarding users.",
       ,
-       "Persistent Animations: Click state, hover state, and toggle state optimizations ensure that animations remain persistent and smooth.",
+      "Persistent Animations: Click state, hover state, and toggle state optimizations ensure that animations remain persistent and smooth.",
       ,
     ],
-
+  
     resultAndImapcts: [
       {
         title: "Improved User Experience",
@@ -380,7 +357,7 @@ const allProjects = [
           "Mailchimp’s integration streamlined the form interaction process and Email marketing Onboarding, ensuring smooth data handling and user onboarding.",
       },
     ],
-
+  
     challengesAndSolutions: [
       {
         title: "Handling Multiple User Types",
@@ -403,15 +380,44 @@ const allProjects = [
           "Maintaining smooth and continuous animations was challenging, especially with state changes. Optimization of toggle, click, and hover states ensured that the animations stayed intact.",
       },
     ],
-    packagesUsed:[
+    packagesUsed: [
       "dotenv",
       "react",
       "react-dom",
       "react-helmet-async",
       "react-mailchimp-subscribe",
       "react-router-dom",
-      "react-router-hash-link"
-  ]
+      "react-router-hash-link",
+    ],
+  },
+  {
+    name: "Trading Website with Webflow",
+    description:
+      "This is a  website made using webflow. the website showcases the various features of the trading company with well structured contents and sections",
+    linkToWebsite: "https://www.360trading.com/",
+    tags: [
+      {
+        name: "Webflow",
+        color: "#b6a6e8-text-gradient",
+      },
+      {
+        name: "CMS",
+        color: "#8469d8-text-gradient",
+      },
+      {
+        name: "Javascript",
+        color: "#8469d8-text-gradient",
+      },
+      {
+        name: "figma",
+        color: "#69a2d8 -text-gradient",
+      },
+    ],
+    image: [trading360_2, trading360, trading360_3, trading360_4],
+    source_code_link: "#",
+    category: "web2",
+    keyFeatures: [],
+    packagesUsed: [],
   },
   {
     name: "Deyspeak Wailtlist",
@@ -714,65 +720,65 @@ const allProjects = [
       "stripe",
     ],
   },
-  {
-    name: "portfolio Website",
-    description:
-      "My Portfolio website, showcasing my web2 and web3 journey as a Fullstack web developer, here you can journey with me as I highlight important details about my journey which includes a brief description of me, the technology I use, projects I have worked on and I am still working on, ways you can reach me, and more. :)",
-    linkToWebsite: "https://web-dev-crib.netlify.app/",
-    tags: [
-      {
-        name: "React",
-        color: "#b6a6e8-text-gradient",
-      },
-      {
-        name: "Tailwindcss",
-        color: "#8469d8-text-gradient",
-      },
-      {
-        name: "Framer-motion",
-        color: "#69a2d8 -text-gradient",
-      },
-      {
-        name: "Three-js",
-        color: "#69a2d8 -text-gradient",
-      },
-    ],
-    image: [portfolio],
-    source_code_link: "https://github.com/cReAtOR0009/portfolio",
-    category: "web2",
-    keyFeatures: [
-      " Utilizes react useContext for Providing Nav state Management to all Component.",
-      "Utilizes React Router's Link component for navigation.",
-      "Implements responsive design using CSS media queries.",
-      "Uses Framer Motion for animations and transitions.",
-      "Uses an Higher Order Function as a wrapper component for other components.",
-      "Utilizes React Router's Outlet component for nested routing.",
-      "Shows a loading progress bar before 3d Items load using Three.js and React Drei.",
-      "Utilizes useProgress hook from react-three to track loading progress.",
-      "Utilizes React Router's useParams hook to extract parameters from the URL.",
-      "Retrieves project details based on the provided projectId.",
-      "Utilizes staggered animations for multiple components.",
-      "Utilizes React Router's Link component for internal navigation.",
-      "Utilizes React Tilt for tilt effect on Cards Component.",
-    ],
-    packagesUsed: [
-      "react",
-      "@mail.js/browser",
-      "@react-three-drei",
-      "react-three-fiber",
-      "framer-motion",
-      "maath",
-      "react-router-dom",
-      "tailwindcss",
-      "postcss",
-      "react-icons",
-      "react-toastify",
-      "react-tilt",
-      "react-vertical-timeline-component",
-      "three",
-      "dotenv",
-    ],
-  },
+  // {
+  //   name: "portfolio Website",
+  //   description:
+  //     "My Portfolio website, showcasing my web2 and web3 journey as a Fullstack web developer, here you can journey with me as I highlight important details about my journey which includes a brief description of me, the technology I use, projects I have worked on and I am still working on, ways you can reach me, and more. :)",
+  //   linkToWebsite: "https://web-dev-crib.netlify.app/",
+  //   tags: [
+  //     {
+  //       name: "React",
+  //       color: "#b6a6e8-text-gradient",
+  //     },
+  //     {
+  //       name: "Tailwindcss",
+  //       color: "#8469d8-text-gradient",
+  //     },
+  //     {
+  //       name: "Framer-motion",
+  //       color: "#69a2d8 -text-gradient",
+  //     },
+  //     {
+  //       name: "Three-js",
+  //       color: "#69a2d8 -text-gradient",
+  //     },
+  //   ],
+  //   image: [portfolio],
+  //   source_code_link: "https://github.com/cReAtOR0009/portfolio",
+  //   category: "web2",
+  //   keyFeatures: [
+  //     " Utilizes react useContext for Providing Nav state Management to all Component.",
+  //     "Utilizes React Router's Link component for navigation.",
+  //     "Implements responsive design using CSS media queries.",
+  //     "Uses Framer Motion for animations and transitions.",
+  //     "Uses an Higher Order Function as a wrapper component for other components.",
+  //     "Utilizes React Router's Outlet component for nested routing.",
+  //     "Shows a loading progress bar before 3d Items load using Three.js and React Drei.",
+  //     "Utilizes useProgress hook from react-three to track loading progress.",
+  //     "Utilizes React Router's useParams hook to extract parameters from the URL.",
+  //     "Retrieves project details based on the provided projectId.",
+  //     "Utilizes staggered animations for multiple components.",
+  //     "Utilizes React Router's Link component for internal navigation.",
+  //     "Utilizes React Tilt for tilt effect on Cards Component.",
+  //   ],
+  //   packagesUsed: [
+  //     "react",
+  //     "@mail.js/browser",
+  //     "@react-three-drei",
+  //     "react-three-fiber",
+  //     "framer-motion",
+  //     "maath",
+  //     "react-router-dom",
+  //     "tailwindcss",
+  //     "postcss",
+  //     "react-icons",
+  //     "react-toastify",
+  //     "react-tilt",
+  //     "react-vertical-timeline-component",
+  //     "three",
+  //     "dotenv",
+  //   ],
+  // },
 
   //freelancing
   {

@@ -291,7 +291,7 @@ const testimonials = [
     testimonial: "He was a great intern!",
     name: "Toluwalase Gbenga",
     designation: "Project Manager",
-    company: "D0tCircleLabs",
+    company: "DotCircleLabs",
     image:
     "#",
   },

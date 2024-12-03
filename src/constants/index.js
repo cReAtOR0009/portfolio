@@ -207,6 +207,24 @@ const technologies = [
 ];
 
 const experiences = [
+
+  {
+    title: "Intern Web Developer",
+    company_name: "DotcircleLabs",
+    icon: reactjs,
+    iconBg: "#383E56",
+    date: "April 2022 - January 2023",
+    points: [
+      "solidified React.js Knowledge and Practices through consistent Code Review by Seniors",
+      "Tutored by senior designers and Developers in creating website mockups and Code reviews.",
+      "gained Experience in working with cross-funtional teams of UI/UX engineers, Software Engineers, Project Managers, developers",
+      "Gained solid Experience from contractive feedbacks from Senior Developers",
+      "Undergo several Web development Trainings.",
+      "Familiarized with Professional and industry Standard Frontend Development Techniques .",
+      "Participated in quality assurance testing to ensure cross-browser compatibility and responsiveness of web applications.",
+      "Contributed to reviews and providing constructive feedback to other developers.",
+    ],
+  },
   {
     title: "Front-End Developer (React.js)",
     company_name: "KasuwaFarms",
@@ -214,9 +232,9 @@ const experiences = [
     iconBg: "#383E56",
     date: "Febuary 2023 - April 2023",
     points: [
-      "maintaining and Developing web applications using React.js and its Framworks",
+      "maintained and Developed web applications using React.js Library",
       "Collaborating with cross-functional teams including ui/ux designers, devops engineers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
+      "Implemented responsive design Principles and ensured cross-browser compatibility for website.",
     ],
   },
   {
@@ -226,23 +244,12 @@ const experiences = [
     iconBg: "#E6DEDD",
     date: "March 2023 - October 2023",
     points: [
-      "Developing and maintaining backend-service using Node.js and other related technologies.",
-      "Collaborating with cross-functional teams including ui/ux designers, devops engineers, frontend developers, other content creators, and other developers to create high-quality products.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Intern Web Developer",
-    company_name: "DotcircleLabs",
-    icon: reactjs,
-    iconBg: "#383E56",
-    date: "April 2022 - Now",
-    points: [
-      "Assisted senior designers in creating website mockups and prototypes.",
-      "Undergo several Web design Trainings and Practice.",
-      "Familiarize with Professionals and industry Standard Work Experiences.",
-      "Participated in quality assurance testing to ensure cross-browser compatibility and responsiveness.",
-      "Contributed to reviews and providing constructive feedback to other developers.",
+      "Collaboretively Developed and maintained backend-service using Node.js, Express. MongoDb, Firebase",
+      "Developed a waitlist website",
+      "Participated in multiple code reviews and Sprint",
+      "learn Proper file structuring for Project",
+      "Collaborating with cross-functional teams that icludes ui/ux designers, devops engineers, frontend and backend developers, content creators, to create high-quality products.",
+      "Participated in code reviews and providing constructive feedback to other developers.",
     ],
   },
   {
@@ -250,13 +257,13 @@ const experiences = [
     company_name: "Fiverr, Upwork, Discord...",
     icon: reactjs,
     iconBg: "#E6DEDD",
-    date: "June 2023 - Now)",
+    date: "June 2023 - Now",
     points: [
-      "Making web bots for fetching data and automating web task",
-      "writting web bot for listening to blockchain events, and Telegram Bots ",
-      "writting webscrapper, Discord Bot, Game Playing bot",
-      "Helping client deploy web applications on node js server",
-      "and lot more...",
+      "developed web bots for fetching data and automating web task",
+      "wrote scripts for listening to blockchain events, and Telegram Bots ",
+      "developed webscrappers, Discord Bot, Game Playing bot",
+      "Helped client deploy web applications on node js server",
+      "Fixed frontend Bugs","and lot more...",
     ],
   },
 ];

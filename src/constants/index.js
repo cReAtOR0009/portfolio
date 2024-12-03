@@ -276,7 +276,7 @@ const testimonials = [
     designation: "Product Manager",
     company: "AGRIARCHE LIMITED",
     image:
-    "https://images.unsplash.com/photo-1484517186945-df8151a1a871?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cmFuZG9tJTIwYmxhY2slMjBhZnJpY2FuJTIwbmlnZXJpYW4lMjBwZW9wbGV8ZW58MHx8MHx8fDA%3D",
+    "#",
   },
   {
     testimonial:
@@ -285,7 +285,7 @@ const testimonials = [
     designation: "CEO",
     company: "Deyspeak coop",
     image:
-      "https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cmFuZG9tJTIwYmxhY2slMjBhZnJpY2FuJTIwbmlnZXJpYW4lMjBwZW9wbGV8ZW58MHx8MHx8fDA%3D",
+      "#",
   },
   {
     testimonial: "He was a great intern!",
@@ -293,7 +293,7 @@ const testimonials = [
     designation: "Project Manager",
     company: "D0tCircleLabs",
     image:
-    "https://images.unsplash.com/photo-1506634572416-48cdfe530110?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8cmFuZG9tJTIwYmxhY2slMjBhZnJpY2FuJTIwbmlnZXJpYW4lMjBwZW9wbGV8ZW58MHx8MHx8fDA%3D",
+    "#",
   },
 ];
 

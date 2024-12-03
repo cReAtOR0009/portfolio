@@ -274,7 +274,7 @@ const testimonials = [
   {
     testimonial:
     "I've never met a web developer who truly cares about their clients' success like Creator does.",
-    name: "Endurance Murgho",
+    name: "Muogho Endurance",
     designation: "CEO",
     company: "Deyspeak coop",
     image:
@@ -282,7 +282,7 @@ const testimonials = [
   },
   {
     testimonial: "He was a great intern!",
-    name: "Mr Gbenga",
+    name: "Toluwalase Gbenga",
     designation: "Project Manager",
     company: "D0tCircleLabs",
     image:

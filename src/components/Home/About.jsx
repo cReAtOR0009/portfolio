@@ -35,10 +35,10 @@ const ServiceCard = ({ index, title, icon }) => {
   // }, []);
 
   return (
-    <Tilt className="xs:w-[300px] w-[200px] h-full bg-[transparent] border-2 border-[#915eff]  p-[15px] rounded-lg">
+    <Tilt className="xs:w-[300px] w-[200px] h-full bg-[transparent] border-2 border-[#915eff] p-2 sm:p-[15px] rounded-lg">
       <motion.div
         variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
-        className="sm:w-[200px] w-[200px] bg-primary border-2 p-[20px] rounded-lg"
+        className="sm:w-[200px] w-[100px] bg-primary border-2 p-4  sm:p-[20px] rounded-lg"
       >
         <div
           options={{
@@ -46,12 +46,12 @@ const ServiceCard = ({ index, title, icon }) => {
             scale: 1,
             speed: 250,
           }}
-          className="bg-tertiary border-2 border-[#915eff] rounded-lg py-5 px-[35px] min-h-[180px] sm:w-[220px] w-[200px] flex justify-evenly items-center flex-col"
+          className="bg-tertiary border-2 border-[#915eff] rounded-lg p-2 sm:py-5 sm:px-[35px] h-full min-h-[180px]- sm:w-[220px] w-[100px] -mr-20- flex justify-evenly items-center flex-col"
         >
-          <h3 className="text-white text-[20px] font-bold text-center">
+          <h3 className="text-white text-sm sm:text-[20px] font-bold text-center">
             {title}
           </h3>
-          <img src={icon} alt={title} className="w-16 h-16 object-contain" />
+          <img src={icon} alt={title} className="w-6 sm:w-16 h-6 sm:h-16 object-contain" />
         </div>
       </motion.div>
     </Tilt>
@@ -100,7 +100,7 @@ const About = () => {
           variants={infinitescrollx(200, 10, 0.5, 20)}
           // style={{width:"100%", background:"red"}}
           animate={"animate"}
-          className=" flex gap-[100px] max-h-[100%] h-[100%] sm:mobileScrolling sm:w-[80vw] w-[100%]"
+          className=" flex items-stretch gap-12 sm:gap-[100px] max-h-[100%]- h-[100%] sm:mobileScrolling sm:w-[80vw] w-[100%]"
         >
           {services.map((service, index) => (
             <ServiceCard key={service.title} index={index} {...service} />

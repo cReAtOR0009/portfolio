@@ -103,12 +103,12 @@ const Navbar = () => {
         <div className="lg:hidden flex flex-1 justify-end items-center">
           {Toggle ? (
             <FiX
-              className="w-[28px] h-[28px] cursor-pointer color-primary"
+              className="w-[28px] h-[28px] cursor-pointer text-primary"
               onClick={() => setToggle(!Toggle)}
             />
           ) : (
             <FiMenu
-              className="w-[28px] h-[28px] cursor-pointer color-primary"
+              className="w-[28px] h-[28px] cursor-pointer text-primary"
               onClick={() => setToggle(!Toggle)}
             />
           )}

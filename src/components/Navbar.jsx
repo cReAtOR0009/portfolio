@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import { BiSolidMoon, BiMoon } from "react-icons/bi";
+import { FiMenu, FiX } from "react-icons/fi";
 import { HashLink } from "react-router-hash-link";
 import { Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -35,68 +36,82 @@ const Navbar = () => {
           }}
         >
           {/* <img src={logo} alt="logo" className="w-9 h-9 object-contain" /> */}
-          <h3 className={`${styles.logo} whitespace-nowrap text-primary`}> &lt;Creator/&gt;</h3>
+          <h3 className={`${styles.logo} whitespace-nowrap text-primary`}>
+            {" "}
+            &lt;Creator/&gt;
+          </h3>
           <p
             className={` ${
               theme === "dark" ? "text-white" : "text-primary"
             } sm:flex hidden text-[18px] min-w-[180px] font-bold cursor-pointer sm:flex-col`}
           >
-           {/* &lt;Creator/&gt; */}| #WebManiac
-           &nbsp;
+            {/* &lt;Creator/&gt; */}
+            &nbsp;
             {/* <span className="sm:block hidden"> | #WebManiac</span> */}
           </p>
         </Link>
-        <ul className="list-none hidden lg:flex justify-between items-center flex-row lg:gap-10">
+        <ul className="list-none hidden lg:flex items-center gap-6">
           {navLinks.map((link, index) => {
+            const isContact = link.id === "contact";
+            const isActive = active === link.title;
+
             return (
               <motion.li
                 key={link.id}
-                className={` ${link.id == "contact" ? "py-[10px rounded-full] rounded-full" : ""} ${
-                  active === link.title
-                    ? " border-b-4 border-b-primary rounded pr-[10px]"
-                    : "border-b-4 border-b-transparent"
-                } transition-all`}
-                variants={navIn(
-                  "right",
-                  "spring",
-                  link.title === "Contact" ? 1 * index : 1 * index,
-                  link.title === "Contact" ? 1.5 : 2
-                )}
-                initial={link.title === "Contact" ? "hidden2" : "hidden"}
-                animate={link.title === "Contact" ? "show2" : "show"}
-                onClick={() => {
-                  setActive(link.title);
-                }}
+                className={`transition-all duration-300 cursor-pointer
+          ${
+            isActive
+              ? "border-b-4 border-b-primary pr-2 rounded"
+              : "border-b-4 border-transparent"
+          }
+          ${isContact ? "py-2- rounded-full" : ""}
+        `}
+                variants={navIn("right", "spring", index, isContact ? 1.5 : 2)}
+                initial={isContact ? "hidden2" : "hidden"}
+                animate={isContact ? "show2" : "show"}
+                onClick={() => setActive(link.title)}
               >
                 <HashLink
-                  to={link.id !== "contact" ? `/#${link.id}` : `#${link.id}`}
-                  className={` whitespace-nowrap  ${
-                    theme === "dark" ? "text-white hover:text-primary" : "text-primary"
-                  } text-[18px] ${
-                    link.title === "Contact"
-                      ? "text-white   bg-primary rounded-full text-[20px] px-[10px] text-center"
-                      : ""
-                  } font-medium cursor-pointer text-center transition-all`}
+                  to={isContact ? `#${link.id}` : `/#${link.id}`}
+                  className={`whitespace-nowrap text-[18px] font-medium text-center transition-all
+            ${
+              isContact
+                ? "text-white bg-primary rounded-full px-4 py-1 text-[20px]"
+                : theme === "dark"
+                ? "text-white hover:text-primary"
+                : "text-primary"
+            }
+          `}
                 >
                   {link.title}
                 </HashLink>
               </motion.li>
             );
           })}
-          <BiSolidMoon
-            fontSize="2em"
-            color={theme == "dark" ? "#ffffff" : `#000000`}
-            onClick={toggleTheme}
-          />
+
+          {/* Theme toggle icon */}
+          <li className="ml-4 cursor-pointer">
+            <BiSolidMoon
+              size={24}
+              color={theme === "dark" ? "#ffffff" : "#000000"}
+              onClick={toggleTheme}
+              title="Toggle Theme"
+            />
+          </li>
         </ul>
 
         <div className="lg:hidden flex flex-1 justify-end items-center">
-          <img
-            src={Toggle ? close : menu}
-            alt="menu"
-            className="w-[28px] h-[28px] object-contain cursor-pointer"
-            onClick={() => setToggle(!Toggle)}
-          />
+          {Toggle ? (
+            <FiX
+              className="w-[28px] h-[28px] cursor-pointer color-primary"
+              onClick={() => setToggle(!Toggle)}
+            />
+          ) : (
+            <FiMenu
+              className="w-[28px] h-[28px] cursor-pointer color-primary"
+              onClick={() => setToggle(!Toggle)}
+            />
+          )}
 
           <ul
             className={`${
@@ -108,42 +123,42 @@ const Navbar = () => {
             {navLinks.map((link, index) => {
               return (
                 <motion.li
-                key={link.id}
-                className={`${
-                  
-                  theme === "dark" ? "text-white" : "text-primary"
-                }  ${
+                  key={link.id}
+                  className={`${
+                    theme === "dark" ? "text-white" : "text-primary"
+                  }  ${
                     active === link.title
                       ? "border-b-4 border-b-primary  rounded "
                       : "border-b-transparent border-b-0"
-                  } self-start sm:self-center ${link.id === "contact" ? "rounded-full px-4  bg-primary" : ""}`}
-                variants={navIn(
-                  "right",
-                  "spring",
-                  index,
-                  link.title === "Contact" ? 1.5 : 2
-                )}
-                initial={link.title === "Contact" ? "hidden2" : "hidden"}
-                animate={link.title === "Contact" ? "show2" : "show"}
-                onClick={() => {
-                  setActive(link.title);
-                  setToggle(!Toggle);
-                }}
-              >
-                <HashLink
-                  to={`/#${link.id}`}
-                  className={`${
-                    theme === "dark" ? "text-white hover:text-primary" : "text-primary"
-                  }  hover:border-b-primary hover:border-b-4 text-[18px] ${
-                    link.title === "Contact"
-                      ? "text-white"
-                      : ""
-                  } font-medium cursor-pointer text-left transition-all`}
+                  } self-start sm:self-center ${
+                    link.id === "contact" ? "rounded-full px-4  bg-primary" : ""
+                  }`}
+                  variants={navIn(
+                    "right",
+                    "spring",
+                    index,
+                    link.title === "Contact" ? 1.5 : 2
+                  )}
+                  initial={link.title === "Contact" ? "hidden2" : "hidden"}
+                  animate={link.title === "Contact" ? "show2" : "show"}
+                  onClick={() => {
+                    setActive(link.title);
+                    setToggle(!Toggle);
+                  }}
                 >
-                  {link.title}
-                </HashLink>
-              </motion.li>
-              
+                  <HashLink
+                    to={`/#${link.id}`}
+                    className={`${
+                      theme === "dark"
+                        ? "text-white hover:text-primary"
+                        : "text-primary"
+                    }  hover:border-b-primary hover:border-b-4 text-[18px] ${
+                      link.title === "Contact" ? "text-white" : ""
+                    } font-medium cursor-pointer text-left transition-all`}
+                  >
+                    {link.title}
+                  </HashLink>
+                </motion.li>
               );
             })}
             <BiSolidMoon

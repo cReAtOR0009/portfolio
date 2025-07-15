@@ -15,9 +15,11 @@ const Home = () => {
   return (
     <div>
       <div
-        className={`relative z-0 ${
-          theme == "dark" ? "bg-dark-bg2" : " bg-light-bg2"
-        }`}
+        className={`relative z-0 
+          ${ 
+          theme == "dark" ? "" : ""
+        }
+        `}
       >
         {/* <div className="bg-hero-patter bg-cover bg-no-repeat bg-center"> */}
           <Hero />

@@ -8,17 +8,14 @@ import { ThemeContext } from "../../context/themeContext";
 
 const Layouts = () => {
   const {theme} = useContext(ThemeContext)
+  const usedTheme = theme == "dark" ? "bg-primary_100" : "bg-white"
   return (
-    <div className={`${
-      theme == "dark" ? "bg-primary_100" : "bg-white"
-    }`}>
-      <Nav />
-      <div className="">
-        {/* <StarsCanvas /> */}
+    <div className={`${usedTheme}`}>
+       <Nav />
+      <div className="relative">
         <Outlet />
-      </div>
-      <div className='relative z-0'>
-      <StarsCanvas />
+      {/* <div className='relative z-0'>
+      <StarsCanvas /> */}
       <Contact />
       </div>
     </div>

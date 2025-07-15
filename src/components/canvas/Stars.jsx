@@ -6,7 +6,7 @@ import { ThemeContext } from "../../context/themeContext";
 
 const Stars = (props) => {
   const ref = useRef();
-  const [sphere] = useState(() => random.inSphere(new Float32Array(5000), { radius: 1.2 }));
+  const [sphere] = useState(() => random.inSphere(new Float32Array(1000), { radius: 1.2 }));
   const {theme} = useContext(ThemeContext)
   const color = theme==="light"?"#915eff":"#915eff"
 
@@ -35,7 +35,7 @@ const StarsCanvas = () => {
   return (
     <div className='w-full h-auto absolute inset-0 z-[-1]'>
       <Canvas camera={{ position: [0, 0, 1] }}   className={`relative z-0 ${
-          theme == "dark" ? "bg-primary_100" : "bg-primary_100"
+          theme == "dark" ? "bg-primary_100" : "bg-white"
         }`}>
         <Suspense fallback={null}>
           <Stars />

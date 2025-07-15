@@ -18,7 +18,7 @@ const FeedbackCard = ({
     variants={fadeIn("up", "spring", index * 0.5, 0.75)}
     initial="hidden"
     animate="show"
-    className="bg-black-200 p-10 rounded-3xl xs:w-[320px] w-full"
+    className="bg-black-200 p-10 rounded-3xl -xs:w-[320px] w-full"
   >
     <p className="text-white font-black text-[48px]">"</p>
 
@@ -56,7 +56,7 @@ const Feedbacks = () => {
           <h2 className={styles.sectionHeadText}>Testimonials.</h2>
         </motion.div>
       </div>
-      <div className={`-mt-20 pb-14 ${styles.paddingX} flex flex-wrap gap-7`}>
+      <div className={`-mt-20 pb-14 ${styles.paddingX} grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3`}>
         {testimonials.map((testimonial, index) => (
           <FeedbackCard key={testimonial.name} index={index} {...testimonial} />
         ))}

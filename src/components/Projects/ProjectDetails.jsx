@@ -48,12 +48,12 @@ const ProjectDetails = ({}) => {
       <motion.div
         className={`${
           theme == "dark" ? "bg-primary_100" : "bg-white"
-        } mx-auto mt-[20px] p-5 rounded-2xl  w-full`}
+        } mx-auto mt-[20px]  sm:p-5 rounded-2xl  w-full`}
       >
         <div
           className={`${
             theme == "dark" ? "text-white-100" : "text-secondary2"
-          } cursor-pointer underline px-2`}
+          } cursor-pointer underline px-2 hover:text-primary`}
           onClick={goBack}
         >
           back
@@ -93,7 +93,7 @@ const ProjectDetails = ({}) => {
               <p
                 key={`${name}-${tag.name}-${index}`}
                 style={{ background: `${firstWord}` }}
-                className={`text-[14px] p-[10px] rounded-full  text-[${firstWord}] `}
+                className={`text-[14px] p-2 sm:p-[10px] rounded-full  text-[${firstWord}] `}
               >
                 #{tag.name}
               </p>
@@ -115,7 +115,7 @@ const ProjectDetails = ({}) => {
               key={`${name}-keyFeature-${index}`}
               className="flex items-center"
             >
-              <img src={icon} alt="" className="w-8 h-8" />
+              <img src={icon} alt="" className="w-6 h-6 sm:w-8 sm:h-8" />
               <p
                 className={`${styles.paragraph}  ${
                   theme == "dark" ? "text-white-100-100" : "text-secondary2"
@@ -140,16 +140,16 @@ const ProjectDetails = ({}) => {
             </h2>
 
             {resultAndImapcts?.map((resultAndImapct, index) => (
-              <div key={resultAndImapct.title}>
-                <h3 className={`${styles.h3}`}>{resultAndImapct.title}</h3>
+              <div key={resultAndImapct.title} className="my-4">
+                <h3 className={`${styles.h3} mb-2 px-[5px]  border-l-[5px] border-l-solid  border-l-[#350d58]`}>{resultAndImapct.title}</h3>
 
                 <p
                   key={`${name}-keyFeature-${index}`}
                   className={`${styles.paragraph} ${
                     theme == "dark" ? "text-white-100" : "text-secondary2"
-                  } mb-[10px] px-[5px]  rounded-[5px] border-l-[10px] border-l-solid  border-l-[#350d58] text-secondary hover:bg-primary  hover:text-[white] transition`}
+                  } mb-[10px]  text-secondary hover:bg-primary  hover:text-[white] transition`}
                 >
-                  {resultAndImapct.description}
+                  - {resultAndImapct.description}
                 </p>
               </div>
             ))}
@@ -215,16 +215,16 @@ const ProjectDetails = ({}) => {
             <img
               src={activeImage}
               alt={`activeImage`}
-              className={` w-full h-full object-cover rounded-2xl`}
+              className={` w-full h-full md:max-h-[80vh] object-cover rounded-2xl`}
             />
           </div>
         </div>
-        <div className="mt-20  flex justify-center  flex-wrap gap-8">
+        <div className="mt-20  flex justify-center  flex-wrap gap-2 sm:gap-8">
           {image.map((image, index) => {
             return (
               <div
                 key={index}
-                className={`${activeImage == image ? "bg-primary":""} w-[100px] h-[100px]  sm:h-[120px] border border-solid border-[#915eff] rounded p-[10px] hover:scale-[1.2] transition-all`}
+                className={`${activeImage == image ? "bg-primary":""} w-20 h-20  sm:h-32 sm:w-32 border border-solid border-[#915eff] rounded p-1 hover:scale-[1.2] transition-all`}
                 onClick={() => changeMainImage(image)}
               >
                 <img
@@ -239,7 +239,7 @@ const ProjectDetails = ({}) => {
         </div>
       </motion.div>
 
-      <div>{image.map}</div>
+      {/* <div>{image.map}</div> */}
     </>
   );
 };

@@ -90,7 +90,7 @@ const color = theme==="light"?"#915eff":"#151030"
   return (
     <div
       className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
-      styles={{ justifyContent: "start" }}
+      // styles={{ justifyContent: "start" }}
     >
       <motion.div
         variants={slideIn("up", "tween", 0.2, 1)}
@@ -98,9 +98,7 @@ const color = theme==="light"?"#915eff":"#151030"
       >
         <p className={styles.sectionSubText}>Reach Me Here</p>
         <h3
-          className={`${styles.sectionHeadText} ${
-            theme == "dark" ? "text-white" : "text-secondary"
-          }`}
+          className={`${styles.sectionHeadText}} `}
         >
           Contact.
         </h3>
@@ -175,7 +173,7 @@ const color = theme==="light"?"#915eff":"#151030"
 
         <motion.div
           variants={slideIn("up", "tween", 0.2, 1)}
-          className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px] sm:h-[350px]"
+          className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
         >
           <EarthCanvas />
         </motion.div>

@@ -96,6 +96,16 @@ import {
   trading360_3,
   trading360_4,
 
+  // BaseWOF
+  baseWOF,
+  baseWOF2,
+  baseWOF3,
+
+  // Flexchange
+  flexchangeScreen1,
+  flexchangeScreen2,
+  flexchangeScreen3,
+
   //kasuwa
   kasuwa,
   kasuwa2,
@@ -207,7 +217,6 @@ const technologies = [
 ];
 
 const experiences = [
-
   {
     title: "Intern Web Developer",
     company_name: "DotcircleLabs",
@@ -263,7 +272,8 @@ const experiences = [
       "wrote scripts for listening to blockchain events, and Telegram Bots ",
       "developed webscrappers, Discord Bot, Game Playing bot",
       "Helped client deploy web applications on node js server",
-      "Fixed frontend Bugs","and lot more...",
+      "Fixed frontend Bugs",
+      "and lot more...",
     ],
   },
 ];
@@ -275,25 +285,22 @@ const testimonials = [
     name: "Petwilson Olatunde",
     designation: "Product Manager",
     company: "AGRIARCHE LIMITED",
-    image:
-    "#",
+    image: "#",
   },
   {
     testimonial:
-    "I've never met a web developer who truly cares about their clients' success like Creator does.",
+      "I've never met a web developer who truly cares about their clients' success like Creator does.",
     name: "Muogho Endurance",
     designation: "CEO",
     company: "Deyspeak coop",
-    image:
-      "#",
+    image: "#",
   },
   {
     testimonial: "He was a great intern!",
     name: "Toluwalase Gbenga",
     designation: "Project Manager",
     company: "DotCircleLabs",
-    image:
-    "#",
+    image: "#",
   },
 ];
 
@@ -346,7 +353,7 @@ const allProjects = [
       "Persistent Animations: Click state, hover state, and toggle state optimizations ensure that animations remain persistent and smooth.",
       ,
     ],
-  
+
     resultAndImapcts: [
       {
         title: "Improved User Experience",
@@ -364,7 +371,7 @@ const allProjects = [
           "Mailchimp’s integration streamlined the form interaction process and Email marketing Onboarding, ensuring smooth data handling and user onboarding.",
       },
     ],
-  
+
     challengesAndSolutions: [
       {
         title: "Handling Multiple User Types",
@@ -426,6 +433,175 @@ const allProjects = [
     keyFeatures: [],
     packagesUsed: [],
   },
+  {
+    name: "BaseWOF Marketing Website",
+    description:
+      "A modern and engaging marketing site for BaseWOF — the first fully decentralized peer-to-peer Wheel of Fortune casino built on the Base blockchain. The website showcases the product, outlines gameplay mechanics, the boost system, DAO governance, and a compelling roadmap, all while reflecting the trustless nature of blockchain gaming.",
+    linkToWebsite: "https://basewof.com/",
+    tags: [
+      {
+        name: "Next.js",
+        color: "#b6a6e8-text-gradient",
+      },
+      // {
+      //   name: "Web3",
+      //   color: "#69a2d8-text-gradient",
+      // },
+      {
+        name: "Tailwind CSS",
+        color: "#8469d8-text-gradient",
+      },
+      {
+        name: "Landing Page",
+        color: "#b6a6e8-text-gradient",
+      },
+      // {
+      //   name: "Framer Motion",
+      //   color: "#8469d8-text-gradient",
+      // }
+    ],
+    image: [baseWOF, baseWOF2, baseWOF3],
+    source_code_link: "#private",
+    category: "web2",
+    keyFeatures: [
+      "Thematic UI with Tokenized Aesthetic: Implemented a visually rich casino interface with dark-mode-first design, gradient overlays, and Web3-aligned branding using Tailwind CSS utility classes.",
+      "Interactive Boost System UI: Engineered a structured content layout and FAQ-driven education component to explain the odds boost logic (entry-based + time-based logic, capped at +90%) using conditionally rendered React components.",
+      "Auto-Rotating Fact Cards: Built a custom stat rotator using `setInterval` and `useState` to dynamically cycle through facts every 5s, with support for manual navigation using `react-icons` for prev/next triggers.",
+      "Governance Architecture Explanation: Crafted content components to demystify DAO logic and governance contracts, using layout sections that simulate token-weighted voting and control flow narratives.",
+      "Mobile-First and Adaptive Layouts: Tailored responsive breakpoints using Tailwind's grid and flex utilities, ensuring seamless UX across all screen sizes and devices, including interactive overlays and modal interactions.",
+      "Dynamic Roadmap Timeline: Implemented a vertical roadmap timeline using conditional layout rendering (`position` mapping) and animation-friendly class transitions to display staged feature rollouts over 6 months.",
+      "Reusable UI Component Architecture: Adopted a composable component design with props-driven rendering for buttons, sections, cards, timelines, and FAQ entries for easy maintainability and extension.",
+      "Next.js 14 App Router: Leveraged server-side rendering, route segmenting, and async loading behavior via App Router for performance optimizations and SEO-ready navigation structure.",
+    ],
+    resultAndImapcts: [
+      {
+        title: "Improved User Conversion",
+        description:
+          "Designed to onboard early users, partners, and ICO participants by building trust through transparency, clean visuals, and concise messaging.",
+      },
+      {
+        title: "Web3 Education via UX",
+        description:
+          "Educates visitors on complex concepts like Chainlink VRF, DAO voting, and odds boosting using digestible visuals and FAQs.",
+      },
+      {
+        title: "Consistent Brand Identity",
+        description:
+          "Created a visually cohesive system that aligns the BaseWOF brand with the DeFi and Web3 casino ecosystem.",
+      },
+    ],
+    challengesAndSolutions: [
+      {
+        title: "Explaining Blockchain Concepts",
+        description:
+          "Boiling down technical terms like Chainlink VRF, DAO, boost systems, and tokenomics into digestible user-facing content was a key challenge. Solved by structuring content into concise, scannable, and FAQ-friendly formats.",
+      },
+      {
+        title: "Designing for a Gaming + Crypto Audience",
+        description:
+          "Blending fun, risk-taking casino aesthetics with the seriousness of smart contracts and decentralization required careful theming and balance.",
+      },
+      {
+        title: "Dynamic Fact Card Rotator",
+        description:
+          "Built a rotating stats component with both auto-play and manual navigation, optimized to be smooth, responsive, and accessible.",
+      },
+      {
+        title: "DAO and Token Governance Messaging",
+        description:
+          "Simplified governance mechanics into marketing-friendly content while remaining technically accurate and decentralized in ethos.",
+      },
+    ],
+    packagesUsed: [
+      "next",
+      "react",
+      "tailwindcss",
+      "framer-motion",
+      "react-icons",
+      "autoprefixer",
+      "postcss",
+    ],
+  },
+ {
+  name: "Flexchange Website",
+  description:
+    "Flexchange is a high-conversion marketing website for a Nigerian gift card exchange platform. Built with Next.js 15 and Tailwind CSS, it showcases seamless onboarding flows, persuasive copy, and a modal-based trade initiation system. The site highlights benefits like unbeatable rates, customer testimonials, and a simple three-step process to guide users from interest to trade execution.",
+  linkToWebsite: "https://flexchange.online",
+  tags: [
+    { name: "Next.js", color: "#0070f3-text-gradient" },
+    { name: "Marketing Website", color: "#facc15-text-gradient" },
+    { name: "Tailwind CSS", color: "#38bdf8-text-gradient" },
+    { name: "React 19", color: "#61dafb-text-gradient" },
+    { name: "Radix UI", color: "#c084fc-text-gradient" },
+  ],
+  image: [flexchangeScreen1, flexchangeScreen2, flexchangeScreen3],
+  source_code_link: "#private",
+  category: "web2",
+  keyFeatures: [
+    "Card & Platform Modal: Built with Radix Dialog and Context API, the modal allows users to select card types and trading platforms (like WhatsApp) with dynamic CTA generation.",
+    "Persuasive Copywriting: Landing content is structured around trust, speed, and rates — the three key decision drivers for gift card users in Nigeria.",
+    "Interactive Testimonial Carousel: Social proof slider builds trust using Embla Carousel integration and reusable components.",
+    "Step-by-Step Flow: Users are guided through a 3-step trade process using icon-driven visual sections.",
+    "FAQ Accordion: Radix UI Accordion used for a clean and responsive FAQ section with smooth animations.",
+    "Mobile-First and Fully Responsive: Optimized layout for mobile devices using Tailwind utilities and responsive component scaling.",
+    "Auto-Snap Trade Modals: Scrollbar-aware modal opens with body lock and padding shift to prevent layout shift, ensuring optimal UX.",
+    "Clean Animations: Uses `tw-animate-css` for consistent entrance and hover effects across key components.",
+  ],
+  resultAndImapcts: [
+    {
+      title: "Improved Conversion Rate",
+      description:
+        "Modal-based trading flow simplified the user journey, making it easier for users to go from intent to action in less than 3 clicks.",
+    },
+    {
+      title: "Boost in Mobile Engagement",
+      description:
+        "Responsive UI design and mobile-first layout led to improved usability and reduced bounce rate from mobile visitors.",
+    },
+    {
+      title: "Scalable Component System",
+      description:
+        "The modular and styled components allowed for quick adjustments in content and design across sections without rework.",
+    },
+  ],
+  challengesAndSolutions: [
+    {
+      title: "WhatsApp-Based Trade Flow",
+      description:
+        "Creating a seamless bridge between web interface and platform-based trading (WhatsApp) required dynamic message composition and cross-platform link generation.",
+    },
+    {
+      title: "Scrollbar Modal Compensation",
+      description:
+        "Preventing layout shift due to scrollbars on modal open required a manual DOM patch to preserve visual stability.",
+    },
+    {
+      title: "Dynamic Trade Routing",
+      description:
+        "Conditional logic was implemented to update trading links and messages based on selected card and platform in real-time using React hooks.",
+    },
+    {
+      title: "State Persistence in Modal",
+      description:
+        "Implemented global state with React Context for modal visibility and controlled user flow to prevent undesired back-navigation.",
+    },
+  ],
+  packagesUsed: [
+    "next",
+    "react",
+    "react-dom",
+    "tailwindcss",
+    "clsx",
+    "tw-animate-css",
+    "class-variance-authority",
+    "embla-carousel-react",
+    "@radix-ui/react-dialog",
+    "@radix-ui/react-accordion",
+    "@radix-ui/react-label",
+    "@radix-ui/react-slot"
+  ]
+}
+,
   {
     name: "Deyspeak Wailtlist",
     description:

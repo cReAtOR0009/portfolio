@@ -4,7 +4,7 @@ import creator from "./creator.jpeg";
 import mobile from "./mobile.png";
 import web from "./web.png";
 import react from "./react.png";
-import node from "./node.png"; 
+import node from "./node.png";
 import contentcreation from "./contentcreation.jpeg";
 import customer from "./customer.jpeg";
 import github from "./github.png";
@@ -40,7 +40,7 @@ import twitter from "./socials/twitter_icon.jpg";
 import telegram_icon from "./socials/telegram_icon.jpg";
 import linkdin_icon from "./socials/linkdln_icon.jpg";
 
-import arrow from "./right-arrow.png"
+import arrow from "./right-arrow.png";
 
 import carrent from "./carrent.jpeg";
 import jobit from "./jobit.jpeg";
@@ -66,15 +66,25 @@ import crowdFundingApp from "./crowdFunding.jpeg";
 import TelegramBot from "./TelegramBot.jpeg";
 
 //denurx
-import denurxScreen1 from "./denurxScreen1.png"
-import denurxScreen2 from "./denurxScreen2.png"
-import denurxScreen3 from "./denurxScreen3.png"
+import denurxScreen1 from "./denurxScreen1.png";
+import denurxScreen2 from "./denurxScreen2.png";
+import denurxScreen3 from "./denurxScreen3.png";
 
 //360 Trading
-import trading360 from "./360trading.jpeg"
-import trading360_2 from "./360trading2.jpeg"
-import trading360_3 from "./360trading3.jpeg"
-import trading360_4 from "./360trading4.jpeg"
+import trading360 from "./360trading.jpeg";
+import trading360_2 from "./360trading2.jpeg";
+import trading360_3 from "./360trading3.jpeg";
+import trading360_4 from "./360trading4.jpeg";
+
+//Basewof
+import baseWOF from "./basewof1.jpeg";
+import baseWOF2 from "./basewof2.jpeg";
+import baseWOF3 from "./basewof3.jpeg";
+
+//Flexchange
+import flexchangeScreen1 from "./flexchange1.jpeg";
+import flexchangeScreen2 from "./flexchange2.jpeg";
+import flexchangeScreen3 from "./flexchange3.jpeg";
 
 //kasuwa
 
@@ -101,19 +111,19 @@ import nitrobot3 from "./nitrobot3.png";
 import nitrobot4 from "./nitrobot4.png";
 
 //token Deployment
-import creatortoken from "./creatortoken.jpeg"
-import creatortoken2 from "./creatortoken2.jpeg"
+import creatortoken from "./creatortoken.jpeg";
+import creatortoken2 from "./creatortoken2.jpeg";
 
 //3d Product website
-import threeDtool from "./3dtool.jpeg"
-import threeDtool2 from "./3dtool2.png"
+import threeDtool from "./3dtool.jpeg";
+import threeDtool2 from "./3dtool2.png";
 
 //creators crowdfunding
-import creators from "./creators1.png"
-import creators2 from "./creators2.png"
+import creators from "./creators1.png";
+import creators2 from "./creators2.png";
 
 //freelancing
-import freelanceBanner from "./freelanceBanner.png"
+import freelanceBanner from "./freelanceBanner.png";
 
 export {
   illustration,
@@ -173,7 +183,6 @@ export {
   votingApp,
   crowdFundingApp,
   TelegramBot,
-
   arrow,
   lightning,
   lightning2,
@@ -189,6 +198,15 @@ export {
   trading360_3,
   trading360_4,
 
+  // BaseWOF
+  baseWOF,
+  baseWOF2,
+  baseWOF3,
+
+  // Flexchange
+  flexchangeScreen1,
+  flexchangeScreen2,
+  flexchangeScreen3,
 
   //Kasuwa
   kasuwa,
@@ -226,5 +244,5 @@ export {
   creators2,
 
   // freelancing
-  freelanceBanner
+  freelanceBanner,
 };
